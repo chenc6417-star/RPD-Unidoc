@@ -1,0 +1,178 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            118,
+            483,
+            178
+        ],
+        "text": "that can collaborate with humans in many HCI scenarios\nsuch as playing these kinds of games. However, implicit com-\nmunication is rarely incorporated into AI design, effectively\nomitting a large component of team game experiences.",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            179,
+            483,
+            329
+        ],
+        "text": "Previous work in building AIs that can collaborate with\nhumans, both for Hanabi [26, 60] and for other games [77] ,\nhas generally centered on modeling teammates\\' mental states\nand exhaustively searching all potential states. However,\nthese approaches are inefficient. Furthermore, although the\nartificial agents resulting from these approaches perform\nwell when playing against each other, they reason in a way\nthat most human players do not, resulting in interactions\nthat are insufficiently natural.",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            330,
+            483,
+            468
+        ],
+        "text": "Modeling implicit communication is difficult because it is\nhard to generalize a set of principles that transcends domain\nand context. For our study, we draw inspiration from the\nfield of pragmatics in linguistics in order to interpret and\nmake use of implicit communication in human conversation.\nSpecifically, this paper takes a step towards this goal by\nusing a type of implicit communication called conversational\nimplicature [33] . Our key insight is that in a teamwork setting\nsuch as Hanabi , implicit communication typically focuses on\nconveying actionable information.",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            469,
+            483,
+            750
+        ],
+        "text": "In this paper, we detail the landscape of communication for\nteamwork and subdivide the communicated content into dif-\nferent categories of implicit communication. We take a prin-\nciple approach to studying effective modes of information\ntransfer among teammates by investigating two methods of\ncommunicating information. We provide a computational\napproach to the theory of implicature by using Gricean max-\nims and describe an AI that we built that uses these strategies\nto play the cooperative card game Hanabi . We conducted a\nstudy in simulation comparing the AI that uses implicit com-\nmunication strategies to a baseline AI that only uses explicit\ncommunication; the results of this study demonstrate that\nthe former AI consistently outperforms the latter. Using an\nonline interface of our design, we conducted a user study in\nwhich users completed 904 games and 246 follow-up surveys.\nFrom this study we found that the AI that used implicit com-\nmunication performed comparably with other state of the\nart Hanabi AIs in terms of game score, but human teammates\nwere 71 % more likely to believe that their partner was human\nwhen playing with an AI that used implicit communication.",
+        "reading_order": 5
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            788,
+            240,
+            804
+        ],
+        "text": "2 RELATED WORK",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            808,
+            483,
+            878
+        ],
+        "text": "In our work, we employ actionable implicit communication\nas a hint-giving strategy in Hanabi . Aspects of implicit com-\nmunication, though not always actionable, arise in research\nin many fields. We survey its forms and applications here.",
+        "reading_order": 7
+    },
+    {
+        "label": "sec_2",
+        "bbox": [
+            515,
+            118,
+            750,
+            134
+        ],
+        "text": "Forms of Implicit Communication",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            137,
+            914,
+            270
+        ],
+        "text": "There exists a rich body of work that explores how com-\nmunication can establish varying forms of shared context or\ncommon ground. Ways to reach consensus about context\nrange broadly from demographic information about partic-\nipating agents [46] to converging on an understanding of\ngame playing strategy for multiplayer online battle arena\ngames [47] . Many of these areas refer to a form of implicit\ncommunication, often verbally-restricted or entirely non-\nverbal, to reach these consensuses.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            270,
+            915,
+            536
+        ],
+        "text": "One form of implicit communication that has been ex-\nplored in the realm of emotional understanding is affective\ngrounding , which tends to focus on converging on a shared\nknowledge or understanding of mental state [42] in regard\nto an agent\\'s internal emotional state. Another area in which\nimplicit communication is crucial is tacit coordination . Tacit\ncoordination is focused on establishing consensus about ex-\npected behavior and responsibilities of others on a team\nwhen working to achieve a shared goal [20] . It is cited as\nan important factor in scenarios from team dynamics for\nmultiplayer game team coordination [88] to effectiveness of\ncrowdsourced teams in achieving tasks [91] . Some means\nof communication for tacit coordination in these contexts\nare explicit, but there are others, such as use of an annota-\ntion system in distributed multiplayer games, that are highly\ncontext-dependent and implicitly communicated [1] .",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            536,
+            915,
+            720
+        ],
+        "text": "Linguistics literature describing the phenomenon of con-\nversational implicature [11, 35, 37, 38, 51, 67] originated with\nGrice [33] . Work in natural language processing has sought\nto build artificial agents able to generate and understand\nutterances containing implicature. Generalizable techniques\nare difficult to put into practice in a computational system\ndue to dependency on context representation [72] . More\ntractable techniques isolate specific and far more restricted\ntypes of implicature, such as the technique proposed for\nscalar implicature [31] . The full complexity of the implicature\nunderstanding and generation problems has been explored\nas well [84] but remains intractable.",
+        "reading_order": 11
+    },
+    {
+        "label": "sec_2",
+        "bbox": [
+            515,
+            738,
+            800,
+            753
+        ],
+        "text": "Foundations of Implicit Communication",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            757,
+            915,
+            903
+        ],
+        "text": "The mechanism of implicit communication, including implic-\nitance, leverages context to allow messages to convey more\ninformation content than the raw message contains. This is\npossible because actions (the messages) are interpreted in\ncontext, from which added meaning can be derived. In social\nsettings, this mechanism is mediated by an innate human\nmental capability, called teleological reasoning, which con-\nnects goals and actions. People perceive both humans [24]\nand robots [74] to be goal-oriented. If a person can correctly\npredict an action that somebody will take to achieve a known\ngoal, we would say that the action is predictable ; if a person",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            154,
+            958
+        ],
+        "text": "Paper 95",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 2",
+        "reading_order": 15
+    }
+]

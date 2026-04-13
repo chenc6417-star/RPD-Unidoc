@@ -1,0 +1,200 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            118,
+            483,
+            205
+        ],
+        "text": "can infer the goal based on her observation of an action, then\nwe say that the action is legible [25] . The fact that humans\nperform teleological reasoning about explains how\nmany Hanabi players are able to adopt an implication-based\nhinting strategy without explicitly conferring with the other\nplayers about strategy.",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            205,
+            483,
+            455
+        ],
+        "text": "At an even more basic level, teleological reasoning is a\nform of abductive inference [62] , sometimes called “ infer-\nence to the best explanation ” . Just as deduction leads from\na general principle ( A $\\rightarrow$ B ) and an observation ( A ) to a\nconsequence ( B ) and induction leads from a pair of specific\nobservations ( A and B ) to a prediction about a general prin-\nciple ( A $\\rightarrow$ B ), abduction takes a general principle ( A $\\rightarrow$ B )\nand an observation ( B ) and returns an explanation ( A ). It is\nan everyday human practice. For example, if Zach notices\nthat his car key is in a different place than he left it, his\nmind will immediately compare possible explanations: his\nwife borrowed his car, the cat knocked the key on the floor,\nor there was an earthquake. Abduction has been studied in\nAI [13, 15, 30, 36, 41, 50, 58, 63, 65] and employed to solve\na variety of real-world problems [36, 57, 66, 81, 82] and to\nperform plan recognition [5, 21, 85] . Mirroring results in im-\nplicate however, it was found that abduction is generally\nintractable [2, 14, 15, 28, 30] to exactly compute.",
+        "reading_order": 3
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            467,
+            273,
+            483
+        ],
+        "text": "Partially Observable Games",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            486,
+            483,
+            556
+        ],
+        "text": "There are many strategies for partially observable games\n[32, 43, 79] , but the cooperative nature of Hanabi has inspired\ndifferent kinds of playing strategies. We specifically consider\nthe impact that Gricean conversational implicature can have\non Hanabi-playing logic [52, 86] .",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            556,
+            483,
+            709
+        ],
+        "text": "Osawa [60] proposes a series of strategies that consider\nthe state of a teammate\\'s hand in a two-player game of\nHanabi. The final strategy, titled the \"self-recognition strat-\negy\", outperforms the other strategies by modeling the other\nplayer\\'s knowledge of their hand before providing each hint\nand considering the inverse when interpreting hints. Osawa\nimplements the self-recognition strategy using an entropy-\nminimization approach and demonstrates the superior per-\nformance of this approach in computer simulations against\nless advanced models.",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            709,
+            483,
+            879
+        ],
+        "text": "Eger et al. [26] uses two of the Gricean maxims (Relation\nand Manner) in the context of Hanabi to construct an AI that\nemploys “ intentionality ” , using implicature in addressing\ngoal-directedness. Their “ intentional ” AI also employs an\nalternative discard policy and other resource management\ntechniques as modifications over Osawa\\'s prior work. Their\nAI is geared toward improving the Hanabi game experience\nas well as optimizing the AI for game score performance.\nResults indicate that for a limited score range, player engage-\nment and enjoyment is correlated with the intentionality\nlevel of the AI. However, their AI does not exclusively or",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            914,
+            205
+        ],
+        "text": "wholly investigate the impact of Grice\\'s maxims, and their\nhypotheses are not focused on how conversational impli-\ncature affects the extent to which the gameplay of the AI\nreflects the gameplay of a human. We study the full score\nrange from our user study participants and specifically in-\nvestigate how the AI is perceived by human players.",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            205,
+            914,
+            315
+        ],
+        "text": "We note that there are other rule-based techniques that\ncan create AIs that can successfully demonstrate high scores\nin Hanabi . For example, Bouzy [8] and Cox et al. [23] use\nideas from hat guessing games to get near-optimal scores.\nHowever, many rule-based approaches apply techniques that\nwould be entirely opaque to human teammates [12, 83] .",
+        "reading_order": 9
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            327,
+            848,
+            359
+        ],
+        "text": "Implicit Communication in Human-Robot\nInteraction",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            362,
+            914,
+            474
+        ],
+        "text": "Since robots can act physically in the world, they have a\ngreater potential than software agents to perform acts of\nimplicit communication and to best exploit actionable im-\nplicit communication from a human. An abstract, high-level\nframework for robots to automatically understand and gen-\nerate implicit communicative messages was proposed [48] ,\nalthough as presented it remains intractable to perform this\ninference for nontrivial problems.",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            474,
+            914,
+            598
+        ],
+        "text": "There are many instances of robots performing domain-\nspecific implicit communication. Robots have been demon-\nstrated communicating the weight of objects during lift-\ning [75] , the intended goal of a reaching motion [25] , how\na person can most effectively help the robot [49] , intended\navoidance maneuvers during socially-competent navigation\n[56] , symbol grounding for language understanding [39] ,\nand communicating a self-driving car\\'s goals to human ob-\nservers [40] .",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            598,
+            914,
+            713
+        ],
+        "text": "Researchers have also investigated implicit robot control\nby programming the robot\\'s environment [76, 90] . These\nimplications qualify as implicit communication in the sense that\nthey leverage context to interpret the meaning of symbols.\nIn order to function as part of an effective team, robots need\nto infer human intentions and also express the internal state\nof the robot, for example via affective cues [10, 29] .",
+        "reading_order": 13
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            725,
+            848,
+            741
+        ],
+        "text": "Conversational Implicature, Games, and HCI",
+        "reading_order": 14
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            744,
+            914,
+            868
+        ],
+        "text": "Researchers have examined the role of conversational impli-\ncature in human-computer interaction, such as in interpreta-\ntion of multimodal interactions including eye gaze [68] , lan-\nguage [19, 53] , and gesture [44] . Cordona-Rivera and Young\nstudied how conversational implicature can provide a frame-\nwork for game design and communication between the game\nand the player [17] . We build on this work by applying con-\nversational implicature specifically to human-AI teamwork\nand transmission of actionable information.",
+        "reading_order": 15
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            943,
+            154,
+            959
+        ],
+        "text": "Paper 95",
+        "reading_order": 16
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            943,
+            913,
+            959
+        ],
+        "text": "Page 3",
+        "reading_order": 17
+    }
+]

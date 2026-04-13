@@ -1,0 +1,72 @@
+<think>
+</think>
+
+[[[42, 85, 57, 194], 'header', 'CHI 2019 Paper'], [[42, 582, 58, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[118, 85, 133, 142], 'sec_1', 'Results'], [[136, 85, 246, 483], 'para', 'Our AI-AI results (Figure 4 ) show that our implicature-based
+AI achieves scores that are on average 46 % higher than the
+AI employing entropy minimization (18.9 points on average
+for implicature games and 13.0 points on average for entropy
+games). A Student\'s t-test with two-sample unequal variance
+is significant ( $t=57.967$ , $p<0.001$ ). The Cohen\'s D value is
+2.592381.'], [[260, 85, 276, 330], 'sec_1', 'Discussion of Simulation Results'], [[279, 85, 430, 483], 'para', 'Both AIs are implemented statically, so they do not adapt
+to their teammate\'s playing style. Each AI played with a
+teammate that had the exact same hinting strategy, and it is
+likely that this hard-coded consensus is a big factor in good
+score performance. However, in reality, human players are
+not static: they adapt to their teammate\'s playing strategy. In
+order to truly investigate the impact of using implicature in
+our AI design, it is necessary to explore whether non-static
+agents demonstrate a difference in performance similar to
+that of our statically-implemented AIs.'], [[443, 85, 459, 397], 'sec_1', '8 EVALUATION WITH HUMAN PLAYERS'], [[462, 85, 510, 483], 'para', 'In this section, we present a web-based human user study
+designed to explore both hypotheses. We study how humans
+perform in play with and perceive the AIs.'], [[510, 85, 623, 483], 'para', 'A dilemma with humans Hanabi players is that they often
+communicate through side-channels during gameplay, such
+as by conveying information through facial expression. In
+order to focus strictly on implicit communication conveyed
+through hints, we created an online environment for two-
+player games that inherently removed these other forms of
+implicit communication from the game experience.'], [[636, 85, 652, 156], 'sec_1', 'Interface'], [[656, 85, 764, 483], 'para', 'The interface presented in Figure 5 is meant to be as close
+to natural in-person gameplay as permitted by the Hanabi
+rules. In addition, we intentionally designed the interface to
+isolate communication of informational content, removing
+emotion from the game entirely. Due to its online nature,
+we added additional features to compensate for some of the
+advantages in real-life games.'], [[764, 85, 903, 483], 'para', 'When the game is administered, the user is directed to a
+starting lobby. After deciding to start the game, the user is
+automatically paired up with a "teammate" who is selected
+randomly from one of our two AIs. We divulge nothing about
+the teammate\'s identity (whether it is a human or an AI) nor
+do we prompt them to consider this when playing the game;
+the user can only observe their teammate\'s selected moves
+as the game unfolds. Whether the user or the teammate goes
+first is randomly chosen. After the user is paired with their'], [[391, 516, 420, 914], 'para', 'teammate and the game begins, they are presented with the
+interface shown in Figure 5 .'], [[114, 513, 270, 917], 'fig', '![Figure](figures/3290605-3300875_pdf_shortened_page_7_figure_010.png)', 'A mobile game interface displays a grid of cards, with two rows of four cards each. The top row shows a "Planner card" and "Discarding cards," while the bottom row shows "Discarding cards" and a "Planner card." A "Back" button is visible in the top right corner.'], [[279, 516, 350, 914], 'figure_cap', 'Figure 5: Online Hanabi playing interface. An example of a
+rotated card is shown in (1). The remaining hint tokens, fuse
+tokens, and cards in the deck are given by (2). The history
+of all moves made by both players throughout the game is
+recorded in (3).'], [[420, 516, 559, 915], 'para', 'When it is the player\'s turn, they can either select a card to
+play or discard, or they can provide a hint to their teammate.
+When receiving a hint from a teammate, the cards that are
+being hinted about are highlighted. All plays, cards, and
+hints are recorded in the log on the interface. The interface
+also allows players to rotate cards in their hand and shuffle
+them around in case they want to use orientation or ordering
+of their cards to recall information. However, the other player
+cannot see how the cards have been moved, so this feature
+is solely used for keeping track of one\'s own knowledge.'], [[559, 516, 612, 914], 'para', 'Aside from playing cards, discarding cards, and giving
+hints, players are not provided any means communication
+with their teammate. As a result, there is no side-channel
+communication that could introduce confounding factors.'], [[625, 516, 640, 745], 'sec_1', 'User Study Setup and Execution'], [[643, 516, 812, 915], 'para', 'We recruited participants for our user study through online
+forums, namely from Reddit (r/boardgames and r/cardgames),
+and linked them to our online Hanabi implementation. Our
+user study consisted of 904 completed games of Hanabi from
+online users, 463 of whom played with our implicature-based
+AI and 441 of whom played with our entropy-based AI. All
+users were prompted to continue to our survey after complet-
+ing their first game, and we collected 246 completed surveys
+(127 of these survey-takers played with the implicature AI
+and 119 with the entropy AI).'], [[812, 516, 903, 915], 'para', 'We considered several metrics, the most important being
+game score. However, we also considered the ratio of game
+score to number of hints given (to measure the efficiency
+of each hint) as well as the number of fuse tokens used and
+the number of discarded cards that were playable at the time
+they were discarded. H1 predicts the overall score for games'], [[943, 86, 959, 151], 'foot', 'Paper 95'], [[943, 865, 959, 913], 'foot', 'Page 8']]

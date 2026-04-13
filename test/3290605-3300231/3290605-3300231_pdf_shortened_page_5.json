@@ -1,0 +1,189 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            118,
+            483,
+            223
+        ],
+        "text": "do not get actionable information from researchers (P7, P11,\nP29, P35). \"I have been to CHiPlay, but there is a big barrier\nbetween industry and academia. Very little of what I saw there\nwas applicable, and that event is the only direct contact I have\nwith academia. During the year, everyone is locked up in their\ncompanies or universities and don\\'t speak\" (P11, who runs a\nvirtual reality gaming company).",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            223,
+            483,
+            312
+        ],
+        "text": "HCI researchers translating between applied research and\ndesign practice described the applicability barrier as the most\nimportant to address to successfully influence the work of de-\nsign practitioners. P14, P30, and P32, all HCI professors, said\nthat designers do not care about using theories or detailed\nterminology, only wanting to know what can be applied for\ntheir particular case.",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            312,
+            483,
+            509
+        ],
+        "text": "Many HCI researchers recognized that the long and diffi-\ncult applied research process does not result in actionable\nresources that can be offered to design practice, which, in\ntheir view, is a big problem for HCI (P4, P7, P14, P19, P27,\nP34). An industry researcher, who worked in a translational\nmedical science project after her doctorate, said that HCI\n“does not have enough research study findings that have been\nshown to work in practice or practice-based research. Research\nfindings are not real world enough to be meaningful and appli-\ncable” (P16). This concern motivated P19, a long-time CHI\ncontributor, to engage with industry partners, tapping into\nwiders populations to generalize her study results, and to\nlearn how to translate her research findings into something\n“useful” for practitioners.",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            509,
+            483,
+            716
+        ],
+        "text": "We then asked participants what has worked in terms of\ntranslations from applied research to design practice. Re-\nsearchers mentioned having success with a “make it happen”\napproach. They described embedding in organizations as\nconsultants or doing design work along with practitioners,\nfirst learning what those practitioners care about before of-\nfering recommendations (P8, P19, P20, P21, P30, P32); and\ncreating actionable resources for practitioners to use, such as\neasy to use research and design methods (P7, P14, P19, P32),\nor open-source projects. P8 used an open-source model: “it\nwas an open-source project, so they literally put the code up on\nthe wall and like went through it and used that as the jumping\noff point to invent their startup” and introduced the project\nto practitioners in a hackathon.",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            716,
+            483,
+            828
+        ],
+        "text": "P19 told the story of how the idea to create a design\nmethod started: \"this industry guy asked for resources, and\nthen I asked myself what do I give to this guy?\" Papers... and\nacademic research... are too hard for practitioners to get it.\"\nHer approach was to study how to transform empirical data\nfrom published studies into a design method. \"Connecting to\npractice was a study in itself, a long one\" (P19).",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            828,
+            483,
+            880
+        ],
+        "text": "Compatibility with existing workflows and demonstrated\nutility affect adoption of assets and methods by practice, sup-\nporting [57] . Scholars mentioned making assets compatible",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            914,
+            239
+        ],
+        "text": "with current industry practices (P8, P19), and the need for\nthese assets to promote their usefulness from the outset, such as\nby connecting with metrics that practitioners value. “I have\nlearned one lesson. Managers and bosses need to want it. I need\nto be convinced and make that a part of their process.\nThey need to know what the practical outcome of the method\nfor them is. One manager told me: “I will fail if I don’t use this\nmethod” and that’s when I knew I had succeeded” (P19).",
+        "reading_order": 8
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            516,
+            250,
+            750,
+            266
+        ],
+        "text": "TBA - Basic to Applied Research",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            269,
+            914,
+            400
+        ],
+        "text": "Participants, specifically researchers, pointed that apart from\nTBA, there is also an important gap in the knowledge progres-\nsion from basic to applied research, with its unique barriers.\nFirst, translating basic knowledge into research products is\na challenging process that happens through collaborations\nwith parties who possess supportive skills. Second, there\nseems to be a disconnect between HCI and other disciplines.",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            400,
+            914,
+            525
+        ],
+        "text": "Participants noted that translating theory from the social\nsciences, ethnography, or philosophy into tools for conduct-\ning applied research is complicated and often depends on\npartnerships as they lack the “skillet” (P27, P28, P33, P43).\nP24, a psychology professor, said “my main goal is finding\nreproducible regular patterns in people\\'s behavior that both\nhave real-life potential applicability or consequences, and at\nthe same time can be studied in a fairly controlled way. But I\nwant my studies to have an impact in real life.”",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            525,
+            914,
+            688
+        ],
+        "text": "Regarding this challenge, participant P27 posed a question\nand a proposed path: “ How do we facilitate the interaction of\nbasic and applied researcher in HCI, long term, sustainable?\nThis is a big problem. We need to do more work on understand-\ning how this happens naturally, which might help us foster how\nto facilitate this interaction. ” P28, also present in the group\ninterview, agreed, saying that he worked in projects with\ncollaborators from other fields in successful programs dedi-\ncated to foster basic and applied research exchange, funded\nby a Translational Medicine association.",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            688,
+            914,
+            770
+        ],
+        "text": "A few participants described how basic and applied re-\nsearch interact through joint projects. Basic researchers may\nwork with HCI researchers or practitioners to create designs\nthat can be used in detailed investigations. However, finding\nthese collaborations and establishing common-ground can\nbe challenging and costly (P7, P19, P24, P27, P28).",
+        "reading_order": 13
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            770,
+            914,
+            902
+        ],
+        "text": "We hired a computer science Ph.D. student who\nwas a really good programmer. We met with him\nand he prototyped a version that we had in mind.\nMy colleague and I may say \\'oh let\\'s do this\\',\nnot because we know that we have to do it, but\nbecause we happened to think of it, but learning\nfrom the programmer that would be difficult to\nimplement, we would think of something else.\n(P27)",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            143,
+            958
+        ],
+        "text": "Paper 1",
+        "reading_order": 15
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 6",
+        "reading_order": 16
+    }
+]

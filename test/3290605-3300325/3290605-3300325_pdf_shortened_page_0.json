@@ -1,0 +1,255 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            107,
+            195,
+            120
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            678,
+            107,
+            913,
+            120
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "sec_0",
+        "bbox": [
+            115,
+            134,
+            881,
+            176
+        ],
+        "text": "Implicit Communication of Actionable Information in\nHuman-AI teams",
+        "reading_order": 2
+    },
+    {
+        "label": "author_information",
+        "bbox": [
+            208,
+            189,
+            792,
+            220
+        ],
+        "text": "Claire Liang, Julia Proft, Erik Andersen, and Ross A. Knepper\n\nDepartment of Computer Science, Cornell University\n\ncy148@cornell.edu, {jproft, eland, rka}@cs.cornell.edu",
+        "reading_order": 3
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            85,
+            233,
+            173,
+            247
+        ],
+        "text": "ABSTRACT",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            250,
+            484,
+            500
+        ],
+        "text": "Humans expect their collaborators to look beyond the ex-\nplicit interpretation of their words. Implicature is a com-\nmon form of implicit communication that arises in natural\nlanguage discourse when an utterance leverages context to\nimply information beyond what the words literally convey.\nWhereas computational methods have been proposed for\ninterpreting and using different forms of implicature, its role\nin human and artificial agent collaboration has not yet been\nexplored in a concrete domain. The results of this paper pro-\nvide insights to how artificial agents should be structured to\nfacilitate natural and efficient communication of actionable\ninformation with humans. We investigated implicature by\nimplementing two strategies for playing Hanabi , a cooper-\native card game that relies heavily on communication of\nactionable implicit information to achieve a shared goal. In\na user study with 904 completed games and 246 completed\nsurveys, human players randomly paired with an implica-\nture AI are 71 % more likely to think their partner is human\nthan players paired with a non-implicature AI. These teams\ndemonstrated game performance similar to other state of the\nart approaches.",
+        "reading_order": 5
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            511,
+            211,
+            527
+        ],
+        "text": "CCS CONCEPTS",
+        "reading_order": 6
+    },
+    {
+        "label": "list",
+        "bbox": [
+            83,
+            530,
+            483,
+            586
+        ],
+        "text": "• Human-centered computing → User studies: Collab-\norative interaction; Empirical studies in HCI; Empirical\nstudies in collaborative and social computing; Web-based in-\nteraction;",
+        "reading_order": 7
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            597,
+            186,
+            612
+        ],
+        "text": "KEYWORDS",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            616,
+            483,
+            643
+        ],
+        "text": "Collaboration, Games/Play, Empirical study that tells us\nabout people",
+        "reading_order": 9
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            516,
+            236,
+            679,
+            249
+        ],
+        "text": "ACM Reference Format:",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            250,
+            915,
+            320
+        ],
+        "text": "Claire Liang, Julia Proft, Erik Andersen, and Ross A. Knepper. 2019.\nImplicit Communication of Actionable Information in Human-AI\nteams. In CHI Conference on Human Factors in Computing Sys-\ntems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK.\nACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/3290605.\n3300325",
+        "reading_order": 11
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            516,
+            332,
+            688,
+            348
+        ],
+        "text": "1  INTRODUCTION",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            352,
+            915,
+            491
+        ],
+        "text": "An important area of human-computer interaction research\ninvolves enabling collaborative behavior for artificial agents\nworking in close partnership with humans. Teamwork re-\nquires communication for planning and coordination, and\nthe content communicated during this form of coordina-\ntion is complex and multifaceted. In particular, a significant\namount of communication in human groups goes through\nnon-explicit channels [73] . These channels can range from\nnon-explicit verbal statements to other means as subtle as\neye gaze or gesture [71] .",
+        "reading_order": 13
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            491,
+            915,
+            602
+        ],
+        "text": "The impact of implicit communication is ubiquitous. It can\nbe found in applications from robot motion [25] to language\ninput [84] . In many domains involving teamwork, implicit\ncommunication is vital for good performance. In order to\nbe effective partners and integrate well with human teams,\n robots and AIs need to understand and generate this kind of\nactionable implicit communication that results from actions\nbeing situated in context [9, 18, 27] .",
+        "reading_order": 14
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            602,
+            915,
+            868
+        ],
+        "text": "One area in which implicit communication is particularly\nimportant is human-AI interaction in video games. While\nthere has been significant progress in creating AIs that can\nplay games such as chess [16] and Go [78] , AIs are still inca-\npable of playing many kinds of games because they cannot\neffectively deal with social elements [64] . For example, con-\nsider the cooperative card game Hanabi . In this game, players\nmust cooperate to play a set of cards in a certain order. Each\nplayer can see all of the other players\\' cards, but they cannot\nsee their own. Although players need to inform other players\nabout what cards they should play, they are prohibited from\ncommunicating anything other than direct facts such as \"this\ncard is red\". Therefore, in this highly restricted communica-\ntion space, players routinely use direct facts to communicate\nactionable intent implicitly , such as saying \"this card is red\"\nto convey the action \"play this card now\" [61] . Capturing\nimplicit information of this form is crucial for designing AIs",
+        "reading_order": 15
+    },
+    {
+        "label": "fnote",
+        "bbox": [
+            83,
+            654,
+            483,
+            723
+        ],
+        "text": "Permission to make digital or hard copies of all or part of this work for\npersonal or classroom use is granted without fee provided that copies\nare not made or distributed for profit or commercial advantage and that\ncopies bear this notice and the full citation on the first page. Copyrights\nfor components of this work owned by others than the author(s) must\nbe honored. Abstracting with credit is permitted. To copy otherwise, or\nrepublish, to post on servers or to redistribute to lists, requires prior specific\npermission and/or a fee. Request permissions from permissions@acm.org.",
+        "reading_order": 16
+    },
+    {
+        "label": "fnote",
+        "bbox": [
+            85,
+            724,
+            314,
+            735
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland UK",
+        "reading_order": 17
+    },
+    {
+        "label": "fnote",
+        "bbox": [
+            83,
+            736,
+            483,
+            750
+        ],
+        "text": "© 2019 Copyright held by the owner/author(s). Publication rights licensed\nto ACM.",
+        "reading_order": 18
+    },
+    {
+        "label": "fnote",
+        "bbox": [
+            85,
+            750,
+            304,
+            762
+        ],
+        "text": "ACM ISBN 978-1-4503-5970-2/19/05...$15.00",
+        "reading_order": 19
+    },
+    {
+        "label": "fnote",
+        "bbox": [
+            85,
+            763,
+            295,
+            775
+        ],
+        "text": "https://doi.org/10.1145/3290605.3300325",
+        "reading_order": 20
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            943,
+            154,
+            958
+        ],
+        "text": "Paper 95",
+        "reading_order": 21
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            864,
+            943,
+            912,
+            958
+        ],
+        "text": "Page 1",
+        "reading_order": 22
+    }
+]

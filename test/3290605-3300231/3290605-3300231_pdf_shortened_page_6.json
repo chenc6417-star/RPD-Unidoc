@@ -1,0 +1,189 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            118,
+            483,
+            273
+        ],
+        "text": "However, P27 and P33 emphasized that collaborations\nwith students or designers are often temporary and expen-\nsive, and that longer-term partnerships would be better. In\nP27\\'s case, the student soon graduated and left only the code.\nChanging and deploying the code required someone to have\nor gain - familiarity with that particular technology stack.\nP27 and his colleague spent a year with the project on a hold\nbecause of this issue. P27 and P33, who are self-described ba-\nsic researchers, even started learning design and engineering\nskills to do applied work on their own.",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            273,
+            483,
+            412
+        ],
+        "text": "Second, as the first point already suggests, participants\nvalued drawing on other domains of knowledge to create\nwork that is \"new\" and \"fresh\" (P30, P26). Researchers think\nthat engaging with diverse scholarship transforms them into\nbetter scholars (P5, P17, P26, P28). Understanding is not a\nbarrier in TBA; while it can be difficult to quickly grasp other\nresearch traditions, there is institutional support through\ncitations and a common understanding of papers as an output\nto incentivize reading diverse work.",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            412,
+            483,
+            630
+        ],
+        "text": "However, HCI scholars mentioned barriers to engaging\nwith other scholarship. Scholars do not feel incentivized\nto participate in communities of interest that are peripheral to\nHCI; P28, P29, and P35 said this stifles research innovation.\nMost of the knowledge within HCI happens within the\nconfines of the CHI community and other ACM conferences.\nHCI researchers also said their work rarely feeds back into\nthe original bodies of theory from which they draw on. “I\ndraw on social psychology theories and behavior change and\ntranslate that into designs. So that’s a translation. Usually,\nyou’re drawing on many different theories to help inform one\ncoherent thing. Not the opposite. I don’t feel like I contribute\nto basic science” (P7). Again, citation deficit was raised as\nevidence for a basic-applied research gap (P3, P14). Partici-\npants did not mention efforts to facilitate engagement with\nother disciplines, or to promote more – and more relevant-\ncitation exchanges.",
+        "reading_order": 4
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            85,
+            650,
+            330,
+            666
+        ],
+        "text": "TAA - Gap within Applied research",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            670,
+            483,
+            809
+        ],
+        "text": "Participants described another disconnect within HCI in\nacademia, one specifically pertaining to how HCI research\nis disseminated and reused in the field. While some participants\nwho frequently participate and publish at CHI boasted that\nit is common to cross-pollinate work with their colleagues\\'\ndiverse research (P1, P7, P19, P27, P32), others mentioned a\ncritical barrier related to citations, perhaps the main currency\nin academia. Within sub-communities, research papers are\noften not cited:",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            124,
+            820,
+            442,
+            892
+        ],
+        "text": "I speak directly to those issues. We use the same\nkeywords, publish in the same venues. It be-\ncomes a personal grudge, which is a problem\nwithin HCI. You may not like my work, but",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            555,
+            118,
+            876,
+            148
+        ],
+        "text": "it should be cited. If you disagree with my ap-\nproach or findings, cite it and explain why. (P2)",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            154,
+            915,
+            350
+        ],
+        "text": "The reasons given by participants for the citation failure\nwere information overload and academic traditions. First,\nparticipants mentioned that it is difficult to keep up with all\npublications within an area of studies or across them (P1, P9,\nP15, P17, P32, P43), which is curious as most of the knowl-\nedge circulation happens within a few, well-known venues.\nRegarding academic traditions, some researchers said that\nauthors can devote ethnographies or systems development\nif they do not engage with — or understand — it, which can\ncause those researchers to not learn from or cite that work\n(P4, P5, P19, P27). As in TBA , participants did not mention ef-\nforts to promote more and more relevant citation exchanges\nacross HCI conferences tracks.",
+        "reading_order": 9
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            361,
+            810,
+            377
+        ],
+        "text": "T20 - Basic Research to Design Practice",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            380,
+            915,
+            520
+        ],
+        "text": "Our participants initially marked $T_{BA}$ as the rarest transla-\ntional path. Basic researchers do not plan studies or write\npapers with the objective of influencing practice; and P19\nmentioned that \"HCI is so important because it sits in between\nbasic research and design practice to do the translation.\" For\nP6, P17, P24, and P33, $T_{BA}$ is where the understanding and\naccess barriers are more salient. However, although rare,\nparticipants acknowledged that basic research can influence\nHCI practice, and provided a few examples.",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            520,
+            915,
+            800
+        ],
+        "text": "One approach is to translate basic science into content\nto be consumed more broadly. For example, pop psychol-\nogy books [6, 29] are often written by practitioners with\nscientific training, sharing scientific findings blended with\npersonal industry experience or partnering with scholars.\nNone of our participants had written or helped to write such\nkind of books; instead they accomplished other types of out-\nreach such as participating in radio talks and contributing\nto news articles about science (P6, P17, P24). Second, trans-\nlating content and disseminating it for a targeted group of\npractitioners, in events (P24, P43), and in discussions with\npractitioners that are actively searching for new knowledge\nto inform product development (P4, P8, P17, P30, P33). Third,\nparticipants agreed that training in basic research affords\nthe abilities to partner with practitioners through research\nmethod skills and deep scientific understanding (P6, P17, P24,\nP28, P33, P40, P43).",
+        "reading_order": 12
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            812,
+            598,
+            828
+        ],
+        "text": "Bubble-up",
+        "reading_order": 13
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            830,
+            915,
+            903
+        ],
+        "text": "Bubble-up, an important aspect of our model (Figure 2), has\nbeen discussed in prior work [32] . Our participants who\nengaged in Bubble-up work described mostly researcher-led\nstrategies to help practice knowledge to inform research.\nThey also voiced the impression that most of their colleagues\ndo not do the same because they are either not personally",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            143,
+            958
+        ],
+        "text": "Paper 1",
+        "reading_order": 15
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            863,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 7",
+        "reading_order": 16
+    }
+]

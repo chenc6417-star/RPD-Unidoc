@@ -1,0 +1,79 @@
+<think>
+</think>
+
+[[[42, 85, 57, 194], 'header', 'CHI 2019 Paper'], [[42, 582, 58, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[118, 83, 356, 484], 'half_para', 'as follows. First, if the AI knows that it can play a card, it
+does so. Second, there is logic to special-case the hinting and
+playing of 1s, since it is desirable to give a maximal entropy-
+reduction hint about 1s even in the implicature condition.
+Third, the AI considers whether it should discard a card. If it
+knows for certain that one of its cards can be safely discarded
+(for example, if a blue 2 has already been played successfully,
+and it knows that it is holding the second blue 2), it will
+discard that card. Otherwise, if it is not certain whether any
+cards in its hand can be safely discarded but there is only one
+hint token left, it tries to discard a card that it suspects can be
+safely discarded. Lastly, if there are no hint tokens available,
+it will discard the card that it knows least about. From there,
+the AI takes a different course of action depending on which
+hint strategy the AI implements.'], [[368, 85, 384, 173], 'sec_1', 'Implicature AI'], [[387, 83, 554, 484], 'para', 'Broadly, the logic of the implicature hint-giving strategy
+proceeds as described in Section 4 . According to that section,
+the actor triggers an implicature interpretation by floating
+one of the Gricean maxims. Since the observer assumes that
+the actor is being cooperative, she infers that there must exist
+some hypothetical actionable information that is unknown
+to her but would be known to the actor. She then searches
+over possible messages containing actionable information
+that the actor could be implicating. With a good choice of
+actionable information, a maxim violation can be interpreted
+as a cooperative behavior instead.'], [[554, 83, 812, 484], 'para', 'The implicature AI\'s connection to the Gricean maxims is
+based on several observations. First, giving hints uses up hint
+tokens, making it a costly move not to be made frivolously.
+Second, circumstances in Hanabi do not always permit im-
+plicature hints: either there may be no card with actionable
+information or there may be no way to isolate the card by
+color or number. The hinter may need to fall back on the
+explicit hint strategy, which may not be worth the hint token.
+Players need to detect if a given hint is intended to be inter-
+preted explicitly or implicitly. A Gricean maxim applies here
+based on a statistical argument. Under an explicit entropy-
+reduction strategy, the best hint on average reveals the color
+or number of about 2.5 cards, and about 99.85 % of hands per-
+mit a hint about two or more cards. An implicature hinting
+strategy should be able to give more immediately useful and
+therefore more efficient hints by communicating actionable
+information. Thus, a hint about a single card flouts the max-
+im of Quantity , so the hint implicates actionable information
+rather than merely conveying identity information.'], [[812, 83, 903, 484], 'para', 'The implicature AI does not perform Gricean reasoning
+directly. Instead, we built a decision tree that encodes the
+application of the Gricean maxims to giving and receiving
+hints (see Figure 2 ). The first two of the three decisions in the
+implicature hint strategy involve Gricean reasoning, and the'], [[118, 515, 148, 914], 'para', 'third decision ensures that unintended implicit meaning is
+not conveyed. Details of the three decisions are given below.'], [[152, 533, 450, 917], 'list', '(1) The first Gricean decision addresses whether the AI
+can give an actionable hint that would cause its team-
+mate to successfully play a card. Qualifying conditions
+are that the teammate must have a playable card that
+she does not know about and that there must be a hint
+that can be given about that card alone. The AI will
+give that hint if these conditions are met.
+(2) The second Gricean decision involves conservation
+hints, which are given to prevent a player discarding a
+valuable card rather than to play a card. In our im-
+plementation, only 5s are considered for conservation
+hints since they are each unique in the deck. If the
+teammate is holding a 5 that she is unaware of, then a
+conservation hint is given.
+(3) Finally, the implicature AI takes care to account for the
+maxims by only providing a hint about a singleton card
+if that card is actionable or unambiguously conservative.
+As a result, the AI will only give a maximal entropy-
+reduction hint if the hint concerns more than one card,
+thereby avoiding hints that could be misinterpreted as
+a suggestion to take an action with a card.'], [[466, 513, 700, 917], 'fig', '![Figure](figures/3290605-3300775_pdf_shortened_page_5_figure_010.png)', 'A cartoon-style character, a grey robot with a speech bubble, sits at a table with a blue card. A large thought bubble above the robot displays the text "The teammate will interpret the hint based on the shared context and what it knows about the teammate\'s knowledge." The robot\'s face shows a surprised expression.'], [[709, 515, 848, 915], 'figure_cap', 'Figure 3: When generating a hint, the AI simulates how the
+teammate will interpret the hint based on the shared context
+and what it knows about the teammate\'s knowledge. For ex-
+ample, the light gray robot, using the implicature AI, might
+think: "My teammate\'s leftmost card is a purple three. My
+teammate knows nothing about it. We both know that the
+purple three is next in sequence. Since my teammate has
+only one three, if I hint that it is a three, he will infer that it
+must be the purple three and will therefore play it."'], [[943, 85, 959, 151], 'foot', 'Paper 95'], [[943, 865, 959, 913], 'foot', 'Page 6']]

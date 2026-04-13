@@ -1,0 +1,178 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            41,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            41,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "header",
+        "bbox": [
+            83,
+            118,
+            483,
+            148
+        ],
+        "text": "2019, Glasgow, Scotland UK. ACM, New York, NY, USA, 14 pages.\nhttps://doi.org/10.1145/3290605.3300237",
+        "reading_order": 2
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            162,
+            243,
+            179
+        ],
+        "text": "1  INTRODUCTION",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            182,
+            484,
+            436
+        ],
+        "text": "Informal learning environments like museums are constantly\ntrying to strike a balance between enjoyment and learning to\nenhance the visitor experience [3] . Emphasizing enjoyment\ncan result in “ edutainment ” or “ Disney-fied ” exhibits that\ncan put the museum\\'s mission to educate at risk, while a\nstrict emphasis on learning can produce rigid, school-like\nexhibits that risk losing visitor engagement. Immersive digi-\ntal technologies permit the creation of exhibits that employ\ninherently engaging forms of interaction like collaboration,\nwhole-body movements, and the manipulation of tangible\nobjects. But such exhibits run the risk of being victims of\ntheir own success, in that the interaction design can be so\nengaging in its own right that this ludic engagement can sup-\nplant or even interfere with visitors\\' ability to learn. Exhibit\ndesigners are constantly trying to find the “ goldlocks zone ”\nbetween supporting ludic engagement that piques the curios-\nity and exploration of visitors, and supporting the reflective\nengagement that helps visitors learn.",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            436,
+            484,
+            800
+        ],
+        "text": "In this paper, we report on our explorations into how\nvisitor reflection might be supported via the use of digital\nfeedback on their use of an immersive exhibit. The exhibit\nwe used as a testbed is a large-scale, multi-user immersive\necology simulation exhibit installed in a science center in a\nmajor city in the United States. The exhibit has won multiple\ndesign awards, and visitors almost universally give it high\nmarks on exit interviews, despite the fact that this exhibit\\'s\ndesign violates virtually all of the known design principles\nfor supporting learning with interactive exhibits [1] : (1) it\nhas multiple interactive elements with equal salience, (2) it\nallows multiple users to interfere with one another, (3) it\nencourages visitors to disrupt the current state of the presented\nphenomena, and (4) it has features that make the critical\nphenomena hard to find when viewing the simulation. So\nit\\'s not too surprising that visitors also often express con-\nfusion about \"what was really going on\" in the simulation.\nTo be fair, the exhibit was intentionally designed to allow\nvisitors to interfere with one another, as one of the learning\ngoals is to convey how a lack of coordination among humans\ncan affect natural systems (see Section 3 ), but even when\nvisitors recognize the need to coordinate, they have a hard\ntime knowing what to do. Changing the exhibit design at\nthis point would be prohibitively expensive, so we had to\nlook to other means for supporting visitors. Fortunately, we\nhave access to logs of the simulation.",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            800,
+            484,
+            860
+        ],
+        "text": "The challenge we gave ourselves was: how can we use\nlogged exhibit use data to help visitors engage with the ex-\nhibit more reflectively? In this paper we report on several de-\nsign iterations that saw us shifting our strategies in terms of",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            914,
+            205
+        ],
+        "text": "form factors, data visualization design, and data visualization\ndeployment. We uncovered several design directions that we\nsuspect will be of interest to interaction designers who wish\nto support \"learning in activity\": per Greeno, the ways in\nwhich learning is both distributed across and situationally\nconstrained by the activity system it occurs within [20] .",
+        "reading_order": 7
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            217,
+            674,
+            233
+        ],
+        "text": "2 RELATED WORK",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            236,
+            914,
+            319
+        ],
+        "text": "Our work set out to investigate if data-driven feedback could\npromote reflection while learners are engaged with an ex-\nhibit. This section thus reviews what is known about design-\ning for engagement, and prior work on providing learners\nwith data-driven feedback on their actions.",
+        "reading_order": 9
+    },
+    {
+        "label": "sec_2",
+        "bbox": [
+            515,
+            331,
+            710,
+            348
+        ],
+        "text": "Designing for Engagement",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            350,
+            914,
+            448
+        ],
+        "text": "Museum exhibits, especially those in science centers, are\ntypically intended to convey defined educational goals, even\nif those goals are meant to be learned via playful explo-\nration [21] . This puts designers in a bit of a bind: for visi-\ntors to have the opportunity to learn, they need to be en-\ngaged [25] , but interaction designs can be made so engaging\nas to actually interfere with learning the intended content [1] .",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            448,
+            914,
+            620
+        ],
+        "text": "Some designers have used the term “ ludic engagement ” [18,\n37] to describe the way an interaction design can playfully\nencompass a user\\'s attention. This is distinct from the state\nof engagement known as “ flow ” , coined by Csikszentmihalyi,\nwhich requires that the “ goals are clear, feedback is unam-\nbiguous, [and] challenges and skills are well-matched ” [13] .\nIn fact, ludic designs may deliberately promote ambiguity\nabout what is happening and what the user can do [18, 37]\nto induce a feeling of enchantment [42] . Ambiguity and\nenchantment might be desirable outcomes for art muse-\nums [37] , but for STEM museums, these feelings are not\noutcomes, but a precursor for learners to get more engaged\nwith a new topic area [16] .",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            620,
+            915,
+            882
+        ],
+        "text": "One might argue, then, that interactive STEM exhibit de-\nsigners should strive to first engage visitors ludically, with\nan alluring \"hook\" [21] , but then transition visitors to more\nof a flow style of engagement, which has been proposed as a\nmodel for how to sustain interest so that learning can take\nplace at an exhibit [13] . How to do this, though, is a complex\nquestion, involving how goals are defined (and by whom),\nhow feedback is structured and supplied, how to attenuate\nchallenges to accommodate visitors with different levels of\nskill, and how all of these elements interrelate. For exam-\nple, structuring an exhibit to be open-ended (e.g., asking a\nvisitor to build a creation of their own, rather than attain a\nfixed outcome) is one way to help visitors match skills-to-\nchallenge, as visitors are free to define their own (hopefully\nattainable) goals [21] . But when visitors are setting their own\ngoals, designing \"unambiguous feedback\" per [13] is more",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            143,
+            959
+        ],
+        "text": "Paper 7",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            863,
+            942,
+            913,
+            959
+        ],
+        "text": "Page 2",
+        "reading_order": 15
+    }
+]

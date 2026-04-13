@@ -1,0 +1,157 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "table_cap",
+        "bbox": [
+            83,
+            116,
+            914,
+            163
+        ],
+        "text": "Table 2: Description of the steps and gaps of the HCI Translational Science model. Definitions drawn from our data, Schneider-\nman [64] , and the NSF – National Science Foundation [1] . Of note, similar to their academic counterparts, industry researchers\ncan engage in both Basic and Applied research. The model does not designate where academic or industry researchers reside\nin the continuum.",
+        "reading_order": 2
+    },
+    {
+        "label": "tab",
+        "bbox": [
+            86,
+            176,
+            911,
+            450
+        ],
+        "text": "<table><tr><td>Steps</td><td>Description</td></tr><tr><td>Basic Research</td><td>Basic research is performed without thought of practical ends, resulting in general knowledge to answer a large number of problems, though it may not give a complete specific answer to any one of them. In HCI, basic research results in a foundational understanding of people, technology, and design. It is achieved by researchers posing formative questions and investigating a topic through the scientific process often in specific scenarios/context. Participants mentioned 3 main types of basic research relative to HCI: A) Research from other fields such as anthropology and psychology that is drawn upon to conduct Applied research; B) Ethnographies conducted within the context of how people use or are impacted by technologies, and C) HCI research probing the technological boundaries, demonstrating new potential interaction capabilities and new experiences made possible by technological advances.</td></tr><tr><td>Applied Research</td><td>Applied research provides complete answers to practical problems. In HCI, applied research results in practical, goal/solution-oriented research. It is achieved by HCI researchers posing questions through the use of an embodiment of knowledge; study of interface efficacy and how people relate to it; observation of tensions between people and technologies, safety, and ethics in realistic scenarios.</td></tr><tr><td>Design Practice</td><td>HCI practitioners using HCI and design knowledge to create something new in the aAaMworld made.AI involves the deep consideration of specific users, related stakeholders, technical and market requirements. Integration of art, science, and engineering to make aesthetically functional interfaces.</td></tr><tr><td>Gaps</td><td>Main translations</td></tr><tr><td>TBA</td><td>Information over-load, skillset</td></tr><tr><td>TBD</td><td>Understanding, access</td></tr><tr><td>TAD</td><td>Applicability</td></tr><tr><td>P",
+        "reading_order": 3,
+        "alt_text": "This is a two-column table titled \"Steps\" and \"Description\". The table outlines different research phases: Basic Research, Applied Research, and Design Practice, each with a brief description. Below these, there are four \"Gaps\" listed: TBA, TBD, TAD, and Pubble-up, each with a corresponding description."
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            471,
+            483,
+            499
+        ],
+        "text": "noticed that the single gap narrative does not distinguish\nBasic research.",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            499,
+            484,
+            679
+        ],
+        "text": "In the HCI T-S model, we used the T-terminology to de-\nscribe different gaps between steps to facilitate more pre-\ncise discussion about specific gaps (following Drolet and\nLorenzi\\'s model [28] ). Drawing from our interviews, the most\nprominent gaps in the HCI Translational Science model seem\nto be between Basic and Applied research ( $T_{BA}$ ), between Ap-\nplied research and Design practice ( $T_{AD}$ ), and between Basic\nresearch and Design practice ( $T_{BD}$ ). We also heard about how\nBubble-up happens (supporting [32] ), and finally, about gaps\nwithin applied research in HCI. Table 2 shows descriptions\nof the abovementioned steps and gaps with their unique\nknowledge exchanges, translations, and barriers.",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            679,
+            484,
+            802
+        ],
+        "text": "As can be seen on Figure 1 and Table 2 , the model does\nnot designate where academic or industry researchers reside\nin the continuum. Basic and Applied research can occur both\nin academic or industry settings, and the same is true for\nthe design of interactive systems (e.g., university startup\nincubators). Additionally, Applied research can be tightly\nlinked to basic research if conducted in an academic setting,\nbut in the industry, it gravitates towards design practice.",
+        "reading_order": 6
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            471,
+            830,
+            487
+        ],
+        "text": "TAD – Applied Research to Design Practice",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            488,
+            914,
+            588
+        ],
+        "text": "The gap between Applied research and Design practice is\nwhat people most often refer to as the research-practice gap.\nParticipants said that basic research findings rarely influence\nthe work of design practitioners, which is one of the reasons\nwhy translating basic into applied research is important.",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            588,
+            914,
+            688
+        ],
+        "text": "Participants described known barriers to the use of re-\nsearch findings by practitioners, such as understanding is-\nsues due to the terminology in research contributions and\ndifficulty in accessing them. However, they highlighted that\napplicability might be the most significant barrier keeping\napplied research from influencing design practice.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            688,
+            914,
+            830
+        ],
+        "text": "P7 and P13, experienced in both academia and industry,\nsaid that expecting HCI practitioners to read papers is unre-\nalistic. A practitioner noted designers will not – and cannot\n– spend the time to read papers: “I don’t have four hours to\nread one paper, I just don’t, I could get a lot done in those four\nhours.\n”\nFrankly, I do have 10 minutes to skim through a Medium\narticle. I’ve never understood why in academia, they don’t set\nup an incentivization structure for academics to almost like\npromote their research to industry” (P35).",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            830,
+            914,
+            902
+        ],
+        "text": "When researchers and designers meet and talk in person,\nthe terminology issue is lessened as they can speak directly\nto each other and ask for clarification (P11, P13, P14, P30,\nP39, P40). However, even at these rare occasions, designers",
+        "reading_order": 11
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            943,
+            142,
+            959
+        ],
+        "text": "Paper 1",
+        "reading_order": 12
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            863,
+            943,
+            913,
+            959
+        ],
+        "text": "Page 5",
+        "reading_order": 13
+    }
+]

@@ -1,0 +1,169 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            582,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "fig",
+        "bbox": [
+            83,
+            114,
+            484,
+            250
+        ],
+        "text": "![Figure](figures/3290605-3300775_pdf_shortened_page_6_figure_002.png)",
+        "reading_order": 2,
+        "alt_text": "A line graph titled \"Desert\" displays two data series, \"Total Biosphere Water\" (blue) and \"Total Plant Drink Water\" (orange), over a 24-hour period. The blue line shows a general increase, peaking around 00:22, while the orange line remains relatively flat and low, mostly below 1."
+    },
+    {
+        "label": "figure_cap",
+        "bbox": [
+            83,
+            260,
+            483,
+            292
+        ],
+        "text": "Figure 5: Screen-shot detail of a Plants vs. Water Summary\ngraph, demonstrating how multiple session segments can be\nshown.",
+        "reading_order": 3
+    },
+    {
+        "label": "fig",
+        "bbox": [
+            83,
+            312,
+            484,
+            450
+        ],
+        "text": "![Figure](figures/3290605-3300775_pdf_shortened_page_6_figure_004.png)",
+        "reading_order": 4,
+        "alt_text": "A dark blue, textured surface is divided into two sections, labeled \"D\" on the left and \"E\" on the right. The left section features a lighter blue, wavy pattern, while the right section displays a darker, more solid blue, wavy pattern."
+    },
+    {
+        "label": "figure_cap",
+        "bbox": [
+            83,
+            460,
+            483,
+            543
+        ],
+        "text": "Figure 6: Screen-shot detail of the Water Bin visualization\nfor the Desert. A snapshot of the water level in each water\nbin is visualized as a column, with time increasing on the x-\naxis, and the color changing from white to dark blue as the\ndepth of water present increases.",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            578,
+            484,
+            745
+        ],
+        "text": "The Water Bin Visualization shown in Figure 6 gives need-\ned details on how water is distributed across a biome: ground-\nwater is not one pool distributed evenly, it is actually divided\ninto 10 \"bins\", so it matters where within the biome water\ngets directed. Plants vs. Water representations might show\n\"plenty\" of water present in a biome, when in actuality the\nwater is present in bins that are not supporting any plants.\nAdditionally, visitors often get confused when they try to\nplant a seed in a \"dry\" bin and it fails to thrive. In Figure 6 ,\nthe Desert initially lacks water, but over time, a deep pool of\ngroundwater forms in one corner of the biome screen.",
+        "reading_order": 6
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            757,
+            240,
+            773
+        ],
+        "text": "4   STUDY DESIGN",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            777,
+            484,
+            903
+        ],
+        "text": "As researchers situated within a museum we are subject to\ninstitutional interests & constraints. Given the prior failure\nof Global View, we needed to gauge whether CtwC had any\npotential for success to gain internal support for future work.\nFor our study, then, we defined \"success\" as whether and if\nparticipants could (1) access and (2) comprehend the data visu-\nalizations, and then use them to inform their (3) reflection, (4)\nplans, and (5) actions . Stake [47] notes that selecting multiple\ncases is often done to maximize what can be learned about\na phenomenon. We were curious to see what was possible\nwhen we removed known obstacles for reflecting-with-data\nby intentionally selecting the participants (adults-only), sce-\nnario (facilitator-led reflection during a pause in activity),",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            118,
+            915,
+            330
+        ],
+        "text": "& visualization style (column graphs). By pairing this \"best-\ncase\" case with a case absent the visualization using a closed\ntwo-case design [50] , we set up a contrast that could give\nus an \"existence proof\", to see the extent to which the genre\nof mobile data-driven reflection technology could impact\ntargeted visitor behaviors, and to form a baseline against\nwhich we can contrast future, more challenging use cases\n(e.g., mixed-age groups; with explainers facilitating, or with\nparents facilitating). Observing the changes needed to adapt\nCtCW to new use cases will further illuminate design issues\nfor this genre of technology. After the sessions concluded,\nwe then engaged the visitors in a focus group discussion,\nwhere we could show them the variations in visualizations,\nand probe them about other ways they might want to use\nConnected Worlds data to reflect.",
+        "reading_order": 9
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            517,
+            371,
+            609,
+            386
+        ],
+        "text": "Participants",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            390,
+            915,
+            609
+        ],
+        "text": "The pilot trial was conducted with 26 adults including 11\nwomen and 15 men (aged 22-57 years, M=33) for one hour\non a Saturday. The adults chosen for the study were a part\nof a volunteer group that were visiting the museum, with\nno prior Connected Worlds experience. All chose to consent\naccording to our IRB procedures. We chose to work with\nthis adult group partly out of convenience, as the logistical\nneed to have 12+ people present and consented in order\nto run just a single session has proven to be surprisingly\ndifficult when also trying to control for visitor age (parents\ntypically attend the museum with children of multiple ages,\nand do not like separating their children), working around\nexisting bookings of the exhibit space, and complying with\nstate Board of Education IRB requirements (we are not able\nto record students on school trips).",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            609,
+            915,
+            884
+        ],
+        "text": "We reasoned that adults new to the exhibit would be best\npositioned to reveal if there was any potential value to vi-\nsualizing Connected Worlds data for visitors: they would\nhave the most need for help understanding the exhibit, they\nwould have the best chance of understanding the data rep-\nresentations, and they would likely be able to be articulate\nabout their plans. These volunteers were in keeping with the\ndiverse ethnic demographics of our visitors (30 % white, 30 %\nHispanic/Latino, 40 % Asian/Indian), and their education level\n(10 % High School, 65 % Bachelor\\'s, 25 % Graduate) matched\nour visitor education demographics as well as general de-\nmographics for science centers [28] . If our study revealed if\nand how these adults could make use of data-driven feed-\nback to reflect, plan, and act, we could then begin to explore\nhow to adapt CtwC to work for more challenging scenarios\n(like school groups; or family groups where parents might di-\nrectly use CtwC, a scenario our Visitor Services department\nwanted us to discuss in the post-activity focus groups).",
+        "reading_order": 12
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            943,
+            143,
+            959
+        ],
+        "text": "Paper 7",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            943,
+            913,
+            959
+        ],
+        "text": "Page 7",
+        "reading_order": 14
+    }
+]

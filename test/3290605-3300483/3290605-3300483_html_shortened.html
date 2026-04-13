@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Comparing Effectiveness and Engagement of Data Comics and Infographics
+  </title>
+  <!-- Copyright (c) 2010-2015 The MathJax Consortium -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width; initial-scale=1.0;" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <link href="https://dl.acm.org/pubs/lib/css/bootstrap.min.css" media="screen, print" rel="stylesheet"/>
+  <link href="https://dl.acm.org/pubs/lib/css/bootstrap-theme.min.css" media="screen, print" rel="stylesheet"/>
+  <link href="https://dl.acm.org/pubs/lib/css/main.css" media="screen, print" rel="stylesheet"/>
+  <script src="https://dl.acm.org/pubs/lib/js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/bibCit.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/divTab.js" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" type="text/javascript">
+  </script>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+ </head>
+ <body id="main">
+  <section class="front-matter">
+   <section>
+    <header class="title-info">
+     <div class="journal-title">
+      <h1>
+       <span class="title">
+        Comparing Effectiveness and Engagement of Data Comics and Infographics
+       </span>
+       <br/>
+       <span class="subTitle">
+       </span>
+      </h1>
+     </div>
+    </header>
+    <div class="authorGroup">
+     <div class="author">
+      <span class="givenName">
+       Zezhong
+      </span>
+      <span class="surName">
+       Wang
+      </span>
+      , University of Edinburgh, UK,
+      wangzezhong2016@gmail.com
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Shunming
+      </span>
+      <span class="surName">
+       Wang
+      </span>
+      , Peking University, China,
+      shunming.wang@pku.edu.cn
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Matteo
+      </span>
+      <span class="surName">
+       Farinella
+      </span>
+      , Columbia University, USA,
+      mf3094@columbia.edu
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Dave
+      </span>
+      <span class="surName">
+       Murray-Rust
+      </span>
+      , University of Edinburgh, UK,
+      d.murray-rust@ed.ac.uk
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Nathalie
+      </span>
+      <span class="surName">
+       Henry Riche
+      </span>
+      , Microsoft Research, USA,
+      nath@microsoft.com
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Benjamin
+      </span>
+      <span class="surName">
+       Bach
+      </span>
+      , Edinburgh University, UK,
+      bbach@inf.ed.ac.uk
+     </div>
+    </div>
+    <br/>
+    <div class="pubInfo">
+     <p>
+      DOI:
+      https://doi.org/10.1145/3290605.3300483
+      <br/>
+      CHI '19:
+      Proceedings of CHI Conference on Human Factors in Computing Systems
+      , Glasgow, Scotland UK, May 2019
+     </p>
+    </div>
+    <div class="abstract">
+     <p>
+      <small>
+       This paper compares the effectiveness of data comics and infographics for data-driven storytelling. While infographics are widely used, comics are increasingly popular for explaining complex and scientific concepts. However, empirical evidence comparing the effectiveness and engagement of infographics, comics and illustrated texts is still lacking. We report on the results of two complementary studies, one in a controlled setting and one in the wild. Our results suggest participants largely prefer data comics in terms of enjoyment, focus, and overall engagement and that comics improve understanding and recall of information in the stories. Our findings help to understand the respective roles of the investigated formats as well as inform the design of more effective data comics and infographics.
+      </small>
+     </p>
+    </div>
+    <div class="CCSconcepts">
+     <ccs2012>
+      <small>
+       <span style="font-weight:bold;">
+        CCS Concepts:
+       </span>
+       •
+       <strong>
+        Human-centered computing → Visualization design and evaluation methods
+       </strong>
+       ;
+      </small>
+     </ccs2012>
+    </div>
+    <div class="classifications">
+     <div class="author">
+      <span style="font-weight:bold;">
+       <small>
+        Keywords:
+       </small>
+      </span>
+      <span class="keyword">
+       <small>
+        Visualization
+       </small>
+       ,
+      </span>
+      <span class="keyword">
+       <small>
+        Comics
+       </small>
+       ,
+      </span>
+      <span class="keyword">
+       <small>
+        Effectiveness
+       </small>
+       ,
+      </span>
+      <span class="keyword">
+       <small>
+        Engagement
+       </small>
+      </span>
+     </div>
+     <br/>
+     <div class="AcmReferenceFormat">
+      <p>
+       <small>
+        <span style="font-weight:bold;">
+         ACM Reference Format:
+        </span>
+        <br/>
+        Zezhong Wang, Shunming Wang, Matteo Farinella, Dave Murray-Rust, Nathalie Henry Riche, and Benjamin Bach. 2019. Comparing Effectiveness and Engagement of Data Comics and Infographics. In
+        <em>
+         CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK.
+        </em>
+        ACM, New York, NY, USA 13 Pages.
+        https://doi.org/10.1145/3290605.3300483
+       </small>
+      </p>
+     </div>
+    </div>
+   </section>
+  </section>
+  <section class="body">
+   <figure id="fig1">
+    <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/913c142d-ad7e-4cfa-9402-b09f9778e3cf/chi2019-253-fig1.jpg"/>
+    <div class="figure-caption">
+     <span class="figure-number">
+      Figure 1:
+     </span>
+     <span class="figure-title">
+      Two stories were presented in the wild in both
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      form, for an empirical observation study conducted with pedestrians, measuring reading time, interactions (i.e. pointing and talking) and opinions as evidence for engagement and enjoyment.
+     </span>
+    </div>
+   </figure>
+   <section id="sec-2">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        1
+       </span>
+       INTRODUCTION
+      </h2>
+     </div>
+    </header>
+    <p>
+     Data-driven storytelling is concerned with effective communication around data through visualization [
+     26
+     ,
+     38
+     ]. It covers a multitude of formats to match the diversity of audiences, messages, contexts, data, and communication media [
+     44
+     ]: magazine style, annotated charts, partitioned posters, flowchart, comic strips, sideshows and videos. Many of these formats can be seen as complementary, in that they support specific media, might be more attractive to specific audiences, have different ways of supporting a specific message, and involve specific skills and tools for creation.
+    </p>
+    <p>
+     In this paper, we are interested in
+     <em>
+      data comics
+     </em>
+     [
+     3
+     ,
+     54
+     ], a relatively new and underexplored format. Data comics draw from the tradition of comics, and combine techniques from infographics, data visualization, journalism, and other formats of visual explanations. They are based on the notion of a sequence of panels [
+     32
+     ] with each panel being a combination of text and picture to illustrate a particular message the author wants to convey. For sequential explanations in general, many studies have shown benefits (e.g., [
+     13
+     ,
+     36
+     ], summarized in [
+     18
+     ]). Generally the use of comics in classroom education and health-related communication appears to improve the reader's comprehension and engagement. While these results may encourage the use of data comics, generalizing existing study results to data comics is challenging due to varying content, visual representations, audiences, and purposes.
+    </p>
+    <p>
+     As a step towards a better understanding, we provide the first structured investigation into the effectiveness of data comics. We compare data comics with the two closest popular alternatives: infographics and texts accompanied by visualizations (illustrated texts). While there are numerous differences between these three formats, we focus our comparison on
+     <em>
+      i)
+     </em>
+     the degree to which an explicit
+     <em>
+      reading order
+     </em>
+     is given, and
+     <em>
+      ii)
+     </em>
+     how close the
+     <em>
+      integration of text and picture
+     </em>
+     is (Section
+     3
+     ). While data comics typically have a highly structured reading order and text closely integrated pictures, illustrated texts and infographics exhibit a varying degree in each of these dimensions. We compared these techniques in a controlled lab study, where 36 participants read the same 3 stories, each presented in a different format (Section
+     4
+     ). We collected empirical and subjective data on understandability, recall, preferences, and engagement. To complement this controlled study, we observed 50 groups of visitors engaging with comics and infographics in an open public space (Section
+     6
+     , Figure
+     1
+     ).
+    </p>
+    <p>
+     Based on a variety of collected data including questionnaires, interviews, think-aloud protocols, explanations, memory-recall, and visitor observation, we found that data comics are seen as more fun, help readers to stay focused, and are overall more engaging. Quantitative results suggest that data comics improve understanding for most cases, and were generally rated high for enjoyment and engagement. In addition, subjective feedback collected gives a richer picture of the respective merits and drawbacks of each format. With these results, we aim to encourage professional communicators to explore the use of data comics for explanation, as well as to better inform the design of future data comics and communicative graphics. Study materials for the Lab study, in the wild study, questions, some interview quotations and examples of reading sequence record, can be found online:
+     http://datacomics.net.
+    </p>
+   </section>
+   <section id="sec-3">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        2
+       </span>
+       BACKGROUND
+      </h2>
+     </div>
+    </header>
+    <p>
+     This section overviews previous studies on illustrated texts, infographics and other related data storytelling media.
+    </p>
+    <section id="sec-4">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Texts and Pictures
+       </h3>
+      </div>
+     </header>
+     <p>
+      Textual descriptions (printed and spoken words) and graphical depictions (photography, drawings, paintings, maps and videos) are the basic forms of representation [
+      43
+      ,
+      51
+      ]. Information is remembered better when it is supported with pictures [
+      28
+      ], even more so when presented through both channels at the same time [
+      6
+      ,
+      13
+      ,
+      36
+      ,
+      48
+      ]. Data visualizations have been found less memorable than natural scenes [
+      11
+      ], yet adding embellishments and unique presentations can improve memorability [
+      7
+      ,
+      11
+      ]. Studies comparing comics and other visual formats [
+      27
+      ] with text-only material [
+      1
+      ] and illustrated texts [
+      31
+      ] confirm these trends, and show increased memorability. For storytelling in general, the use of sequence has been found to increase recall, facilitated by information being split into chunks [
+      10
+      ]. Psychological studies have investigated the effectiveness of the panel layouts [
+      14
+      ,
+      15
+      ] used in traditional comics through eye-tracking [
+      19
+      ]. Other studies have found that in cases where text is unnecessary, closely integrating text and picture can distract the reader and hinder learning [
+      12
+      ,
+      40
+      ], while providing inappropriate graphics can impede understanding [
+      29
+      ].
+     </p>
+    </section>
+    <section id="sec-5">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Comics for Explanation
+       </h3>
+      </div>
+     </header>
+     <p>
+      Comics are becoming increasingly popular for explaining complicated processes [
+      18
+      ,
+      49
+      ]. They offer a set of unique characteristics for communication and optimal understanding, being highly accessible to a large audience, compatible with many different media, do not require a presenter and can be read at one's own pace [
+      53
+      ]. Comics can blend explanation (e.g. schemata, illustrations, data visualization) with narration, characters and dialogue. From a structural point of view, a notion central to comics is the
+      <em>
+       panel
+      </em>
+      , which encapsulates a specific
+      <em>
+       message
+      </em>
+      (or information) represented as an integrated combination of text and picture [
+      32
+      ]. The (mostly) linear order of panels creates a sequence of view-points which together can build a deeper understanding in the readers’ mind [
+      46
+      ].
+     </p>
+     <p>
+      Comics, and related formats such as juxtaposed annotated pictures, have consequently been used for explaining a range of phenomena, blending schematic drawings and illustrations with the narration and characters of traditional comics. Empirical evidence from using comics as classroom material [
+      21
+      ,
+      45
+      ,
+      47
+      ] as well as for health-related communication [
+      16
+      ,
+      17
+      ,
+      33
+      ,
+      50
+      ] suggests that comics may be more engaging and easier to comprehend, especially for non-expert readers.
+     </p>
+     <p>
+      Recently, comics have also been applied to the communication of insights from data, resulting in a format called
+      <em>
+       data comics
+      </em>
+      [
+      3
+      ,
+      4
+      ,
+      54
+      ], where comic strip elements are combined with data visualization techniques. A growing number of data comics have been created for networks [
+      2
+      ,
+      54
+      ], geography [
+      8
+      ,
+      34
+      ], personal data and scientific experiments [
+      4
+      ], summarized online [
+      5
+      ]. While research highlighted design patterns [
+      4
+      ], authoring tool-support [
+      25
+      ], and workshop formats [
+      52
+      ] for creating data comics, several factors prevent a wider distribution and exploration of data comics: the novelty of the format as well as the lack of a better understanding of the effectiveness of the format.
+     </p>
+     <p>
+      In fact, while most of the evidence from previous studies supports a strong motivation for the use of comics, the effects were observed in traditional or scientific comics and may or may not generalize to
+      <em>
+       data
+      </em>
+      comics. In particular, graphics in data comics focus more on abstract data visualization [
+      3
+      ], require visualization knowledge and largely deal with concepts requiring data literacy such as relations, temporal change, and quantities. For example, Qu and Hullman point to the importance of consistency in creating sequences of visualizations [
+      37
+      ], a factor that very likely influences the acceptability and usability of data comics. Given the popularity of infographics and traditional visualisation formats, as well as the body of expertise built up around their creation and use, it would be wrong to simply assume there will be enhanced understanding and engagement with data comics. Our study aims to support the further investigation, application and creation of data comics through empirical results on their effectiveness. As far as we are aware, ours is the first study to address this gap.
+     </p>
+    </section>
+    <section id="sec-6">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Infographics and Illustrated Texts
+       </h3>
+      </div>
+     </header>
+     <p>
+      Two popular alternatives to data comics are
+      <em>
+       infographics
+      </em>
+      and
+      <em>
+       illustrated texts
+      </em>
+      (“magazine style” [
+      44
+      ]). Both are text-picture combinations, differing in how these elements are combined. Infographics strongly emphasize the visual content, often using visual embellishments to stimulate attractiveness and memory [
+      7
+      ]. They tend to be open-ended, inviting the reader to explore the content without any specific direction. For more structured narrative content, e.g., in journalism and scientific papers, texts illustrated with visualizations have become the common option: a text for the main narration, referring to visualizations as needed.
+     </p>
+     <p>
+      All three formats (comics, infographics, and illustrated texts) are expressions of different combinations of reading order and text-picture integration. Current studies are not conclusive and say little about these three formats ability to support understanding and memory as well as how engaging each format appears to potential readers.
+     </p>
+    </section>
+   </section>
+   <section id="sec-7">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        3
+       </span>
+       STUDY DESIGN SPACE
+      </h2>
+     </div>
+    </header>
+    <p>
+     Infographics, illustrated texts, and data comics vary in a range of characteristics and it is not easy to precisely define each format. Thus, to inform our baseline techniques for the study, we focus on two characteristics across these formats:
+    </p>
+    <ul class="list-no-style">
+     <li id="uid5" label="1">
+      <strong>
+       Text-Picture-Integration
+      </strong>
+      is the
+      <em>
+       spatial distance between the verbal message and the visualization
+      </em>
+      [
+      3
+      ]. In their general form, comics exhibit a high integration of text and picture; one piece of text is related exactly to one image, both supporting the same information within the panel. A low integration would mean that text and picture are presented in parallel with occasional implicit or explicit references such as found in scientific and news articles.
+      <br/>
+     </li>
+     <li id="uid6" label="2">
+      <strong>
+       Reading Guidance
+      </strong>
+      is
+      <em>
+       how strong the reader is guided while reading the story
+      </em>
+      [
+      3
+      ,
+      4
+      ]. While exceptions exist [
+      4
+      ], comics provide a high guidance through an explicit order of panels. Low guidance can be found in most infographics where text and pictures are usually not organized in a linear order but can be read in a non-linear way.
+      <br/>
+     </li>
+    </ul>
+    <figure id="fig2">
+     <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/6427f8f5-f291-421a-b88c-bf9e527a9c15/chi2019-253-fig2.jpg"/>
+     <div class="figure-caption">
+      <span class="figure-number">
+       Figure 2:
+      </span>
+      <span class="figure-title">
+       Design space.
+      </span>
+     </div>
+    </figure>
+    <p>
+     We use these dimensions to map out a design space for visual storytelling formats for our study (Figure
+     2
+     ).
+     <em>
+      Comics
+     </em>
+     are located high on both dimensions, with tight text-picture integration and strong reader guidance.
+     <em>
+      Infographics
+     </em>
+     provide a less strong integration of textual and pictorial content because the same picture is usually annotated with several textual information and the specific scope of the text, with respect to the picture. Infographics provide low reading guidance as the content can usually be read in any order.
+     <em>
+      Illustrated Texts
+     </em>
+     are by visualizations, sometimes referenced in the text. This format provides a low integration of text and picture, a higher reading guidance than infographics, but less than comic as it is up to the reader to switch between text and picture.
+    </p>
+    <figure id="fig3">
+     <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/b7de14a2-ed7a-45a6-b396-a629daae8f7a/chi2019-253-fig3.jpg"/>
+     <div class="figure-caption">
+      <span class="figure-number">
+       Figure 3:
+      </span>
+      <span class="figure-title">
+       Samples of
+       <font style="font-variant: small-caps">
+        Alliances
+       </font>
+       in the lab study.
+       <font style="font-variant: small-caps">
+        IllustratedText
+       </font>
+       (left) ;
+       <font style="font-variant: small-caps">
+        Infographic
+       </font>
+       (center);
+       <font style="font-variant: small-caps">
+        Comic
+       </font>
+       (right).
+      </span>
+     </div>
+    </figure>
+    <p>
+    </p>
+    <p>
+     To investigate the effectiveness and engagement of these formats, we opted to perform two complementary studies: one in laboratory settings and one in the wild.
+    </p>
+   </section>
+   <section id="sec-8">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        4
+       </span>
+       LAB STUDY
+      </h2>
+     </div>
+    </header>
+    <p>
+     Our first study aimed to compare comics, infographics, and illustrated text in a controlled lab study. We were generally interested in how each of the dimensions, laid out in the previous section, influences comprehension, recall, and engagement with the formats. More specific questions concerned how people read each format, which configurations they found helpful or confusing, how well did they understand the communicated stories, as well as how much of the content do participants remember after a while. To that end, we invited participants to read a series of stories in each of the formats, answer questions related to content understanding, and report their subjective impressions about each format. Prior to the study, we carried out a pilot with three visualization-experienced participants to ensure the suitability of our material and techniques. The full material (including all questions and results) is found in the supplementary material.
+    </p>
+    <section id="sec-9">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Stories
+       </h3>
+      </div>
+     </header>
+     <p>
+      During the study, participants read three data stories, a number we chose with respect to how long we expected participants to remain attentive and remember story content. Our main criteria in finding appropriate stories for a controlled lab study were (i) comfortably presentable on A3 paper and (ii) requiring little previous knowledge. To extend the variation among the study examples, we selected different types of common visualizations including multivariate data, dynamic networks, and geological distribution. To ensure realistic stories, we selected three existing infographics (see below). For two of the stories, the labels, text, and data were changed to prevent users relying on prior knowledge.
+     </p>
+     <ul class="list-no-style">
+      <li id="list1" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         Energy
+        </strong>
+       </font>
+       <strong>
+        :
+       </strong>
+       <em>
+        Renewables’ Mix in Power Generation in Europe
+       </em>
+       talks about the production and distribution of renewable energy among European countries. The visualization was found in the Energy Atlas  [
+       9
+       ]. Bars on each country showed production in 2011 and 2017 respectively. Texts describe features of the distribution (Figure
+       4
+       -left).
+       <br/>
+      </li>
+      <li id="list2" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         Alliances
+        </strong>
+       </font>
+       <strong>
+        :
+       </strong>
+       <em>
+        Kings’ Alliances and Aggressions in Dullama
+       </em>
+       (Figure
+       3
+       ) was based on a graph comic on dynamic networks
+       <em>
+        European Alliances before World War I
+       </em>
+       [
+       2
+       ]. Dates were changed and the story was transposed into a fictitious medieval kingdom. Country names were replaced by common names and the background map was altered.
+       <br/>
+      </li>
+      <li id="list3" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         Economics
+        </strong>
+       </font>
+       <strong>
+        :
+       </strong>
+       <em>
+        Global Interest Rate And Tax Burden
+       </em>
+       was taken from Hans Rosling's TED talk [
+       41
+       ], featuring a dynamic scatterplot of country indicators over time [
+       20
+       ](Figure
+       4
+       -right). We changed axes labels to
+       <em>
+        Interest rate
+       </em>
+       and
+       <em>
+        tax burden
+       </em>
+       respectively, implying no specific meaning. The narration was guided by the changes to specific countries over time.
+       <br/>
+      </li>
+     </ul>
+     <p>
+      While we tried to keep stories to an equal level of complexity (e.g., number of panels, number of messages per panel, expected commonness of visualizations and difficulty of understanding visualizations), all three participants in the pilot study gave the same ordering in terms of increasing complexity:
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      , and
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      .
+     </p>
+     <figure id="fig4">
+      <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/353b0aa2-1fbb-48ce-9103-117182b41704/chi2019-253-fig4.jpg"/>
+      <div class="figure-caption">
+       <span class="figure-number">
+        Figure 4:
+       </span>
+       <span class="figure-title">
+        Infographics:
+        <font style="font-variant: small-caps">
+         Energy
+        </font>
+        (left) and
+        <font style="font-variant: small-caps">
+         Economics
+        </font>
+        (right).
+       </span>
+      </div>
+     </figure>
+     <p>
+     </p>
+    </section>
+    <section id="sec-10">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Techniques
+       </h3>
+      </div>
+     </header>
+     <p>
+      The techniques in the lab study are the three techniques mentioned in Section 3. As boundaries between the formats are blurred, we settled on the following criteria to create the material for our comparison. Fig.
+      3
+      shows the three formats for
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      . The full material for the other stories is available in supplementary material.
+     </p>
+     <ul class="list-no-style">
+      <li id="list4" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         IllustratedText
+        </strong>
+       </font>
+       : One or two narrative paragraphs were placed right below the title, followed by the legend below or on the right. Text and pictures were visually separated, captions and essential names were added on the pictures referring to the text description.
+       <br/>
+      </li>
+      <li id="list5" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         Infographic
+        </strong>
+       </font>
+       : Besides a 1-2 sentence summarization under the title, texts were shown in text boxes, placed close to the visual information they referred to. Leader lines sometimes connected text to visual elements. No explicit visual hint implied a specific reading sequence.
+       <br/>
+      </li>
+      <li id="list6" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         Comic
+        </strong>
+       </font>
+       : All text and visuals were placed into 16-18 panels in an unambiguous linear left-right, top-down order. Visuals were adapted to support the text, e.g., focusing on specific information, highlighting important and removing unimportant information. We made no other changes to visual encoding or text.
+       <br/>
+      </li>
+     </ul>
+     <p>
+      We ensured everything was readable comfortably from 40cm distance, printed on A3 paper format. Texts were kept the same across formats, except from minor adjustments to the format. For example, we added
+      <em>
+       “see figure x”
+      </em>
+      for
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      and simplified few longer sentences to fit the panels in
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      . We created all materials through several iterations to make sure they were readable and understandable and to lower confusion; at each stage we discussed in depth across the authors and asked for feedback from three external comic artists as well as two external colleagues. The pilot study identified minor problems in understanding and design and we consequently modified several ambiguous expressions in the stories and the questionnaires. To provide a high-resolution and minimize the operational distractions such as panning and zooming, we printed each story on one-side A3 paper instead of showing them on a monitor.
+     </p>
+    </section>
+    <section id="sec-11">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Hypotheses
+       </h3>
+      </div>
+     </header>
+     <p>
+      We developed our hypotheses based on the existing literature, and the two dimensions of our design space.
+     </p>
+     <ul class="list-no-style">
+      <li id="list7" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         H-Accuracy
+        </strong>
+       </font>
+       : We expect participants
+       <em>
+        to have a more correct understanding of the messages after reading
+       </em>
+       <font style="font-variant: small-caps">
+        Comic
+       </font>
+       <em>
+        than
+       </em>
+       <font style="font-variant: small-caps">
+        Infographic
+       </font>
+       <em>
+        , and least with
+       </em>
+       <font style="font-variant: small-caps">
+        IllustratedText
+       </font>
+       . We believe that making a connection between visual and verbal for each message improves understanding. Comics with messages embedded in individual panels will be more effective than combined information in
+       <font style="font-variant: small-caps">
+        Infographic
+       </font>
+       and separated text and pictures.
+       <br/>
+      </li>
+      <li id="list8" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         H-Engaging
+        </strong>
+       </font>
+       : we expect
+       <font style="font-variant: small-caps">
+        Comic
+       </font>
+       <em>
+        and
+       </em>
+       <font style="font-variant: small-caps">
+        Infographic
+       </font>
+       <em>
+        to be rated as more engaging than
+       </em>
+       <font style="font-variant: small-caps">
+        IllustratedText
+       </font>
+       . This means that people are more willing to spend time with
+       <font style="font-variant: small-caps">
+        Comic
+       </font>
+       and
+       <font style="font-variant: small-caps">
+        Infographic
+       </font>
+       and believe they are more fun to read.
+       <br/>
+      </li>
+      <li id="list9" label="•">
+       <font style="font-variant: small-caps">
+        <strong>
+         H-Memorability
+        </strong>
+       </font>
+       : We expect
+       <font style="font-variant: small-caps">
+        Comic
+       </font>
+       to increase retention of information compared to the other formats due to the separation of information into clear chunks, supported through tightly integrated texts-and-pictures, presented in a clear reading order  [
+       31
+       ].
+       <br/>
+      </li>
+     </ul>
+    </section>
+    <section id="sec-12">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Data Collection
+       </h3>
+      </div>
+     </header>
+     <p>
+      Seven types of data were collected during the lab study: (1) error rate from multiple-choice questions to measure understanding of each story and format (including four answer possibilities and “I'm not sure”); (2) story recall scores, coded by the experimenter and explained in Section 5; (3) reading paths drawn onto the material by the participants; (4) subjective scores, and (5) qualitative feedback from participants on all three formats for the same story (shown at the end of the study) gathered through semi-structured interviews. Questions included
+      <em>
+       “Compared to the other formats of same story, how would you judge these formats?”
+      </em>
+      and
+      <em>
+       “Do you have any preference among these formats and why?”
+      </em>
+      . Subjective ratings were collected through a questionnaire after participants saw the three formats of all stories. While engagement is hard to define and measure [
+      30
+      ], we assessed aesthetic feeling, willingness of spending time to explore, enjoyment, attention, engagement and preference using 7-point Likert scales, inspired by existing frameworks [
+      35
+      ,
+      42
+      ].
+     </p>
+    </section>
+    <section id="sec-13">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Participants
+       </h3>
+      </div>
+     </header>
+     <p>
+      We recruited 38 participants through mailing lists of a Western-european university. One subject was eventually denied participation due to missing English language proficiency and one subjects results were invalidated as she did not complete phase 1. Of the remaining 36 participants, 19 were male, ages ranged between 18 and 35 years, 1 A-level, 9 undergraduates and 20 graduates, 4 computer science doctoral students, 1 research associate in computer science and 1 lecturer of Linguistics and English Language. Participants’ backgrounds included Design, Art, Computer Science, Engineering, Linguistics, Philosophy and Psychology. We had 16 Europeans, 15 Asians, 3 North American and 2 African; 34 had lived in an English speaking country for more than 1 year, the other 2 had scores in English language test equal to B2 level of Common European Framework of Reference for Languages.
+     </p>
+     <p>
+      To assess participants’ level of reading ability, comic and visualization literacy, self rated questions were filled in before the study. For text reading ability, 13 read illustrated texts daily and 13 indicated weekly; 11 read scientific text-only articles daily and 12 read them weekly. For infographics, 20 read them weekly and 7 daily. Familiarity with data visualizations was rated differently (
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/5a37e4ad-1166-4fc6-b79a-838d32dbdc64/chi2019-253-img1.svg"/>
+      </span>
+      .). For comic literacy, 8 read comics daily, 7 weekly, 4 monthly, 9 few times year, 3 yearly and 5 of them have never read comics with 20 of them having first read comics aged between 6 and 12 years old. 12 participants had experience in drawing comics, but mostly only a few times and for less than one year. Participants reported on their preferred learning method: verbal (spoken or written) media (6), visual stimuli (8), combined visual and verbal media (17). Repetition was a popular strategy mentioned by 8 participants. Participants were paid a compensation of
+      <font style="normal">
+       $
+      </font>
+      7.
+     </p>
+    </section>
+    <section id="sec-14">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Procedure
+       </h3>
+      </div>
+     </header>
+     <p>
+      Our study employed a mixed design. For both stories and techniques we employed an within-design, i.e., every participant read all stories and all formats. However, as we could not provide the same story twice to the same participant, we employed an in-between design for story-format conditions, i.e., every participant read each story using a different format. We used a Latin-square randomization to assign stories to formats. With 36 participants each seeing 3 presentations, each of the 9 story-format combinations (3 formats × 3 stories) was seen by 12 participants. The experiment was divided into three stages, taking place on different days. The first part (lasting between 45 and 55min) included the following steps: (1) Upon arrival, participants filled out a background questionnaire asking for, e.g., familiarity with comics and visualization. Participants sat in a quiet room with the instructor. Material was printed and placed on the table, one at a time. (2) Participants read each story in a fixed order (
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      ), each time with a different format. Participants were told to read comfortably without rush but to try to not spend more than 5min reading, and that they were asked questions about their understanding after reading. (3) Immediately after reading a story, participants were asked to re-tell the story with their own words. Reading and retelling was recorded through a video camera, not including the participant's face. Then (4), they were given a questionnaire with 6 multiple choice questions to assess participants’ understanding (see next subsection). Eventually, (5) participants were asked to explain their reading strategy for each story in the format they had viewed, by drawing arrows onto the printed material. Participants came back the next day for their 2
+      <em>
+       nd
+      </em>
+      session, lasting between 20 and 30min each. For each story, participants were asked to (6) retell the story with their own words to assess recall. Then, (7) they were presented with all the materials (
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      ) for each story—including the material they had not seen during their reading session—and were asked for their preferences through another questionnaire and then (8) were asked additional feedback on all three techniques in a brief semi-structured interview. Eventually, (9) 1 month after these sessions, we emailed participants the multiple-choice questionnaire from (4) to further help assessing recall. Participation was rewarded with the possibility of winning a
+      <font style="normal">
+       $
+      </font>
+      25 Amazon voucher.
+     </p>
+    </section>
+    <section id="sec-15">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Understanding Questions
+       </h3>
+      </div>
+     </header>
+     <p>
+      In step (4) participants answered 6 questions, measuring their understanding of the story content. Each question provided 4 answer options plus an
+      <em>
+       “I'm not sure”
+      </em>
+      option. Questions were naturally different for each story, yet for each story we created one question covering the following information types:
+      <strong>
+       distribution
+      </strong>
+      (e.g.,
+      <em>
+       “What is the geographical distribution characteristics of renewables production in EU?”
+      </em>
+      ),
+      <strong>
+       time
+      </strong>
+      (e.g.,
+      <em>
+       “During what time did African countries suffer from crisis”
+      </em>
+      ),
+      <strong>
+       single fact
+      </strong>
+      (e.g.,
+      <em>
+       “The tax burden reduced in which country due to family planning according to this story?”
+      </em>
+      <strong>
+       outliers
+      </strong>
+      (e.g.,
+      <em>
+       “Which King was isolated when the Three King Alliance was created in 772?”
+      </em>
+      ),
+      <strong>
+       comparison
+      </strong>
+      (e.g.,
+      <em>
+       “Compared to 1990 to 2000, African countries tend to have (?) interest rate and (?) tax burden from 2000 to 2015.” higher / lower
+      </em>
+      ), and
+      <strong>
+       visual encoding
+      </strong>
+      (e.g.,
+      <em>
+       “Which colour is used to present countries in Latin America”
+      </em>
+      ).
+     </p>
+    </section>
+   </section>
+   <section id="sec-16">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        5
+       </span>
+       LAB STUDY RESULTS
+      </h2>
+     </div>
+    </header>
+    <p>
+     All 36 participants completed the study, with each session lasting just below 1h. For each of the 9 story-format combinations, we obtained true or false answers to 6 questions from 12 participants. We collected all video materials and annotated print outs from each participants, available in the supplementary material.
+    </p>
+    <section id="sec-17">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Understanding
+       </h3>
+      </div>
+     </header>
+     <p>
+      Understanding was measured as accuracy for the questions from the questionnaire in step (4). Error per question was binary, i.e., participants selected the right or a wrong answer. For each participant we calculated the mean accuracy score across all the answers per story. Using
+      <font style="font-variant: small-caps">
+       D'Agostino's K-squared test
+      </font>
+      , we found accuracy scores for two stories to be
+      <em>
+       not
+      </em>
+      normally distributed. Below and in Figure 5 we report on mean values, confidence intervals (CIs), and effect sizes. Using Bonferroni correction for multiple comparisons, we report on 98% CIs for our three comparisions (1 − 0.05/3). P-values are indicated for pair-wise comparisons yielding significance at the respective 0.02 level or close, using a
+      <font style="font-variant: small-caps">
+       Mann-Whitney-U
+      </font>
+      test.
+     </p>
+     <p>
+      <strong>
+       Across Stories
+      </strong>
+      we found
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      (mean=.70) to be more accurate than
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      (p &lt; .006). No difference was found between
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      with the same mean accuracy of .57. Effect sizes between techniques are reported in Figure 5-bottom. Our effect sizes represent the overall improvement (or decrease) in understanding averaged for each participant, i.e. for each participant we calculated differences between formats and averaged these values. Differences between
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      and the other techniques amounts to .13 points in understanding, implying that comics are on average 23% more accurate than both
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      .
+     </p>
+     <p>
+      For
+      <font style="font-variant: small-caps">
+       <strong>
+        Energy
+       </strong>
+      </font>
+      we found
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      (mean=.79) more accurate then
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (mean=.68). However, leading to the same mean accuracy than
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      ,
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      was not found different from the other two techniques and showed much wider CIs. For one question, we could find a real difference between techniques; the question asked for spatial distribution of countries. As this information was highlighted explicitly in one panel in the comic, we believe it was easier for participants to understand and remember.
+     </p>
+     <p>
+      For
+      <font style="font-variant: small-caps">
+       <strong>
+        Alliances
+       </strong>
+      </font>
+      we could not find any clear differences, while
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      (mean=.52) was still the most accurate on average but with largely overlapping CIs.
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      had similar mean values (.42 and .43). Again, we found a difference for one question asking about the meaning of a specific visual encoding in the visualization (
+      <em>
+       “What does the black dashed relation represent?”
+      </em>
+      );
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      was significantly worse (mean=.25) than the other two formats (
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      =.66,
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      =.83). We believe participants overlooked this information in the comic as they might have paid less attention to this particular—not explicitly highlighted—detail. We attribute the good performance of
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      to the fact that a respective text was placed close to these lines to explain their meaning.
+     </p>
+     <p>
+      For
+      <font style="font-variant: small-caps">
+       <strong>
+        Economics
+       </strong>
+      </font>
+      we found similar results to
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      ;
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      showed a slightly higher accuracy (mean=.79) while
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (mean=.61)(p &lt; .036) and
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      (mean = .62) (p &lt; .04) were similar. As with the other stories, we found a difference for a question on time (
+      <em>
+       “What is the characteristic of the countries in 1962?”
+      </em>
+      ). Here,
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      was more accurate (mean=.91)(p &lt; .015) then any of the other formats (
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      =.58,
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      =.33). We conjecture that the bad performance of
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      can be related, again, to the missing temporal visualization, while
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      showed that information in a single panel. While the explanation should indicate a similar bad performance for
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      , the average here was slightly higher. However, this particular infographic has been described as very cluttered by participants, which may explain some of the poor performance.
+     </p>
+     <figure id="fig6">
+      <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/d6765374-e44d-4388-9b2a-18fb3a3687d8/chi2019-253-fig6.jpg"/>
+      <div class="figure-caption">
+       <span class="figure-number">
+        Figure 6:
+       </span>
+       <span class="figure-title">
+        Mean results for understanding after one 1-4 weeks. Upper numbers indicate original values (as shown in Fig 5), lower numbers indicate correct results after 1-4 weeks with change in percent (
+        <font style="font-variant: small-caps">
+         Comic
+        </font>
+        =blue,
+        <font style="font-variant: small-caps">
+         IllustratedText
+        </font>
+        =yellow,
+        <font style="font-variant: small-caps">
+         Infographic
+        </font>
+        =red).
+       </span>
+      </div>
+     </figure>
+     <p>
+     </p>
+    </section>
+    <section id="sec-18">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Recall
+       </h3>
+      </div>
+     </header>
+     <p>
+      After reading the stories on the first day, participants were required to retell the story in their own words. We took notes of each explicitly presented fact they mentioned (11 for
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      , 14 for
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      , and 17 for
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      ). Self discovered messages, i.e., those not being mentioned in the texts, were not considered. On the second day, participants were asked to again retell the story with their own words. Following the methodology by Bateman et al. [
+      7
+      ], we coded the difference between both versions as follows: 3 points for every correct fact (e.g., correct values), 2 points for remembering general trends (e.g., increase, type of temporal change), 1 point for vaguely remembering (e.g., mentioning type of information) and 0 points for not or wrongly recalling. Two of the authors independently coded all of the recordings, then discussed until reaching consensus. We found
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      to yield slightly more precise results on average (35%), compared to
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      (32%) and
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (30%).
+     </p>
+     <p>
+      After one to four weeks, we sent the questionnaire from step (4) again to all participants (Figure
+      6
+      ): Overall,
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      caused participants to remember most on average (55%, down from 75%), followed by
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (43%, down from 57%) and
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      (41%, also down from 57%). Participants lost around 1/3 of their performance. However, values varied across stories, with each format performing best for one story (see Figure). In two cases, mean understanding rates did remain the same (
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      for
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      for
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      ).
+     </p>
+     <figure id="fig7">
+      <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/a2214cbd-9f9c-4fa1-a69f-416b62731037/chi2019-253-fig7.jpg"/>
+      <div class="figure-caption">
+       <span class="figure-number">
+        Figure 7:
+       </span>
+       <span class="figure-title">
+        Examples of users’ traces while reading the same story (
+        <font style="font-variant: small-caps">
+         Alliances
+        </font>
+        ) in different formats. Percentages in brackets indicate fraction of users showing comparable traces. Left:
+        <font style="font-variant: small-caps">
+         IllustratedText
+        </font>
+        (67%), center:
+        <font style="font-variant: small-caps">
+         Infographic
+        </font>
+        (75%), right:
+        <font style="font-variant: small-caps">
+         Comic
+        </font>
+        (100%).
+       </span>
+      </div>
+     </figure>
+     <p>
+     </p>
+    </section>
+    <section id="sec-19">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Reading Strategy
+       </h3>
+      </div>
+     </header>
+     <p>
+      By asking for the reading sequence of the story, we simulated an ”eye tracking” phase (step (9)) in our study. In the pilot study, we found participants walking us through their reading order more accurate and informative for our purpose than actual eye-tracking. Figure
+      7
+      shows example traces, drawn by participants, while explaining their reading order. With
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      , all participants followed the panel order, reading both text and looking at figures in each panel except 1 participant who read the
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      of
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      in a right-left order from the second row. 16 participants (44.4%) jumped back to previous panels to make comparisons. For
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      , most participants
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/27f2f47a-7e55-4395-a931-a72334ff95f7/chi2019-253-img2.svg"/>
+      </span>
+      started with title and abstract, the others started with figures. We found no specific sequence in which participants read text-boxes in
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      , i.e. no prevalence for left-right or top-down order. We found reading sequence was guided by the layout of text boxes, e.g., clock-wise or randomly in
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      . Generally, participants were guided by text boxes and only then looked at the figure to obtain more information. All participants checked the legend in
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Economics
+      </font>
+      . In
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      , most participants
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/5569f4aa-bc81-4579-bcd3-2deba8334bb8/chi2019-253-img3.svg"/>
+      </span>
+      started with the text, few
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/85470bf8-912b-49ac-a9e4-8bf937c9dbb5/chi2019-253-img4.svg"/>
+      </span>
+      started with pictures. 28% checked figures in the end, while a majority
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/abafb622-5df2-45d0-a6b3-430b257b2e48/chi2019-253-img5.svg"/>
+      </span>
+      checked the figures during reading (2-3 times), especially when they found specific values in the text.
+     </p>
+    </section>
+    <section id="sec-20">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Subjective Feedback
+       </h3>
+      </div>
+     </header>
+     <figure id="fig8">
+      <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/1dc99846-9144-44d9-9a06-f8037b83b3c9/chi2019-253-fig8.jpg"/>
+      <div class="figure-caption">
+       <span class="figure-number">
+        Figure 8:
+       </span>
+       <span class="figure-title">
+        Subjective measurement from the lab study in step (2) of the 2nd session including means and 98% CIs. Distributions of the answers are shown on the left.
+       </span>
+      </div>
+     </figure>
+     <p>
+      Subjective results from the preference questionnaire (step 7) are summarized in Figure
+      8
+      , following the same conventions and analysis as Figure
+      5
+      . We found
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      to be highest rated (averages) on three measures (
+      <em>
+       fun
+      </em>
+      ,
+      <em>
+       engaging
+      </em>
+      , and allowing people to stay
+      <em>
+       focused
+      </em>
+      ) while scoring slightly less then
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      for
+      <em>
+       aesthetics
+      </em>
+      and
+      <em>
+       exploration
+      </em>
+      . While, differences between
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      and
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      are minor and not significant,
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      is generally ranked higher as shown in the respective distribution (small bar charts left side of Figure 8).
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      was rated generally least across all measures with huge differences to the two other techniques for the measures
+      <em>
+       engaging
+      </em>
+      and
+      <em>
+       fun
+      </em>
+      .
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      was rated as
+      <em>
+       aesthetically pleasing
+      </em>
+      , with opinions being more equally distributed for
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      . Asked which format participants would chose next time, we found similar results:
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      rated best by 47% (
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/41d5757b-bc5e-47c2-85f2-7fdf3e15594e/chi2019-253-img6.svg"/>
+      </span>
+      )),
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      rated least by 64% (
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/f0bbb819-9f8e-4282-aaba-fa351b8ef553/chi2019-253-img7.svg"/>
+      </span>
+      )) and
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      in the middle (
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/56a1791a-1fde-4359-b1c5-64e615169969/chi2019-253-img8.svg"/>
+      </span>
+      )). In the following, we report on participants’ feedback during the interview in step (8). Frequencies of issues raised are reported by the numbers in brackets. Full material and an overview table with the reported merits and drawbacks of each technique can be found in the supplementary material.
+     </p>
+     <p>
+      <font style="font-variant: small-caps">
+       <strong>
+        Comic
+       </strong>
+      </font>
+      —Comics were appreciated for their clear reading order
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/0f5a6dd5-027c-49b7-9e05-1cd59aa1f029/chi2019-253-img9.svg"/>
+      </span>
+      and their ability to break down the complexity into pieces
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/74885aea-30c1-408a-a406-7b4209d388ea/chi2019-253-img10.svg"/>
+      </span>
+      . Reading order was found use support memory
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/f8eb11e2-2ffb-4266-9de5-d82611975bea/chi2019-253-img11.svg"/>
+      </span>
+      (
+      <em>
+       “[...] because the important information is repeated all the time, which helps [...] memorize.”
+      </em>
+      ,
+      <em>
+       “Comic makes a story in your head”
+      </em>
+      ) and were found to facilitate understanding:
+      <em>
+       “just follow the sequence. It is logic and well organized”
+      </em>
+      , especially for temporal content
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/84b6c540-6f01-4bdf-8e75-80b0d9cb8a28/chi2019-253-img12.svg"/>
+      </span>
+      (
+      <em>
+       “just because [
+      </em>
+      <font style="font-variant: small-caps">
+       Alliances
+      </font>
+      <em>
+       ] is so complicated and chronological”
+      </em>
+      ). Breaking down complexity into individual pieces has been found useful for the same reasons (
+      <em>
+       “You have the option to see the information by steps, you can easily have your memory when it is happened (sic). It is like the same way we remember history when I was a child.”“is quite easier to memorize”
+      </em>
+      . Additionally, participants liked that comics could group higher-level messages into rows and potentially pages. Participants also commented on the ability to quickly overview information and find/recall the information they wanted (
+      <em>
+       “If I don't have time, I'll go for data comic”
+      </em>
+      ). In fact, during recall 4 participants used their hands to air-point to where the respective panel was located.
+     </p>
+     <p>
+      On the downside of
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      , visual repetitions were distracting for 2 participants, indicating too much information to process:
+      <em>
+       “every time I see new pictures (panels) I expect something new”
+      </em>
+      ,
+      <em>
+       “I need to compare to define what is new”
+      </em>
+      . There is a tension here, as building a new message is on the basis of previous messages uses repeated visual elements, causing redundancy. For
+      <font style="font-variant: small-caps">
+       Energy
+      </font>
+      , one participant mentioned
+      <em>
+       “I think it is unnecessary to have that kind of level to break down, because it is simple enough to understand the image by just looking at the whole picture and explore it.”
+      </em>
+      . This story indeed featured a high degree of visual repetition (the map of Europe) as it was hard to break down the content into simpler images. Again, other people explicitly preferred a more open format (
+      <em>
+       “I can only read the comic step by step, it is hard to find the part that I am interested in”
+      </em>
+      ) and found that an overview picture was missing. The same participant was found to jump between panels. Looking at the comic the first time, one participant noted
+      <em>
+       “This one can be confusing, considering there are all types of graph. It seems a little much at first glance”
+      </em>
+      .
+     </p>
+     <p>
+      <font style="font-variant: small-caps">
+       <strong>
+        Infographic
+       </strong>
+      </font>
+      —Infographics were rated highly for exploration
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/1b278753-7119-4ed6-8442-543b43a258ea/chi2019-253-img13.svg"/>
+      </span>
+      by providing overview and detail at the same time which helped making comparisons
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/be5cbedd-fd4e-46f1-b26c-cee99ba8756b/chi2019-253-img14.svg"/>
+      </span>
+      . Some participants
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/eea9575c-3282-4885-8052-e0182ed676c6/chi2019-253-img15.svg"/>
+      </span>
+      liked the strong connection between text and picture.
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/9c2e1f67-9d1d-4bd3-9890-34ec700ccb11/chi2019-253-img16.svg"/>
+      </span>
+      participants found
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      easier for spatial relations and
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/50af36f7-9523-4390-b581-7d6ecc71e3b7/chi2019-253-img17.svg"/>
+      </span>
+      mentioned understanding time was harder.
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/b9cdf4a1-d68b-4687-a7f8-536dfaea568e/chi2019-253-img18.svg"/>
+      </span>
+      found a clear reading order lacking.
+     </p>
+     <p>
+      <font style="font-variant: small-caps">
+       <strong>
+        IllustratedText
+       </strong>
+      </font>
+      —Some participants liked the cleanness and familiarity of
+      <font style="font-variant: small-caps">
+       IllustratedText
+      </font>
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/85e978eb-1a54-40b7-9711-726aa5549f36/chi2019-253-img19.svg"/>
+      </span>
+      and reported that they would use the text to understand the story, and could look up information on demand. However, the majority found jumping between text and picture negative
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/1f78ef2e-6c19-454c-b4aa-e97df734d0b2/chi2019-253-img20.svg"/>
+      </span>
+      as they had to create their own connections
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/06f66bad-b74f-44aa-8c60-cdf4d3406dce/chi2019-253-img21.svg"/>
+      </span>
+      , complaining about the high density of the text
+      <span class="inline-equation">
+       <img alt="" class="img-responsive" longdesc="" src="https://dl.acm.org/cms/attachment/fa042b3a-601c-4af4-9b3a-a2ad6e958c4a/chi2019-253-img22.svg"/>
+      </span>
+      (
+      <em>
+       “Along with the high density of text, and hard time of bridging verbal and visual”
+      </em>
+      ).
+     </p>
+    </section>
+    <section id="sec-21">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Summary
+       </h3>
+      </div>
+     </header>
+     <p>
+      Our lab study yielded consistent and conclusive results: comics helped understanding while there was no difference between the other two formats, thus partially confirming
+      <font style="font-variant: small-caps">
+       H-Accuracy
+      </font>
+      . Differences across questions highlighted specific aspects of each format. Eventually, all participants found comics more engaging, thus mostly confirming
+      <font style="font-variant: small-caps">
+       H-Engaging
+      </font>
+      . Subjective feedback revealed more precise information about the respective advantages and drawbacks of each format. We could not find evidence to fully support
+      <font style="font-variant: small-caps">
+       H-Memorability
+      </font>
+      .
+     </p>
+     <p>
+      While this evidence was collected in a controlled lab setting, the question remains of how comics and infographics compare in more ecologically valid settings, and how well each format is able to keep readers engaged who are not paid and asked to answer questions after reading. For example, our comics did not involve characters or elaborate artistic styles, nor could they feature actual topics and information. To complement our initial results, we thus designed a in-the-wild study.
+     </p>
+    </section>
+   </section>
+   <section id="sec-22">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        6
+       </span>
+       IN-THE-WILD STUDY
+      </h2>
+     </div>
+    </header>
+    <p>
+     The in-the-wild study was carried out during an international art festival where visitors varied in age, interest, and cultural origin, enabling us to study a more diverse set of participants compared to using standard mailing list recruiting. The study focused on the attraction of each format, how people engaged with each format and for how long, and their preferences for consuming information. To that end, we observed and coded people's behavior as well as conducting semi-structured interviews with some of the readers.
+    </p>
+    <p>
+     <strong>
+      Techniques
+     </strong>
+     —We only used
+     <font style="font-variant: small-caps">
+      Infographic
+     </font>
+     and
+     <font style="font-variant: small-caps">
+      Comic
+     </font>
+     in this study. Two comics were created from existing infographics, using the same process as the lab study. Presented topics were chosen for public interest, but unrelated to any of the surrounding exhibitions to mitigate potential confounds on the respective audience attracted by our visualization. To increase attractiveness of the material for the public space, we were more free with visual presentation. Comics were drawn by hand by an experienced comic artist and co-author of this paper. The basic visual encodings in the infographic such as colors, height and size for data variations were preserved, while also using metaphors and sketch styles from data comics (Figure
+     1
+     ). We used material on two subjects:
+    </p>
+    <ul class="list-no-style">
+     <li id="list10" label="•">
+      <strong>
+       Hot spots—The Carbon Atlas (
+      </strong>
+      <font style="font-variant: small-caps">
+       <strong>
+        CarbonFootprint
+       </strong>
+      </font>
+      <strong>
+       )
+      </strong>
+      [
+      39
+      ] shows global carbon dioxide emission by country, using bubbles of different size to indicate the amount of produced carbon dioxide, colored by region.
+      <br/>
+     </li>
+     <li id="list11" label="•">
+      <strong>
+       The Global Water Print (
+      </strong>
+      <font style="font-variant: small-caps">
+       <strong>
+        WaterUsage
+       </strong>
+      </font>
+      <strong>
+       )
+      </strong>
+      [
+      24
+      ] indicates the volume of water needed for production and human services, showing of amount of freshwater available, the highest consumption, renewable water sources and the highest usage in food production.
+      <br/>
+     </li>
+    </ul>
+    <p>
+     <strong>
+      Study Design
+     </strong>
+     —An A0 sized copy of an
+     <font style="font-variant: small-caps">
+      Infographic
+     </font>
+     about
+     <font style="font-variant: small-caps">
+      CarbonFootprint
+     </font>
+     and a
+     <font style="font-variant: small-caps">
+      Comic
+     </font>
+     about
+     <font style="font-variant: small-caps">
+      WaterUsage
+     </font>
+     were placed on a pair of easels in the street, with take-away copies of the comics and
+     <font style="font-variant: small-caps">
+      Infographic
+     </font>
+     attached (Figure
+     1
+     ). After 1h, we exchanged the respective material to show an
+     <font style="font-variant: small-caps">
+      Infographic
+     </font>
+     about
+     <font style="font-variant: small-caps">
+      WaterUsage
+     </font>
+     and a
+     <font style="font-variant: small-caps">
+      Comic
+     </font>
+     about
+     <font style="font-variant: small-caps">
+      CarbonFootprint
+     </font>
+     . The study was conducted twice on the same Saturday, once between 11:30am-1:30pm and again from 2pm-4pm. Two study instructors were seated approx. 10 meters distant from the easels, tracking audience behavior. Visitors who read both formats were approached for an interview after they turned away from the graphics.
+    </p>
+    <p>
+     <strong>
+      Data Collection
+     </strong>
+     —The time visitors spent at each format was measured, with talking and pointing interactions counted manually. When we interviewed visitors, we asked four questions: why did they stop? Did they finish reading? Was there anything they did not understand? and Which format they found easiest to understand?
+    </p>
+    <section id="sec-23">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Results
+       </h3>
+      </div>
+     </header>
+     <p>
+      During the 4 hours a total of 43 groups stopped for more than 10 seconds to view the graphics. Most
+      <strong>
+       visitors
+      </strong>
+      came in groups of 2 to 4 with a wide age range from adolescent to elderly. From this, we interviewed 8 groups including 14 people of which 11 were adults, 2 elders and 1 adolescent.
+     </p>
+     <p>
+      We did not not find any differences in time spent on either format or story.
+      <font style="font-variant: small-caps">
+       CarbonFootprint
+      </font>
+      comic was read 13 times while Infographic was read 15 times; For
+      <font style="font-variant: small-caps">
+       WaterUsage
+      </font>
+      , both the comic and infographic format was read 14 times. Viewers spend between 8 and 132 seconds reading each story, with averages ranging between 37 and 48 seconds across formats. We did not find significant difference in reading time.
+     </p>
+     <p>
+      Counting visitors
+      <strong>
+       interactions
+      </strong>
+      with the material through pointing and discussing each format, we found slightly more engagement with
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (8 groups for
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      vs. 12 groups for
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      ). This could be seen as an indicator that the more exploratory nature of infographics prompts people wanting to share and discuss their observations, while comics focus the reader on understanding the message.
+     </p>
+     <p>
+      Asked about what attracted them to our graphics in the first place, 4 groups replied
+      <em>
+       topic
+      </em>
+      , 1 replied
+      <em>
+       color
+      </em>
+      , 2 replied
+      <em>
+       illustration
+      </em>
+      in the comic, 1 replied
+      <em>
+       data
+      </em>
+      . Asked about which format provided
+      <strong>
+       better understanding
+      </strong>
+      of the content, 6 groups preferred
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      , 1 group preferred
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      and 1 group didn't find any difference. Reasons for preferring comics the way it visualized, the grouped messages, the metaphor, and the easy-to-follow layout. Consequently 12 people reported that
+      <font style="font-variant: small-caps">
+       Comic
+      </font>
+      were their overall choice, while 1 adult and one adolescent from different groups would chose
+      <font style="font-variant: small-caps">
+       Infographic
+      </font>
+      (
+      <font style="font-variant: small-caps">
+       WaterUsage
+      </font>
+      ). This supports the evidence from the Lab Study results, that readers find comics more “fun and enjoyable” even if this may not necessarily translate to longer reading time or improved memorability.
+     </p>
+     <p>
+      Participants took away slightly more copies of
+      <font style="font-variant: small-caps">
+       CarbonFootprint
+      </font>
+      in comic format compared to infographics format (20 vs 16). However, this is not the case for
+      <font style="font-variant: small-caps">
+       WaterUsage
+      </font>
+      , for which participants took 16 copies of each.
+     </p>
+    </section>
+   </section>
+   <section id="sec-24">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        7
+       </span>
+       DISCUSSION
+      </h2>
+     </div>
+    </header>
+    <p>
+     This section summarizes our findings, design implications for data comics, as well as limitations and future work.
+    </p>
+    <section id="sec-25">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Main Study Findings
+       </h3>
+      </div>
+     </header>
+     <p>
+      Data Comics improve understanding and engagement—In general, data comics led to more correct answers on average. Data comics have been rated more engaging and more enjoyable, more easy to stay focused, and received better overall ratings. The reasons for these results may be explained by a variety of factors. For example, clear sequencing increases the readers ability to focus and navigate spatial-temporal information, while panels help to divide information into easy memorable chunks, with rows grouping individual messages into higher level messages. From analyzing specific questions, we found that comics performed better for some information that was explicitly shown and highlighted in panels, such as some temporal events (Alliances) or distributions (Energy). On the contrary, not highlighting important
+     </p>
+    </section>
+   </section>
+  </section>
+ </body>
+</html>

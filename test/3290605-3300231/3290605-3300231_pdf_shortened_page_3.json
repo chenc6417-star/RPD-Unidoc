@@ -1,0 +1,179 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            118,
+            484,
+            384
+        ],
+        "text": "T1 is the use of knowledge about disease mechanisms\nin the development of diagnosis methods, therapy, and pre-\nvention. T1 research is performed by scientists trained in\nmolecular biology, genetics, and other basic sciences work-\ning in laboratories. In contrast, ambulatory care settings are\nthe “ laboratory ” for T2 research, where applied interventions\nfurther the understanding of T1 results by confronting them\nwith broader populations. T2 is known as the clinical trials\nstep, where safety and efficacy research occur. T3 requires\nimplementing scientific knowledge: applying and evaluating\ninterventions in real-world settings and of the disciplines\nthat inform the design of those interventions, such as clini-\ncal epidemiology and evidence synthesis, but also commu-\nnication theory, behavioral science, public policy, financing,\norganizational theory, design, informatics, and mixed meth-\nods research. Finally, T3 is bridged when clinical practices\nand guidelines are implemented to produce concrete public\nhealth changes. For example, if an effective clinical applica-\ntion is found (e.g., aspirin effectively decreases thrombosis in\nindividual patients), then it must be marketed and explained\nto clinical practitioners, who may sometimes be trained in\nthe proper ways to administer a drug before public health\ngains can be achieved. After T3 is bridged, public health im-\npact is studied via practice-based research, and feedback for\ncontinual improvement follows (e.g., why are clinicians not\nadministering aspirin?).",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            384,
+            484,
+            550
+        ],
+        "text": "The most noticeable differences between health and HCI\npertain to institutional and policy constraints that need to be\naddressed to protect drugs and treatment users [48, 74] . Addi-\ntionally, the continuum model shows the work of many par-\nties to progress knowledge through successive steps, rather\nthan focusing on the work of researchers and clinicians; such\nas basic scientists, applied researchers, marketers, design-\ners, clinical practitioners, physicians, social workers, public\nhealth researchers, policymakers [28, 68, 74] .",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            550,
+            484,
+            757
+        ],
+        "text": "There are drawbacks in using existing models to describe\nTS in HCI, although we can learn from them. The health\nmodel is field-specific, such as in how it deals with institu-\ntional constraints. The diffusion model focuses on dissem-\ninating information and does not address the importance\nof offering applicable resources to practitioners, or learning\nwhat is useful for them. On the other hand, health shows\nmany stakeholders working on a continuum of knowledge\nprogressions, supporting Beck and Ekthia\\'s call [7] . The\ndiffusion of innovation shows how translators disseminate\ninformation, resonating with Gray et al.\\'s work [32] .",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            757,
+            484,
+            830
+        ],
+        "text": "Therefore, how could we rethink the research-practice gap\nmetaphor to represent HCI\\'s unique process of knowledge\nprogression, incorporating learnings from other fields and\npast work related to Translational Science?",
+        "reading_order": 5
+    },
+    {
+        "label": "fig",
+        "bbox": [
+            513,
+            116,
+            917,
+            250
+        ],
+        "text": "![Figure](figures/3290605-3300775_pdf_shortened_page_3_figure_005.png)",
+        "reading_order": 6,
+        "alt_text": "A flowchart illustrates a research process with four main stages: Basic Research, Applied Research, Design Practice, and a Bubble-up. Arrows indicate the flow from Basic Research to Applied Research, then to Design Practice, and from Applied Research to Design Practice with a dashed arrow labeled \"TBD.\" A dashed arrow from Applied Research points to Bubble-up, and a dashed arrow from Basic Research points to Basic Research."
+    },
+    {
+        "label": "figure_cap",
+        "bbox": [
+            515,
+            259,
+            915,
+            355
+        ],
+        "text": "Figure 1: The HCI Translational Science Model consists of 3\nmain steps: Basic and Applied Research (described only as\n\"research\" in the gap metaphor) and Design Practice; and 3\nmain gaps: T $_{BA}$ , T $_{AD}$ , and T $_{BD}$ . The dotted line represents\nthe Bubble-up from practice to research. T $_{AA}$ suggests a gap\nwithin Applied research. Steps and gaps are defined on Ta-\nble 2 and detailed in the remainder of this paper.",
+        "reading_order": 7
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            516,
+            370,
+            879,
+            386
+        ],
+        "text": "4 MODEL OF TRANSLATIONAL SCIENCE IN HCI",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            389,
+            915,
+            498
+        ],
+        "text": "We propose a model for Translational Science in HCI (Fig-\nure 1 ). We ground the decisions that led to the design of the\nproposed model in our interview findings. First, we present\nhow participants talked about the gap metaphor, transla-\ntional science in the field, and the main actors in translational\nscience. Second, we describe how participants view and en-\nact relationships that point to a progression of knowledge\nbetween research and practice.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            498,
+            915,
+            636
+        ],
+        "text": "While most participants first described a single gap in\nTranslational Science, upon further reflection, many noted\nissues with the dichotomy. Initially, participants defined TS\nin HCI as a \"BIG gap\" or a \"barrier\" between researchers and\ndesigners (P3, P11, P17, P22, P23, P26, P35, P39). Participants\nwould mention known research-practice barriers such as\naccessing and understanding scientific work, as well as how\ndissimilar incentive structures could be the biggest driver for\nthe gap between HCI researchers and Design practitioners.",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            636,
+            915,
+            698
+        ],
+        "text": "Most participants, regardless of role, agreed that those\nin the HCI field share the goal of improving products and\nservices for people, even if not directly. Therefore, we set the\nend-goal of our proposed model as Design practice (Figure 1 ).",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            698,
+            915,
+            812
+        ],
+        "text": "As participants described their personal experiences re-\nlated to translational science and \"the gap\", the roles of addi-\ntional parties in the progression of HCI knowledge surfaced\nnaturally, such as industry researchers and science commu-\nnicators, as well as a nuanced and fluid variety of academic\nresearchers (e.g., P7 had worked in industry, launched a\nstartup in the past, and now focuses on design research and\nteaching at her academic department).",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            812,
+            915,
+            903
+        ],
+        "text": "At the end of the interview, after reflecting on their own\ninitial interpretations of a single research-practice gap, it\nbecame clear to participants that the gap metaphor is insuf-\nficient to describe how multiple parties conduct a series of\ntranslations. Most participants, especially HCI researchers,\nnoted their work falls in the Applied research step; they also",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            143,
+            958
+        ],
+        "text": "Paper 1",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 4",
+        "reading_order": 15
+    }
+]

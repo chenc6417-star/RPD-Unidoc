@@ -1,0 +1,178 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            118,
+            483,
+            178
+        ],
+        "text": "interested in design, or for lack of incentive. For P15, \"It is\ncrucial for researchers to really engage with practitioners and\nknow how things are done in industry. This is, or should be, the\nminimum requirement to contribute to design.\"",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            178,
+            483,
+            402
+        ],
+        "text": "In our interviews, practitioners mentioned not engaging\nwith bubble-up. UX researchers and designers are most often\nnot incentivized to broadcast findings because of intel-\nlectual property restrictions (P12, P35). However, disseminating\ncarefully vetted case studies in platforms such as Medium\nhas been more common among practitioners. Although our\nparticipants did not have experience with such forms of com-\nmunication, they mentioned an interest in doing so for per-\nsonal branding (P29, P39, P41, P42). Interestingly, we heard\nfrom all HCI practitioners that instructors with professional\nexperience as designers or engineers effectively made the\n“ academia-industry linkage ” (P35) in the classroom, bringing\nknowledge from practice into the education of a new gener-\nation of practitioners. This view was consistent among HCI\nprofessors who had industry experience (P10, P11, P13, P15,\nP34, P35, P38).",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            402,
+            483,
+            614
+        ],
+        "text": "HCI researchers interested in learning insights from prac-\ntice put effort into a few strategies that they deem successful,\nsuch as organizing and attending practitioner-oriented con-\nferences (P9, P13, P15, P24); keeping track of students who\ngo on to leading industry positions (P13, P29, P31); and using\nonline design groups: \"I\\'m part of Facebook and Slack groups\nto talk to practitioners. Most of the times we talk about new\ntools or books, design trends, but sometimes deeper issues and\nmethods. It\\'s very varied but focused on practice only. It\\'sAZs\nalmost like a crowdsourced design encyclopedia on current\ntopics.\" (P15). The Bubble-up goals that our participants men-\ntioned were: to learn what practitioners care about (P9, P13,\nP15, P24), to gain insights about design field trends (P13, P29,\nP31), to improve teaching (P15) and syllabi (P13).",
+        "reading_order": 4
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            625,
+            386,
+            641
+        ],
+        "text": "Different Translators and Translational Work",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            644,
+            483,
+            700
+        ],
+        "text": "Through our interviews, we uncovered different types of\ntranslations that address TS barriers: the design of example\nproducts, people transfer, education, use of research knowl-\nedge in industry research, and science communication.",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            710,
+            483,
+            809
+        ],
+        "text": "Synthesizing Information into contextualized products. This\ntype of translation, achieved through the collaborative work\nof basic researchers, applied researchers, and designers, can\nenail both translating basic knowledge into research con-\ncepts for testing and applied research into prototypes and\nguidelines that can facilitate adoption in design practice.",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            809,
+            483,
+            902
+        ],
+        "text": "In the interviews, we heard specific instances of transla-\ntional work altering the original research insight to create a\nnew product to address more contextualized problems. Both\nin TBA and in TAD, knowledge can get lost in translation\nbecause of the synthetic nature of design, which is reflected",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            914,
+            223
+        ],
+        "text": "in the accounts of basic and applied researchers who have\nengaged in translations (P9, P19, P24). P24 mentioned that a\nforay into applied research required making many conces-\nsions and changing their initial ideas because of technical\nand design constraints. P19 in turn mentioned the need to\nmake a design method compatible with industry practices,\nwhich required drastic adaptations.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            223,
+            914,
+            334
+        ],
+        "text": "The challenge in translating research into products or\nmethods is described by Chilana et al. through the creation\nof a new venture born out of HCI research focusing on ad-\noption [17] and by the concept of appropriation used by Gray\net al. [32] . As seen in the previous paragraph, not only do\ndesign practitioners partially appropriate knowledge, so do\nresearchers when attempting to bridge gaps.",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            343,
+            915,
+            660
+        ],
+        "text": "People transfer as knowledge transfer. Chilana et al.\\'s migra-\ntion from academia to starting a venture [17] represents a\nsecond path that drives translations: the movement of peo-\nple. People move across gaps and steps, such as students or\nprofessors working in industry temporarily through sabati-\ncals, collaborative projects, or consulting, permanently after\ngraduating or after a career change. People carry knowledge\nand skills with them. Most participants mentioned that in-\ndustry researchers, for example, whether trained in applied\nor basic research, can help translate the terminology of aca-\ndemic contributions (both in $T_{BA}$ and $T_{AD}$ ). We interviewed\nindustry researchers with academic training, who shared\nhow they have used academic research to inform their work.\nFirst, industry researchers said, that most commonly, their\nknowledge of research methods is employed on a day to\nday basis. Second, they use scientific findings to inform the\ncreation of study protocols and initial product design direc-\ntions. In these two latter cases, industry researchers benefit\nfrom their academic experience in reading and conducting\nscientific studies to quickly evaluate and identify takeaways\nin existing bodies of knowledge, contextualizing that knowl-\nedge to the problems that their companies face for the design\nof products or services (P12, P16, P17, P40, P42).",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            660,
+            914,
+            839
+        ],
+        "text": "Connected to the points above, most participants called\nout one particular form of people transfer – education – as\nperhaps the most common path for HCI to influence design\npractice. Academia usually contributes to society with re-\nsearch findings, but HCI researchers in academia also partici-\npate in the training of practitioners. Multiple HCI professors\nmentioned that teaching HCI theory in classes is challenging\nand how to do so effectively is an open question. “ How do\nwe effectively train people to be sensitive and make them think\nabout these questions [referring to information privacy and\npersuasive design] when they go into the workforce? ” (P1).",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            848,
+            914,
+            902
+        ],
+        "text": "Formal and informal science communication. While papers\nare a primary communication artifact among researchers,\ntime constraints hinder their use by industry researchers. To",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            142,
+            958
+        ],
+        "text": "Paper 1",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 8",
+        "reading_order": 15
+    }
+]

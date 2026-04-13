@@ -1,0 +1,17 @@
+# 忽略模型权重文件
+
+
+*.pt
+*.ckpt
+
+# 忽略数据集和日志
+data/
+output/
+logs/
+runs/
+
+# 忽略虚拟环境和系统文件
+venv/
+.venv/
+__pycache__/
+.DS_Store

@@ -1,0 +1,189 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            582,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            85,
+            118,
+            483,
+            283
+        ],
+        "text": "microblowers, which generate weak winds by the ultrasonic vibra-\ntion of ceramic surfaces, are attached to the drone. These devices\nprovide propulsion force in the vertical, yaw and forward direc-\ntions, so this drone can move freely in 3D space. The proposed\ndevice has several advantages over conventional drones (e.g. multi-\ncopter, plane and omnithopter). The microblowers vibrate with very\nsmall amplitude so there is no possibility of personal injury. In ad-\ndition, their vibration in use is visually imperceptible. Furthermore,\nbecause the vibration frequency is in the ultrasonic range, they\ngenerate only a slight wind noise. While the microblowers are not\nactive, the drone simply floats in the air without generating noise\nor consuming power unlike normal drones.",
+        "reading_order": 2
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            283,
+            483,
+            410
+        ],
+        "text": "Traditional drones for applications such as carrying cargo and\ntaking professional photos are so dangerous and noisy that only\nhuman-free spaces can be used. Although there are drones designed\nto implement aggressive interaction [4, 18] with a human, it is still\ndifficult to fly in spaces occupied by people because the user must\nmonitor the dangerous drone while flying and it generates a lot of\nnoise. ZeRONE with its superior safety, quietness, and long flight\ntime makes it possible to build new spatial platforms for human\nliving spaces.",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            410,
+            483,
+            552
+        ],
+        "text": "Our work provides three contributions: First, we outline and\ndiscuss the unique benefits and possible applications of ZeRONE.\nSecond, we reveal the method used to implement ZeRONE. Third,\nwe implement a prototype and evaluate its performance. The re-\nmaining sections of this paper discuss the following: First, we in-\ntroduce previous research on 3D space interaction including HDI.\nSecond, we describe the principles and design parameters of Ze-\nRONE. Third, we introduce the ZeRONE prototype and confirm\nits characteristics and performance. Finally, we discuss possible\napplications, limitations, and the key attributes of our proposal.",
+        "reading_order": 4
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            85,
+            563,
+            240,
+            579
+        ],
+        "text": "2 RELATED WORK",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            583,
+            483,
+            750
+        ],
+        "text": "Devices that can move freely in real 3D space have been attracting\nsignificant attention for a long time. Realizing such devices would\nmake it possible to create input/output interfaces at arbitrary places\nin real space, and the possibility of interaction-oriented applications\nwould greatly increase. Programmable Matter, a concept by Tol-\nfoni and Margouros [28] , is well known in this field. They assumed\nmaterial that had controllable physical properties such as shape,\ndensity, texture and position. Their concept is to form objects in\nthe real world by controlling it. Radical Atoms [8] , Tangible Au-\ntonomous Interfaces [20] and Claytonics [5] are also well known as\nconcepts that embody various tangible objects by using computer\ncontrollable materials or robots in the real world.",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            750,
+            483,
+            903
+        ],
+        "text": "Numerous studies have attempted to realize the concept of con-\ntrolling the physical properties of things. Their aim is to create\na new spatial platform that can gather or output information at\narbitrary places in the real world. There are two main approaches\nto controlling the 3D position of physical objects that appear to\nhover. One uses external systems that generate invisible tether\nto levitate physical objects. Examples include acoustic potential\nfields [21] and magnetic fields [15] . The other assumes the use of\nself-levitating objects. This latter approach is gathering a lot of\nattention because the invisible tether imposes too many limitations.\nThe most popular drone in this area is the multi-copter; basically",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            914,
+            253
+        ],
+        "text": "a rotocraft with more than two rotors. Multi-copters have higher\nmobility, robustness against winds and significant payloads and\nthese characteristics allow various rich interaction interfaces to be\ndesigned. For example, Safar et al. [25] proposed a multi-copter\nwith LED strip to present direction. Sphere [29] combines a drone\nwith a persistence of vision display. Flyables [13] allow users to\ninteract with tangible objects in mid-air. BirdZones [6] , is a pro-\ntotype of interactive programmable matter that uses a swarm of\nsmall drones equipped with small flexible high-resolution thin-film\ntouch screens or RGB LEDs.",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            253,
+            914,
+            491
+        ],
+        "text": "Although multi-copters are a promising technology for realizing\nrapid movement to any spatial location, they also have many limi-\ntations. For example, people are at risk of serious injuries, because\nthey may be hit propellers of the falling or missed drones.\nThe very strong noise caused by drones in flight is also a problem.\nGrace et al. revealed that the maximum noise of DJI Phantom II\nquadcopter is about 80 dBA, on par with a freight train passing\n15 m away [7] . Moreover, the big noise and danger of drones can\ndisturb and create fear in people. Duncan et al. investigated a com-\nfortable drone-participant separation threshold and reported that\nat least 0.6 m is necessary [3] . Cauchard et al. also reported that\nusers accustomed to a drone can bring it within their intimate space\n(1.5 ft) [2] . Unfortunately, the small drones used in the field of HDI\nhave short flight times, just a few tens of minutes, and it is difficult\nto maintain operation as a spatial platform for long periods.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            491,
+            914,
+            646
+        ],
+        "text": "Thus, studies that use balloons are lighter than air and can\ngenerate buoyancy without creating noise or consuming electric\npower have been published. Kuznetsov et al. proposed a fixed bal-\nloon that can sense air quality and visualize the results by altering\nthe color of its surface [14] . RfP is a blind-based drone that uses\npropellers to move in the air and the user can browse remote spaces\nby controlling it via the Internet [23] . Airly and Olie are blind-\nbased, autonomous and ambient robots that fly around by flapping\ntheir wings [12, 22] . Diri is an autonomous helium balloon with\na propeller mechanism designed to document activity in spaces\n[19] . Tobita et al. proposed a telepresence system using blimps onto\nwhich the remote user\\'s face is projected [27] .",
+        "reading_order": 10
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            666,
+            711,
+            682
+        ],
+        "text": "3 PROPOSED METHOD",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            686,
+            914,
+            780
+        ],
+        "text": "We propose a safe drone, ZeRONE, which develops thrust by the\nimperceptible vibration of surfaces. It eliminates the need for pro-\npellers and flapping mechanisms. As the thrusters available produce\nvery weak forces, we mount them on a blimp type drone that has\nvirtually zero weight. This section uses the example of the most\nsimple configuration to explain the principle and architecture of\nZeRONE.",
+        "reading_order": 12
+    },
+    {
+        "label": "sec_2",
+        "bbox": [
+            515,
+            799,
+            650,
+            815
+        ],
+        "text": "3.1 Microblower",
+        "reading_order": 13
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            818,
+            914,
+            903
+        ],
+        "text": "It is well known that a piezo element vibrates mechanically when\nan AC voltage is applied. The microblower [16] is a new pump\ninvented by Murata Manufacturing Co. that uses piezo elements\nas actuators, see Figure 2 . Although the microblower is superior\nin terms of safety and silence, it generates very slight thrust. We\nmeasured the reaction force of a microblower driven by an AC\nsignal (22.2 $V_p$ , 26 kHz, square wave) using a precise balance.\nWhile the microblower weighs about 1.4 g, it produces a reaction",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            86,
+            943,
+            156,
+            959
+        ],
+        "text": "Paper 365",
+        "reading_order": 15
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            943,
+            913,
+            959
+        ],
+        "text": "Page 2",
+        "reading_order": 16
+    }
+]

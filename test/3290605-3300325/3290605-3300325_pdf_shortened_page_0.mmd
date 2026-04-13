@@ -1,0 +1,77 @@
+<think>
+
+[[107, 85, 120, 195], 'header', 'CHI 2019 Paper'], [[107, 678, 120, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[134, 115, 176, 881], 'sec_0', 'Implicit Communication of Actionable Information in
+Human-AI teams'], [[189, 208, 220, 792], 'author_information', 'Claire Liang, Julia Proft, Erik Andersen, and Ross A. Knepper
+
+Department of Computer Science, Cornell University
+
+cy148@cornell.edu, {jproft, eland, rka}@cs.cornell.edu'], [[233, 85, 247, 173], 'sec_1', 'ABSTRACT'], [[250, 83, 500, 484], 'para', 'Humans expect their collaborators to look beyond the ex-
+plicit interpretation of their words. Implicature is a com-
+mon form of implicit communication that arises in natural
+language discourse when an utterance leverages context to
+imply information beyond what the words literally convey.
+Whereas computational methods have been proposed for
+interpreting and using different forms of implicature, its role
+in human and artificial agent collaboration has not yet been
+explored in a concrete domain. The results of this paper pro-
+vide insights to how artificial agents should be structured to
+facilitate natural and efficient communication of actionable
+information with humans. We investigated implicature by
+implementing two strategies for playing Hanabi , a cooper-
+ative card game that relies heavily on communication of
+actionable implicit information to achieve a shared goal. In
+a user study with 904 completed games and 246 completed
+surveys, human players randomly paired with an implica-
+ture AI are 71 % more likely to think their partner is human
+than players paired with a non-implicature AI. These teams
+demonstrated game performance similar to other state of the
+art approaches.'], [[511, 83, 527, 211], 'sec_1', 'CCS CONCEPTS'], [[530, 83, 586, 483], 'list', '• Human-centered computing → User studies: Collab-
+orative interaction; Empirical studies in HCI; Empirical
+studies in collaborative and social computing; Web-based in-
+teraction;'], [[597, 83, 612, 186], 'sec_1', 'KEYWORDS'], [[616, 83, 643, 483], 'para', 'Collaboration, Games/Play, Empirical study that tells us
+about people'], [[236, 516, 249, 679], 'sec_1', 'ACM Reference Format:'], [[250, 516, 320, 915], 'para', 'Claire Liang, Julia Proft, Erik Andersen, and Ross A. Knepper. 2019.
+Implicit Communication of Actionable Information in Human-AI
+teams. In CHI Conference on Human Factors in Computing Sys-
+tems Proceedings (CHI 2019), May 4–9, 2019, Glasgow, Scotland UK.
+ACM, New York, NY, USA, 13 pages. https://doi.org/10.1145/3290605.
+3300325'], [[332, 516, 348, 688], 'sec_1', '1  INTRODUCTION'], [[352, 516, 491, 915], 'para', 'An important area of human-computer interaction research
+involves enabling collaborative behavior for artificial agents
+working in close partnership with humans. Teamwork re-
+quires communication for planning and coordination, and
+the content communicated during this form of coordina-
+tion is complex and multifaceted. In particular, a significant
+amount of communication in human groups goes through
+non-explicit channels [73] . These channels can range from
+non-explicit verbal statements to other means as subtle as
+eye gaze or gesture [71] .'], [[491, 516, 602, 915], 'para', 'The impact of implicit communication is ubiquitous. It can
+be found in applications from robot motion [25] to language
+input [84] . In many domains involving teamwork, implicit
+communication is vital for good performance. In order to
+be effective partners and integrate well with human teams,
+ robots and AIs need to understand and generate this kind of
+actionable implicit communication that results from actions
+being situated in context [9, 18, 27] .'], [[602, 516, 868, 915], 'para', 'One area in which implicit communication is particularly
+important is human-AI interaction in video games. While
+there has been significant progress in creating AIs that can
+play games such as chess [16] and Go [78] , AIs are still inca-
+pable of playing many kinds of games because they cannot
+effectively deal with social elements [64] . For example, con-
+sider the cooperative card game Hanabi . In this game, players
+must cooperate to play a set of cards in a certain order. Each
+player can see all of the other players\' cards, but they cannot
+see their own. Although players need to inform other players
+about what cards they should play, they are prohibited from
+communicating anything other than direct facts such as "this
+card is red". Therefore, in this highly restricted communica-
+tion space, players routinely use direct facts to communicate
+actionable intent implicitly , such as saying "this card is red"
+to convey the action "play this card now" [61] . Capturing
+implicit information of this form is crucial for designing AIs'], [[654, 83, 723, 483], 'fnote', 'Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies
+are not made or distributed for profit or commercial advantage and that
+copies bear this notice and the full citation on the first page. Copyrights
+for components of this work owned by others than the author(s) must
+be honored. Abstracting with credit is permitted. To copy otherwise, or
+republish, to post on servers or to redistribute to lists, requires prior specific
+permission and/or a fee. Request permissions from permissions@acm.org.'], [[724, 85, 735, 314], 'fnote', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland UK'], [[736, 83, 750, 483], 'fnote', '© 2019 Copyright held by the owner/author(s). Publication rights licensed
+to ACM.'], [[750, 85, 762, 304], 'fnote', 'ACM ISBN 978-1-4503-5970-2/19/05...$15.00'], [[763, 85, 775, 295], 'fnote', 'https://doi.org/10.1145/3290605.3300325'], [[943, 85, 958, 154], 'foot', 'Paper 95'], [[943, 864, 958, 912], 'foot', 'Page 1']

@@ -1,0 +1,134 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            118,
+            484,
+            342
+        ],
+        "text": "difficult. This is where digital log files can be useful - log-\nbased feedback can be used to increase visitors\\' awareness\nof their actions, allowing them to judge their own progress\ntowards their goals. Expert practitioners engaged in flow\nknow how and when to seek feedback on their progress,\nbut visitors may not. For example, when explanatory labels\nwere added to inquiry exhibits, the counter-intuitive result\nwas that visitor engagement with exhibits dropped [21] . By\nmaking feedback available too early via omnipresent labels,\nvisitors \"read ahead\" and lost interest in further exploration,\nsubstituting a surface-level didactic explanation for engaged\nfirst-person learning. So exhibit designers need to decide\nhow and when to deliver feedback, keeping in mind that\nfeedback that is too complicated, or delivered too early or\ntoo late, can disrupt engagement.",
+        "reading_order": 2
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            85,
+            354,
+            404,
+            370
+        ],
+        "text": "Designs for Supporting Reflection-with-Data",
+        "reading_order": 3
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            373,
+            484,
+            485
+        ],
+        "text": "Feedback is an integral part of reflecting on one\\'s actions,\nwhich is in turn an integral part of learning [8] . By reflecting\non one\\'s actions, learners consolidate memories of experi-\nences with their evolving mental model of the situation they\nare trying to understand. Here we review what is known\nabout how to design data-driven feedback to support reflec-\ntion on one\\'s own actions.",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            497,
+            484,
+            805
+        ],
+        "text": "Formats of Feedback for Reflection. In a study of data visual-\nization comprehension which interviewed nearly 300 visitors\nat several science museums, it was found that visitors strug-\ngle with interpreting representations that go beyond simple\nforms like bar and line charts [7] . These findings echo the\nreflection-with-data choices being made in classrooms in\nthe form of learning dashboards [6, 19, 34, 41, 49] , which\npredominantly use simpler bar and line charts. But a review\nof the few reflection-with-data projects in museums show\nthat richer data representations are in fact being used. One\nproject visualized as a scatter-plot the calories burned by vis-\nitors using a whole-body interface to role-play as polar bears,\nas a way of illustrating the impact of climate change [26, 45] .\nAnother project presented graphs of force and directional\ndata to parents watching their child role-play as a meteor\narching around gravitational sources [48] . A third project used\nlogs of choices made by visitors engaged with a tabletop cir-\ncuit construction activity [29] , which used a mix of feedback\nmechanisms: animated timelines for each user upon which\ntheir actions were superimposed, and dynamically-generated\nicon-and-text-based alerts [35] .",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            805,
+            484,
+            902
+        ],
+        "text": "The use of these richer representations (as compared to\ndashboards) may be a natural result of attempting to vi-\nsualize feedback for embodied, immersive learning activi-\nties (rather than just quiz scores). In classrooms, the few\nexamples of “ quantified self ” sensor-based learning experi-\nences [10, 30, 31] tend to use richer formats for reflection, like",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            118,
+            915,
+            279
+        ],
+        "text": "scatterplots [31] , histograms [30] , or even bespoke wearables\nthat illustrate physiological data [10] . But these examples,\nas with the museum examples, the learning activities were\ndesigned to incorporate an adult (an explainer, parent, or\nteacher) to help make sense of the visualized data. Indeed,\nin another “ quantified self ” project that positioned students\nas the main users, simple bar graphs were used [17] . This\nsuggests that the format of the feedback should be chosen\nin conjunction with the means of feedback delivery (e.g.,\nwhether or not it will be mediated by another person), as we\nwill discuss next.",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            297,
+            915,
+            630
+        ],
+        "text": "Means of Feedback Delivery for Reflection. The prior museum\nprojects delivered feedback to someone other than the vis-\ntor expressly because of a concern that the visualizations\nwould be too complicated for the visitor to decode while en-\ngaged [26, 29, 45, 48] . Not all of these means of delivery were\nequally effective. Positioning explainers as mediators of feed-\nback makes sense in theory, as they presumably understand\nthe exhibit content and are trained to help visitors make\nsense of exhibits, but in practice they sometimes struggled\nwith incorporating the inherently dynamic data-driven feed-\nback into their more didactically-inclined practices [45] . They\noften missed opportunities to highlight the unique qualities\nof a particular visitor\\'s data, defaulting to a more generic\none-size-fits-all explanation. The most effective means of\ndelivery seems to have been when the mediator (here, a par-\nent) used the data to drive conversations taking the form\nof a recap or a story of what the child had just done within\nthe exhibit [48] . This is in keeping with museum research\n(visitor-visitor conversation and the use of narratives are\nthe most effective strategies for supporting general reflec-\ntion [44] ) as well as with the learning sciences [14] . But\nwhen these conversations should be had is the question we\nwill explore next - should they be planned or capitalize on\nspontaneous “ teachable moments ” [23] ?",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            648,
+            915,
+            902
+        ],
+        "text": "Timing of Feedback Delivery for Reflection. In the prior mu-\nseum projects using explainers as mediators, a major concern\nwas when the explainer should intervene. Despite intention-\nally designing the system to spur the delivery of “ just-in-time ”\nintersections, like the “ explantoids ” that have been shown\nto be an effective means of scaffolding in museum learning\nconversations [12] , the mediators found it awkward to inter-\ncede while the visitor was engaged [26, 45] . In prior work,\nthe most productive reflection occurred in the form of recap\ndiscussions after the conclusion of an oral attempt [48] . This\nsuggests that the exhibit activity may need to be designed to\nhave “ breaks in the action ” for visitors to receive feedback\nto reflect on what they have done.",
+        "reading_order": 9
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            143,
+            958
+        ],
+        "text": "Paper 7",
+        "reading_order": 10
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 3",
+        "reading_order": 11
+    }
+]

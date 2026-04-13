@@ -1,0 +1,59 @@
+<think>
+</think>
+
+[[[42, 85, 57, 194], 'header', 'CHI 2019 Paper'], [[42, 582, 58, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[118, 83, 178, 483], 'half_para', 'approach. We can use an established theory from the field
+of pragmatics, the linguistics subfield that studies language
+in context, and adapt it to develop a policy for this form of
+implicit communication.'], [[198, 83, 215, 377], 'sec_1', '4 CONVERSATIONAL IMPLICITURE'], [[218, 83, 359, 483], 'para', 'The term implicature , coined by Grice [33] , is used to describe
+information that is not explicitly stated but is intentionally
+conveyed. Grice focused primarily on implicature that occurs
+in conversation due to what he calls the cooperative principle ,
+meaning that speakers are expected to contribute what is
+required by the accepted purpose of the conversation [87] . He
+gives four maxims that constitute the cooperative principle
+and describe how to conduct cooperative speech [34] :'], [[364, 109, 450, 483], 'list', '• Quality: only contribute information that is true.
+• Quantity: provide all necessary information, but not
+more.
+• Relation: make your contribution relevant.
+• Manner: avoid ambiguity; be clear, orderly, and brief.'], [[454, 83, 483, 482], 'para', 'Implicature arises when any of the maxims are violated.
+Consider the following example from Recanati [69] :'], [[488, 109, 520, 482], 'list', '• Annie: "Can you cook?"
+• Bernard: "I am French."'], [[525, 83, 555, 482], 'para', 'In order to make sense of Bernard\'s response, Annie must
+apply the following deductive inference steps:'], [[559, 100, 750, 483], 'list', '(1) Contextual premise: Bernard is able to answer the ques-
+tion of whether he can cook.
+(2) Contextual premise: It is common knowledge that the
+French are known for their ability to cook.
+(3) Assume Bernard adheres to the cooperative principle
+and the four maxims.
+(4) By (1), Bernard can completely resolve Annie\'s ques-
+tion, and by (3), he will.
+(5) Only the propositions that Bernard can or cannot cook
+can fully resolve the question.
+(6) By stating a fact seemingly irrelevant to the proposi-
+tions of (5), Bernard flouts the maxim of Relation.
+(7) Thus Annie must search over a plausible set of facts
+in the relevant common ground to find fact (2) and
+conclude that Bernard is implicating that he is able to
+cook.'], [[755, 83, 857, 483], 'para', 'There is also a well-known cancellability test to gauge
+whether an instance of implicature is conversational impli-
+cature [7] . The reasoning in Lines (4)-(7) depends on the
+concepts of shared trust, consensus in a team, and recep-
+tivity of teammates. These dependencies are described in
+greater detail by Knipper et al. [48] .'], [[857, 83, 886, 483], 'para', 'We can then apply this set of rules to Hanabi.'], [[116, 516, 131, 635], 'sec_1', '5 AI DESIGN'], [[134, 516, 273, 914], 'para', 'The core strategy in Hanabi occurs during the giving and
+interpretation of hints. A key distinction in the strategic
+use of hints involves the issue of who decides what cards
+to play. If the team is viewed as a set of individual decision-
+makers, then each player is in charge of her own hand and
+actions. In this view, the best hinting strategy is to maximize
+information about the teammate\'s hand so that she can make
+the best decisions. We call the AI that uses this hint strategy
+the entropy AI , which serves as our baseline.'], [[273, 516, 398, 914], 'para', 'A contrasting hinting strategy stems from the perspective
+that good teamwork requires working together. Since each
+player has complete knowledge of her teammate\'s cards,
+it is logical that each player should decide what card her
+teammate should play next. In this case, the hints serve to
+direct the teammate\'s attention to which (singleton) card
+should be played next via implicature. We call the AI that
+uses this hint strategy the implicature AI.'], [[407, 529, 670, 911], 'fig', '![Figure](figures/3290605-3300775_pdf_shortened_page_4_figure_011.png)', 'This decision tree diagram illustrates a process for determining the appropriate response to an implicit utterance. It begins by asking if a resource management strategy dictates an action, then proceeds to check if a hint is being used, and finally assesses if it is possible to give an actionable hint or a conservation hint. The outcome branches to either giving the hint or discarding a card.'], [[679, 516, 705, 913], 'figure_cap', 'Figure 2: Decision tree illustrating the logic of the different
+hint strategies.'], [[723, 516, 765, 914], 'para', 'The overall AI structure is shown in Figure 2 . The AIs
+share significant gameplay infrastructure, termed "resource
+management strategy" in the figure. The shared strategy is'], [[943, 85, 959, 154], 'foot', 'Paper 95'], [[943, 864, 959, 913], 'foot', 'Page 5']]

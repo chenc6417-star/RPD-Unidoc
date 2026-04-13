@@ -1,0 +1,190 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            581,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "table_cap",
+        "bbox": [
+            83,
+            116,
+            483,
+            203
+        ],
+        "text": "Table 1: Summary of participant information. First, self-\nreported percentage of participants with experience in dif-\nferent areas within HCI. “ Basic research experience con-\ntains research in Social Psychology, Philosophy, Chemistry.\nConsequently, experience in Basic research did not count to-\nwards Years of experience in HCI. Second, at the bottom, we\nshow our participants\\' of experience in the HCI field. ”",
+        "reading_order": 2
+    },
+    {
+        "label": "tab",
+        "bbox": [
+            156,
+            223,
+            411,
+            380
+        ],
+        "text": "<table><tr><td>Area</td><td>Percentage</td></tr><tr><td>Design Practice</td><td>44%</td></tr><tr><td>Applied Research</td><td>42%</td></tr><tr><td>Teaching</td><td>40%</td></tr><tr><td>UX Research</td><td>26%</td></tr><tr><td>Basic Research in HCI</td><td>21%</td></tr><tr><td>Entrepreneurship</td><td>21%</td></tr><tr><td>Basic Research*</td><td>16%</td></tr><tr><td>Media Outreach</td><td>14%</td></tr><tr><td>Policymaking</td><td>7%</td></tr><tr><td>Measure Years in HCI</td><td></td></tr><tr><td>Median</td><td></td></tr><tr><td>13</td><td></td></tr><tr><td>Max</td><td>47</td></tr><tr><td>Min</td><td>1</td></tr></table>",
+        "reading_order": 3,
+        "alt_text": "A table presents data across two columns: \"Area\" and \"Percentage\". The \"Area\" column lists various research and practice fields, including Design Practice, Applied Research, Teaching, UX Research, and Basic Research in HCI, among others. The \"Percentage\" column shows the percentage for each area, with a row for \"Measure Years in HCI\" containing Median, Max, and Min values."
+    },
+    {
+        "label": "half_para",
+        "bbox": [
+            83,
+            411,
+            483,
+            483
+        ],
+        "text": "type of translational work, and if there are multiple gaps,\nthey are likely more nuanced. Focusing on a single set of\nbarriers from one gap may limit how translational problems\nare approached [7] .",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            483,
+            483,
+            667
+        ],
+        "text": "If the research-practice gap metaphor is limited, what\nmodel might better depict Translational Science in HCI? In\nthis paper, we present a literature review and interview study\nof HCI community members representing various parties to\nthe Translational Science process. Through our findings, we\ncontribute descriptions of the translational research practices\ninvolving HCI researchers, other scholars, design practition-\ners, and translators such as industry researchers and science\ncommunicators. Our main contribution is a continuum model\nfor Translational Science in HCI, providing a foundation for\nfuture work to discuss Translational Science in HCI.",
+        "reading_order": 5
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            83,
+            678,
+            203,
+            694
+        ],
+        "text": "2 METHODS",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            697,
+            483,
+            864
+        ],
+        "text": "Following Zimmerman et al.\\'s process to create the model of\ninteraction design research within HCI [75] , we conducted a\nliterature review, interviewed stakeholders in the HCI com-\nmunity, and constructed a model for Translational Science\nin HCI. Our literature review consisted of publications on\nTS, translational research, and research-practice gaps in HCI\nand other applied fields, such as public health, management\nscience, communication, and education. Second, we inter-\nviewed academic researchers, design practitioners and stu-\ndents, entrepreneurs, and science communicators. Literature\nreview findings were compared to participant perspectives.",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            83,
+            865,
+            483,
+            903
+        ],
+        "text": "For interviews, we first recruited six HCI scholars experi-\nenced in research, design, community and media outreach,\nentrepreneurship, teaching, and policymaking to obtain a",
+        "reading_order": 8
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            117,
+            915,
+            380
+        ],
+        "text": "panorama of translation in HCI and to iterate on our research\nprotocol and preliminary model. In the second interview\nstage, we broadened recruiting criteria and interviewed 37\nparticipants engaged in HCI-related research and practice\nfields. We highlight that our participants came from many\ndifferent traditions such as computer science, design, indus-\ntrial engineering, anthropology, English literature, social\npsychology, interaction, and user experience design, design\neducation, user experience research, and product manage-\nment; and worked in academia, industry, and government.\nWe also interviewed science communicators and communi-\ncation managers. We had participants with many years of\nexperience in HCI-related fields, as well as participants who\nare newer members of this community, and even some that at\nfirst did not consider themselves members (such as communi-\ncation managers and some design practitioners). See detailed\nparticipant information on Table 1 , and in Supplementary\nmaterials.",
+        "reading_order": 9
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            380,
+            914,
+            463
+        ],
+        "text": "We asked participants to define their perceptions of the\ngap between research and practice, where translational work\ntakes place in HCI, and what they have done regarding trans-\nlation. As in the first stage, participants commented on the\ncurrent version of our model for TS in HCI.",
+        "reading_order": 10
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            463,
+            914,
+            588
+        ],
+        "text": "The development of the model, the literature review, and\ninterviews were interdependent. The model provided key-\nwords for literature searches and framing concepts for the\ncreation of the interview protocol. At the same time, we did\nnot limit our literature review to a predetermined set of key-\nwords; some concepts only emerged from our readings and\ninterviews. We iterated on the model after each interview.\nAfter many months, a detailed model emerged from formal\ndata analysis and in-depth critique sessions.",
+        "reading_order": 11
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            515,
+            599,
+            900,
+            629
+        ],
+        "text": "3 TRANSLATIONAL SCIENCE IN HCI AND LINKED\nFIELDS",
+        "reading_order": 12
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            632,
+            914,
+            757
+        ],
+        "text": "We start by defining terms related to Translational Science\n(TS) such as research, practice, theory, and the research-\npractice gap. First, TS studies the transformation of knowl-\nedge through successive fields of research from a basic sci-\nence discovery to real-world impact, a complex process that\nrequires both theory-producing steps (basic and applied) and\nnon-research steps (dissemination, implementation, design).\nThe study of each step is called translational research [28] .",
+        "reading_order": 13
+    },
+    {
+        "label": "para",
+        "bbox": [
+            515,
+            757,
+            914,
+            903
+        ],
+        "text": "Human-Computer Interaction (HCI) is “a discipline con-\ncerned with the design, evaluation, and implementation of\ninteractive computing systems for human use and with the\nstudy of the major phenomenon surrounding them” [69] . We\nacknowledge that HCI is a broad discipline that encompasses\nmany fields and that has evolved throughout the years [9] . In\nthe field of HCI, TS is about translating rich understandings\nof people and their interactions with technology with a goal\nof influencing the design of interactive systems.",
+        "reading_order": 14
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            942,
+            142,
+            958
+        ],
+        "text": "Paper 1",
+        "reading_order": 15
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            942,
+            913,
+            958
+        ],
+        "text": "Page 2",
+        "reading_order": 16
+    }
+]

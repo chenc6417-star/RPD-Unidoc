@@ -1,0 +1,169 @@
+[
+    {
+        "label": "header",
+        "bbox": [
+            85,
+            42,
+            194,
+            57
+        ],
+        "text": "CHI 2019 Paper",
+        "reading_order": 0
+    },
+    {
+        "label": "header",
+        "bbox": [
+            582,
+            42,
+            913,
+            58
+        ],
+        "text": "CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK",
+        "reading_order": 1
+    },
+    {
+        "label": "fig",
+        "bbox": [
+            82,
+            113,
+            484,
+            273
+        ],
+        "text": "![Figure](figures/3290605-3300775_pdf_shortened_page_4_figure_002.png)",
+        "reading_order": 2,
+        "alt_text": "A large, light-colored, rectangular display screen is mounted on a white wall, featuring a grid of colorful icons and text. The screen displays various elements such as a globe, a person, a tree, a water drop, a person with a plant, a person with a plant and a tree, a person with a plant and a tree and a bird, a person with a plant and a tree and a bird and a bird, a person with a plant and a tree and a bird and a bird and a bird, and a person with a plant and a tree and a bird and a bird and a bird and a bird."
+    },
+    {
+        "label": "figure_cap",
+        "bbox": [
+            83,
+            283,
+            483,
+            313
+        ],
+        "text": "Figure 2: View of the Global View touchscreen, as installed\nin front of the entrance to the Connected Worlds exhibit.",
+        "reading_order": 3
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            85,
+            334,
+            330,
+            350
+        ],
+        "text": "Global View: A \"Reflection Station\"",
+        "reading_order": 4
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            354,
+            484,
+            509
+        ],
+        "text": "Part of the original design for Connected Worlds was the\nGlobal View touchscreen, a \"reflection station\" which allows\nvisitors to quite literally step back and gain an overview of\nwhat is happening (and has happened) within the simulation\n(see Figure 2 ). Developed with the advice of the Connected\nWorlds advisory board, and drawing heavily from research\nthat showed that young learners prefer representations of\ndata that resemble the items being represented [32] . Global\nView represents the system state using icons superimposed\non a top-down schematic view of the exhibit (see Figure 3 ).",
+        "reading_order": 5
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            515,
+            484,
+            686
+        ],
+        "text": "Interface Design. The flow of water is illustrated in light blue\nstreams on the floor, and the supply of groundwater at a given\nbiome or water source is represented by the amount a blue\ncircle is filled (see contrasting Desert and Wetlands water\nsupplies in Figure 3 ). The number, types, and living/dead\nstatus of plants is illustrated by icons next to each biome.\nThe migration of clouds (produced via plant transpiration) is\nshown in the outer pink arc. By default Global View shows\nthe current state of the simulation, but a user can see how\nthe ecosystem state evolved over time by dragging a slider.",
+        "reading_order": 6
+    },
+    {
+        "label": "para",
+        "bbox": [
+            85,
+            692,
+            484,
+            903
+        ],
+        "text": "Learner Response. While visually attractive, we found that\nthere were two main problems with Global View. The first\nis a simple problem of access. Because the floor of Con-\nnected Worlds is an active interaction space, we couldn\\'t\nplace Global View inside Connected Worlds. It would have\nboth interfered with the ability to detect the placement of\nthe IR-reflective logs and been a collision/trip hazard for chil-\ndren. So in order to consult Global View, visitors would have\nto step away from their ludic engagement with Connected\nWorlds - and observations showed that this didn\\'t happen.\nThe second problem was one of comprehension : formative\nstudies showed that visitors were easily able to link between\nthe iconographic representations and the referents in the\nConnected Worlds exhibit space, but visitors struggled with",
+        "reading_order": 7
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            563,
+            914,
+            650
+        ],
+        "text": "deriving useful information from the display. We intention-\nally designed Global View to be a general-purpose reflection\ntool, because open-ended prompts for reflection are better\nfor reflection [14] , and because Connected Worlds itself is\na very open-ended learning experience. But much like the\nConnected Worlds exhibit itself, the Global View (in both\nlive and playback mode) was lovely, engaging, and provided\naltogether too much detail for visitors to make sense of it.",
+        "reading_order": 8
+    },
+    {
+        "label": "fig",
+        "bbox": [
+            513,
+            112,
+            917,
+            436
+        ],
+        "text": "![Figure](figures/3290605-3300775_pdf_shortened_page_4_figure_010.png)",
+        "reading_order": 9,
+        "alt_text": "A diagram illustrates a system with a central \"Playback scrubber\" and a \"Clouds (from plant transpiration) moving back to waterfall\" element. Surrounding this central element are various biomes, including \"Mountain Valley,\" \"Waterfall (water source),\" \"Jungle Biome,\" \"Playback Biome,\" and \"Wetlands Biome,\" each with associated icons and labels."
+    },
+    {
+        "label": "figure_cap",
+        "bbox": [
+            516,
+            446,
+            913,
+            489
+        ],
+        "text": "Figure 3: Detail of the Global View touchscreen, with yellow\ncallouts describing the iconographic elements and orange\ntext labeling regions of the simulation.",
+        "reading_order": 10
+    },
+    {
+        "label": "sec_1",
+        "bbox": [
+            517,
+            656,
+            846,
+            672
+        ],
+        "text": "Designing Connect-to-Connected Worlds",
+        "reading_order": 11
+    },
+    {
+        "label": "para",
+        "bbox": [
+            516,
+            675,
+            915,
+            903
+        ],
+        "text": "Based on our experiences with Global View we determined\nthat we needed to fix the observed problems of access and\ncomprehension . We were not in a position to alter the Con-\nnected Worlds exhibit itself, so making use of a mobile tablet\nplatform seemed an obvious choice for supporting access - if\nyou can\\'t bring the visitors to the data, bring the data to the\nvisitors. With respect to comprehension , we based our design\ndecisions on the prior work done with providing learners\nwith data for reflection on their own actions (see Section 2 ).\nThe prior work suggested that we should (1) use very simple\ndata representations, (2) use data representations that would\nhelp visitors form a narrative about their use of the exhibit,\n(3) enlist a non-engaged mediator as the main user of the\ndata visualization, and (4) build into the Connected Worlds\nactivity a period to \"pause\" and engage in reflective discus-\nsion with the visualization. It is important to note that the\nthird and fourth design principles listed here do not speak",
+        "reading_order": 12
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            85,
+            943,
+            143,
+            959
+        ],
+        "text": "Paper 7",
+        "reading_order": 13
+    },
+    {
+        "label": "foot",
+        "bbox": [
+            865,
+            943,
+            913,
+            959
+        ],
+        "text": "Page 5",
+        "reading_order": 14
+    }
+]

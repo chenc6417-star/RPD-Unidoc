@@ -1,0 +1,66 @@
+<think>
+</think>
+
+[[[42, 85, 57, 194], 'header', 'CHI 2019 Paper'], [[42, 581, 58, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[116, 103, 263, 461], 'tab', '<table><tr><td>Model</td><td>Deviance</td><td>df</td><td>$\chi^{2}$</td></tr><tr><td>Null</td><td>55104</td><td>0</td><td>0</td></tr><tr><td>MODEL</td><td>22712</td><td>9999</td><td>32329</td></tr><tr><td>Actual/Predicted</td><td>Class 0</td><td>130</td><td>4997</td></tr><tr><td>Class 1</td><td>557</td><td>2674</td><td>3231</td></tr><tr><td>Accuracy</td><td>97.3%</td><td>82.7%</td><td>91.7%</td></tr><tr><td>Precision</td><td>0.90</td><td>0.95</td><td>0.92</td></tr><tr><td>Recall</td><td>0.97</td><td>0.83</td><td>0.92</td></tr><tr><td>F-1</td><td>0.93</td><td>0.89</td><td>0.92</td></tr><tr><td>AUC</td><td>0.901</td><td></td><td></td></tr></table>', 'This is a table presenting model performance metrics. It includes columns for Model, Deviance, df, and $\chi^2$ values, along with a breakdown of Actual/Predicted data for Class 0 and Class 1. The table also lists Accuracy, Precision, Recall, F-1, and AUC, with corresponding numerical values and percentages.'], [[265, 83, 295, 483], 'table_cap', 'Table 2: Summary of model fit and performance of the
+transfer learning classifier on the 20 % heldout dataset.'], [[340, 83, 418, 483], 'half_para', 'performance, at 91.7 % accuracy and precision/recall/F1 of
+0.92/0.92/0.92. In Figure 2 , we report the receiver operating
+characteristic (ROC) curve, illustrating the false positive and
+true positive rate at various settings; the area under the curve
+(AUC) is 0.901.'], [[418, 83, 509, 483], 'para', 'We then ran this
+transfer learning clas-
+sifier on the General
+Drug Dataset and took
+the posts marked class
+1 (recovery) to generate
+the Recovery Dataset.
+The classifier identified
+93,401 posts related to
+OUD recovery from 63
+subreddits. We use these
+posts in RQ2.'], [[516, 83, 626, 483], 'para', 'Analysis of Top Pre-
+dictors. In Table 3 , we
+present 20 of the top 30
+predictive independent variables/features with their $\beta$ values
+and significance values from the logistic regression. Positive
+$\beta$ values indicate that presence of the feature (n-gram token)
+in a post increases its likelihood of belonging to recovery
+(class 1), and negative $\beta$ values from not recovery (class 0).'], [[626, 83, 862, 483], 'para', 'The variables most associated with recovery (class 1) are
+self-explanatory. This include words around opioids ("opi-
+oids", "heroin"), stopping use and symptoms ("clean", "sober",
+"withdrawal", "quit", "cravings", "relapse"), external resources
+to help with recovery ("rehab", "clinic", "na" (Narcotics Anony-
+mous), "meetings", as well as verified OUD recovery drugs
+("methadone", "suboxone" sub). In contrast, the words most
+associated with non-recovery and drug use include many
+kinds of drugs ("mdma", "molly", "weed", "lsd", "adderal"),
+and continued use and research into the effects of drugs
+("trip", "smoke", "took", "effects", "tolerance", "safe"). These re-
+sults suggest that our transfer learning classifier is sensitive
+to behavioral signals of OUD recovery.'], [[116, 527, 370, 901], 'tab', '<table><tr><td>Feature</td><td>$\beta$</td><td>Feature</td><td>$\beta$</td></tr><tr><td>clean</td><td>5.79</td><td>mdma</td><td>-2.46</td></tr><tr><td>suboxone</td><td>4.26</td><td>weed</td><td>-2.43</td></tr><tr><td>methadone</td><td>3.74</td><td>trip</td><td>-2.26</td></tr><tr><td>days</td><td>3.61</td><td>lsd</td><td>-2.12</td></tr><tr><td>addiction</td><td>3.23</td><td>smoke</td><td>-1.84</td></tr><tr><td>opiates</td><td>3.22</td><td>drugs</td><td>-1.70</td></tr><tr><td>heroin</td><td>2.79</td><td>adderal</td><td>-1.57</td></tr><tr><td>rehab</td><td>2.48</td><td>acid</td><td>-1.55</td></tr><tr><td>addict</td><td>2.37</td><td>shrooms</td><td>-1.48</td></tr><tr><td>sober</td><td>2.36</td><td>tolerance</td><td>-1.31</td></tr><tr><td>sub</td><td>2.36</td><td>effects</td><td>-1.26</td></tr><tr><td>clinic</td><td>2.19</td><td>dcm</td><td>-1.12</td></tr><tr><td>withdrawal</td><td>2.12</td><td>coke</td><td>-1.05</td></tr><tr><td>relapse</td><td>2.07</td><td>friend</td><td>-1.03</td></tr><tr><td>na</td><td>2.07</td><td>cocaine</td><td>-1.02</td></tr><tr><td>detox</td><td>1.98</td><td>dmt</td><td>-0.98</td></tr><tr><td>meeting</td><td>1.98</td><td>took</td><td>-0.96</td></tr><tr><td>quit</td><td>1.97</td><td>xanax</td><td>-0.96</td></tr><tr><td>meetings</td><td>1.94</td><td>molly</td><td>-0.94</td></tr><tr><td>cravings</td><td>1.84</td><td>safe</td><td>-0.90</td></tr></table>', 'This image is a two-column table displaying feature names and their corresponding beta coefficients (β). The features listed include various substances, behaviors, and mental health states, such as "clean", "suboxone", "methadone", "addiction", "opiates", "heroin", "rehab", "addict", "sober", "withdrawal", "relapse", "na", "detox", "meeting", "quit", "meetings", and "cravings". Each feature has a numerical β value, with some entries marked by asterisks.'], [[371, 515, 430, 914], 'table_cap', 'Table 3: Selected features with the largest posi-
+tive/negative coefficients ( $\beta$ ) given by the transfer
+learning classifier, $p < 0.001^{***}$ , adjusted using Bon-
+ferroni correction ( $\alpha/10,000$ ).'], [[468, 515, 610, 915], 'para', 'Verification on Expert Labeled Data. Finally, we verify
+the performance of the transfer learning classifier on human-
+labeled data drawn from the General Drug Dataset. Two
+experts, the addiction research scientist and an expert on
+mental health and social media, annotated posts to assess
+whether the user was in recovery or advocated behaviors
+strongly correlated to recovery, like harm reduction or tem-
+porary cessation. The annotators used the Transtheoretical
+Model of Behavior Change [74, 73] as a clinically grounded
+method to analyze recovery, and correlated recovery signals
+recommended by the addiction research scientist [93] .'], [[610, 515, 795, 915], 'para', 'First, the annotators labeled a sample of 200 posts from
+the General Drug Dataset and then adjusted their rating
+schema. Next, they independently and blindly rated another
+200 labeled by the classifier, 100 from each class. On the final
+set of 200 posts, the interrater reliability (Cohen\'s k) between
+the two raters was 0.83; the raters then mutually resolved
+disagreements. Compared to the ratings of the experts, the
+classifier performed at strong accuracy for transfer learning
+of 79 % , with precision/recall of 0.81/0.79/0.79. Class-wise
+performance on the recovery class (class 1) was strong, with
+precision/recall of 0.70/0.85/0.77.'], [[795, 515, 848, 914], 'para', 'Error Analysis. We finish with an error analysis of the
+outcomes of the transfer learning classifier, focusing on its
+performance on the 100 expert-labeled recovery (Class 1)
+posts and the errors the classifier made.'], [[848, 515, 878, 914], 'para', 'We start with an example of a true positive , a post where
+the classifier ( $P_{class}$ ) = 0.664) and human ratings agreed.'], [[943, 85, 959, 156], 'foot', 'Paper 124'], [[943, 864, 959, 913], 'foot', 'Page 6']]

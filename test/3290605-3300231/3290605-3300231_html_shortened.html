@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   A Translational Science Model for HCI
+  </title>
+  <!-- Copyright (c) 2010-2015 The MathJax Consortium -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width; initial-scale=1.0;" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <link href="https://dl.acm.org/pubs/lib/css/bootstrap.min.css" media="screen, print" rel="stylesheet"/>
+  <link href="https://dl.acm.org/pubs/lib/css/bootstrap-theme.min.css" media="screen, print" rel="stylesheet"/>
+  <link href="https://dl.acm.org/pubs/lib/css/main.css" media="screen, print" rel="stylesheet"/>
+  <script src="https://dl.acm.org/pubs/lib/js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/bibCit.js" type="text/javascript">
+  </script>
+  <script src="https://dl.acm.org/pubs/lib/js/divTab.js" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" type="text/javascript">
+  </script>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+ </head>
+ <body id="main">
+  <section class="front-matter">
+   <section>
+    <header class="title-info">
+     <div class="journal-title">
+      <h1>
+       <span class="title">
+        A Translational Science Model for HCI
+       </span>
+       <br/>
+       <span class="subTitle">
+       </span>
+      </h1>
+     </div>
+    </header>
+    <div class="authorGroup">
+     <div class="author">
+      <span class="givenName">
+       Lucas Franco
+      </span>
+      <span class="surName">
+       Colusso
+      </span>
+      , University of Washington, USA,
+      colusso@uw.edu
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Ridley
+      </span>
+      <span class="surName">
+       Jones
+      </span>
+      , University of Washington, USA,
+      rajone@uw.edu
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Sean
+      </span>
+      <span class="surName">
+       A. Munson
+      </span>
+      , University of Washington, USA,
+      smunson@uw.edu
+     </div>
+     <div class="author">
+      <span class="givenName">
+       Gary
+      </span>
+      <span class="surName">
+       Hsieh
+      </span>
+      , University of Washington, USA,
+      garyhs@uw.edu
+     </div>
+    </div>
+    <br/>
+    <div class="pubInfo">
+     <p>
+      DOI:
+      https://doi.org/10.1145/3290605.3300231
+      <br/>
+      CHI '19:
+      Proceedings of CHI Conference on Human Factors in Computing Systems
+      , Glasgow, Scotland UK, May 2019
+     </p>
+    </div>
+    <div class="abstract">
+     <p>
+      <small>
+       Using scientific discoveries to inform design practice is an important, but difficult, objective in HCI. In this paper, we provide an overview of Translational Science in HCI by triangulating literature related to the research-practice gap with interview data from many parties engaged (or not) in translating HCI knowledge. We propose a model for Translational Science in HCI based on the concept of a continuum to describe how knowledge progresses (or stalls) through multiple steps and translations until it can influence design practice. The model offers a conceptual framework that can be used by researchers and practitioners to visualize and describe the progression of HCI knowledge through a sequence of translations. Additionally, the model may facilitate a precise identification of translational barriers, which allows devising more effective strategies to increase the use of scientific findings in design practice.
+      </small>
+     </p>
+    </div>
+    <div class="CCSconcepts">
+     <ccs2012>
+      <small>
+       <span style="font-weight:bold;">
+        CCS Concepts:
+       </span>
+       •
+       <strong>
+        Human-centered computing
+       </strong>
+       ;
+      </small>
+     </ccs2012>
+    </div>
+    <br/>
+    <div class="classifications">
+     <div class="author">
+      <span style="font-weight:bold;">
+       <small>
+        Keywords:
+       </small>
+      </span>
+      <span class="keyword">
+       <small>
+        Translational Science; Translational Research; Research-Practice Gap
+       </small>
+      </span>
+     </div>
+     <br/>
+     <div class="AcmReferenceFormat">
+      <p>
+       <small>
+        <span style="font-weight:bold;">
+         ACM Reference Format:
+        </span>
+        <br/>
+        Lucas Franco Colusso, Ridley Jones, Sean A. Munson, and Gary Hsieh. 2019. A Translational Science Model for HCI. In
+        <em>
+         Proceedings of CHI Conference on Human Factors in Computing Systems (CHI '19), May 4–9, 2019, Glasgow, Scotland UK.
+        </em>
+        ACM, New York, NY, USA 14 Pages.
+        https://doi.org/10.1145/3290605.3300231
+       </small>
+      </p>
+     </div>
+    </div>
+   </section>
+  </section>
+  <section class="body">
+   <section id="sec-2">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        1
+       </span>
+       INTRODUCTION
+      </h2>
+     </div>
+    </header>
+    <p>
+     Translational Science (TS) is the study of scientific knowledge progression from academia to practice and back. Taking findings from a basic science discovery to real-world impact is a complex process that requires both research (e.g., laboratory and applied research) and non-research activities (e.g., design and engineering) [
+     28
+     ]. In this paper, we work under the premise that there is a general goal in applied fields to translate scientific knowledge to inform the work of professionals. In HCI's case, it means influencing design practice as an endpoint [
+     31
+     ,
+     33
+     ].
+    </p>
+    <p>
+     However, HCI papers offer limited support for practice. For example, only 7% of CHI 2011 papers were oriented towards supporting design practice [
+     57
+     ]. At the same time, there is a growing expectation from industry practitioners, governments, and the general public that scientific knowledge should be useful to society [
+     58
+     ,
+     65
+     ]. Practitioners, specifically, have voiced concerns with the applicability of HCI research findings [
+     11
+     ,
+     19
+     ,
+     37
+     ,
+     38
+     ]. Consequently, mapping the Translational Science process is necessary to understand how to increase the use of HCI discoveries in design practice.
+    </p>
+    <p>
+     Past research in HCI has approached TS using the research-practice gap metaphor. This metaphor implies a separation between two sides or communities: academic researchers and design practitioners. However, the research-practice gap metaphor can oversimplify the translation work that HCI scholars and design practitioners do. For example, HCI scholars often draw on other disciplines to inspire applied research, such as cognitive sciences, psychology, and anthropology theories (e.g., Hutchins's Distributed Cognition [
+     35
+     ] from cognitive science, Leontiev's Activity Theory [
+     45
+     ] from psychology, Suchman's Situated Action [
+     68
+     ] from anthropology). The research-practice gap narrative overlooks this type of translational work, and if there are multiple gaps, they are likely more nuanced. Focusing on a single set of barriers from one gap may limit how translational problems are approached [
+     7
+     ].
+    </p>
+    <p>
+     If the research-practice gap metaphor is limited, what model might better depict Translational Science in HCI? In this paper, we present a literature review and interview study of HCI community members representing various parties to the Translational Science process. Through our findings, we contribute descriptions of the translational research practices involving HCI researchers, other scholars, design practitioners, and translators such as industry researchers and science communicators. Our main contribution is a continuum model for Translational Science in HCI, providing a foundation for future work to discuss Translational Science in HCI.
+    </p>
+   </section>
+   <section id="sec-3">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        2
+       </span>
+       METHODS
+      </h2>
+     </div>
+    </header>
+    <p>
+     Following Zimmerman et al.’s process to create the model of interaction design research within HCI [
+     75
+     ], we conducted a literature review, interviewed stakeholders in the HCI community, and constructed a model for Translational Science in HCI. Our literature review consisted of publications on TS, translational research, and research-practice gaps in HCI and other applied fields, such as public health, management science, communication, and education. Second, we interviewed academic researchers, design practitioners and students, entrepreneurs, and science communicators. Literature review findings were compared to participant perspectives.
+    </p>
+    <div class="table-responsive" id="tab1">
+     <div class="table-caption">
+      <span class="table-number">
+       Table 1:
+      </span>
+      <span class="table-title">
+       Summary of participants information. First, self-reported percentage of participants with experience in different areas within HCI. *Basic research experience contains research in Social Psychology, Philosophy, Chemistry. Consequently, experience in Basic research did not count towards Years of experience in HCI. Second, at the bottom, we show our participants’ of experience in the HCI field.
+      </span>
+     </div>
+     <table class="table">
+      <tbody>
+       <tr>
+        <td style="text-align:center;">
+         Area
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         Percentage
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Design Practice
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         44%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Applied Research
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         42%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Teaching
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         40%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         UX Research
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         26%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Basic Research in HCI
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         21%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Entrepreneurship
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         21%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Basic Research*
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         16%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Media Outreach
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         14%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Policymaking
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         7%
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Measure
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         Years in HCI
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Median
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         13
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Max
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         47
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Min
+        </td>
+        <td style="text-align:right;border-right: 2pt solid #000000;">
+         1
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p>
+     For interviews, we first recruited six HCI scholars experienced in research, design, community and media outreach, entrepreneurship, teaching, and policymaking to obtain a panorama of translation in HCI and to iterate on our research protocol and preliminary model. In the second interview stage, we broadened recruiting criteria and interviewed 43 participants engaged in HCI-related research and practice fields. We highlight that our participants came from many different traditions such as computer science, design, industrial engineering, anthropology, English literature, social psychology, interaction, and user experience design, design education, user experience research, and product management; and worked in academia, industry, and government. We also interviewed science communicators and communication managers. We had participants with many years of experience in HCI-related fields, as well as participants who are newer members of this community, and even some that at first did not consider themselves members (such as communication managers and some design practitioners). See detailed participant information on Table
+     1
+     , and in Supplementary materials.
+    </p>
+    <p>
+     We asked participants to define their perceptions of the gap between research and practice, where translational work takes place in HCI, and what they have done regarding translation. As in the first stage, participants commented on the current version of our model for TS in HCI.
+    </p>
+    <p>
+     The development of the model, the literature review, and interviews were interdependent. The model provided keywords for literature searches and framing concepts for the creation of the interview protocol. At the same time, we did not limit our literature review to a predetermined set of keywords; some concepts only emerged from our readings and interviews. We iterated on the model after each interview. After many months, a detailed model emerged from formal data analysis and in-depth critique sessions.
+    </p>
+   </section>
+   <section id="sec-4">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        3
+       </span>
+       TRANSLATIONAL SCIENCE IN HCI AND LINKED FIELDS
+      </h2>
+     </div>
+    </header>
+    <p>
+     We start by defining terms related to Translational Science (TS), such as research, practice, theory, and the research-practice gap. First, TS studies the transformation of knowledge through successive fields of research from a basic science discovery to real-world impact, a complex process that requires both theory-producing research (basic and applied) and non-research steps (dissemination, implementation, design). The study of each step is called translational research [
+     28
+     ].
+    </p>
+    <p>
+     Human-Computer Interaction (HCI) is “a discipline concerned with the design, evaluation, and implementation of interactive computing systems for human use and with the study of the major phenomenon surrounding them” [
+     33
+     ]. We acknowledge that HCI is a broad discipline that encompasses many fields and that has evolved throughout the years [
+     9
+     ]. In the field of HCI, TS is about translating rich understandings of people and their interactions with technology with a goal of influencing the design of interactive systems.
+    </p>
+    <p>
+     On one side of the HCI work are theoretical findings. In this paper, we use Yvonne Rogers's and Ben Schneiderman's definitions of theory: knowledge enabling understandings and generalizations about specific phenomena. Schneiderman even provides a list of instantiations of knowledge: theories (rules, frameworks, models), descriptions (terminology, taxonomies, ontologies), causal explanations and predictions; and more practical knowledge such as solutions (problem fixes, improved processes) and guidelines (recommendations, patterns, tutorials) [
+     60
+     ,
+     65
+     ]. On the other end of the translational work is design practice, the process or practice of devising, planning, or constructing something, focusing on the design of effective, user-friendly, interactive computing systems [
+     26
+     ,
+     31
+     ,
+     70
+     ]. The goal of the TS problem in HCI is thus to facilitate the adoption, implementation, and institutionalization of theoretical findings into design practice (much like what is described in [
+     58
+     ]).
+    </p>
+    <p>
+     Despite acknowledgments of the value of theoretical insights about people in design practice, studies have repeatedly shown that these insights are rarely adopted [
+     11
+     ,
+     19
+     ,
+     55
+     ]. Prior work on HCI translations has primarily described the process using a gap metaphor [
+     7
+     ]. The research-practice gap metaphor is a common concept that has been used in HCI to describe an undesired space that allegedly exists between the research and the practice of the discipline [
+     7
+     ,
+     31
+     ]. Much work describes multiple translational barriers that explain why a single gap exists, and the “gap” problematization inspired many studies proposing ways to bridge it [
+     19
+     ,
+     22
+     ,
+     31
+     ,
+     38
+     ,
+     51
+     ,
+     65
+     ].
+    </p>
+    <p>
+     Building on the gap metaphor, Gray, Stolterman, and Siegel [
+     32
+     ] have suggested a trickle-down and bubble-up model, emphasizing that the interaction between the research and practice communities are bidirectional. Bubble-up describes the efforts of the HCI community to abstract situated knowledge and practice of methods, tools, or concepts into refined theory. The trickle-down describes the way adaptation of research and theory takes place in design practice, including the use of methods, tools, or concepts that originate in an academic community.
+    </p>
+    <p>
+     However, despite the importance of acknowledging a gap between research and practice [
+     51
+     ], a simple gap metaphor might be too simplistic and might limit how we think about TS in HCI. Beck posited that the gap metaphor influences how HCI researchers set translational problems to focus on barriers, which has implications for the kinds of solutions they seek [
+     7
+     ]. Frequently, HCI researchers attempt to bridge the gap by pushing HCI knowledge into practitioner use by presenting scientific findings in different formats apart from research papers [
+     19
+     ,
+     32
+     ,
+     47
+     ,
+     55
+     ], in an attempt to make the theoretical insights “more pertinent and easier to use for developers”  [
+     12
+     ]. The proposed solutions tackle barriers that HCI researchers and practitioners have identified as reasons for the research-practice gap to exist. For example, recent work has described issues with the terminology and applicability of research papers, how practitioners may lack access to academic resources, the different cultures and skill sets of researchers and designers  [
+     19
+     ,
+     51
+     ,
+     54
+     ,
+     57
+     ] and many more [
+     37
+     ].
+    </p>
+    <p>
+     Countering the focus on barriers, Beck and Ekbia [
+     7
+     ] encouraged the HCI community to focus on the connections and continuities between theory and practice in HCI. In this context, Beck and Ekbia suggest that a new metaphor — the continuum metaphor — which draws attention to the mutual agreement, harmony, synergy, and support between research and practice. However, how one can think of the HCI TS problem as a continuum is unclear.
+    </p>
+    <p>
+     Expanding beyond HCI, our literature review shows that “the gap” problem is also the dominant narrative in many other fields, such as Psychology, Nursing, Human Resources, Library Sciences, Management, Education, Social Work, and more [
+     10
+     ,
+     15
+     ,
+     23
+     ,
+     48
+     ,
+     53
+     ,
+     61
+     ,
+     62
+     ,
+     64
+     ]. Similarly, the gap metaphor is used to describe a disconnect between the research community and the practice community. Common barriers include practitioners being unaware of the latest findings [
+     62
+     ], thinking that research is not applicable to real-world problems [
+     48
+     ,
+     64
+     ] or, if applicable, too difficult to implement [
+     10
+     ], and the insularity of academic work dissemination [
+     15
+     ,
+     23
+     ].
+    </p>
+    <p>
+     In these fields, the work of Everett Rogers on diffusion of innovations [
+     58
+     ] has been very influential. For Rogers, diffusion is the process by which a central source communicates an innovation towards practitioners, among whom the innovation is adopted over time or rejected. Rogers's work is particularly influential in its descriptions of the work of translators to disseminate knowledge, and measures of knowledge adoption. A major criticism of this work is that it represents a one-way model, which is insufficient as knowledge flows through multiple channels in parallel. Also, the centrality of research producers in the model disregards the needs of practitioners and what they have to offer researchers [
+     56
+     ].
+    </p>
+    <p>
+     The biomedical and health sciences have begun using a continuum metaphor to describe the progression of research from basic science discovery to proposed human application, to clinical treatment [
+     28
+     ]. They have noted similar issues with using a single term to describe the discontinuities between research and practice. Using a single gap to describe the complex TS problem had become a source of confusion, as different research steps had differing goals, settings, study designs, investigators, and outcomes [
+     74
+     ]. This confusion has hindered the proper identification of translational barriers and prevented proper resource allocation by funding agencies [
+     74
+     ].
+    </p>
+    <p>
+     In their review article of the translational continuum in Biomedicine, Drolet and Lorenzi discuss three “translational chasms” (T's or gaps) as the main landmarks in knowledge progression in the continuum:
+    </p>
+    <p>
+     T1 is the use of knowledge about disease mechanisms in the development of diagnosis methods, therapy, and prevention. T1 research is performed by scientists trained in molecular biology, genetics, and other basic sciences working in laboratories. In contrast, ambulatory care settings are the “laboratory” for T2 research, where applied interventions further the understanding of T1 results by confronting them with broader populations. T2 is known as the clinical trials step, where safety and efficacy research occur. T3 requires implementing scientific knowledge: applying and evaluating interventions in real-world settings and of the disciplines that inform the design of those interventions, such as clinical epidemiology and evidence synthesis, but also communication theory, behavioral science, public policy, financing, organizational theory, design, informatics, and mixed methods research. Finally, T3 is bridged when clinical practices and guidelines are implemented to produce concrete public health changes. For example, if an effective clinical application is found (e.g., aspirin effectively decreases thrombosis in individual patients), then it must be marketed and explained to clinical practitioners, who may sometimes be trained in the proper ways to administer a drug before public health gains can be achieved. After T3 is bridged, public health impact is studied via practice-based research, and feedback for continual improvement follows (e.g., why are clinicians not administering aspirin?).
+    </p>
+    <p>
+     The most noticeable differences between health and HCI pertain to institutional and policy constraints that need to be addressed to protect drugs and treatment users [
+     49
+     ,
+     74
+     ]. Additionally, the continuum model shows the work of many parties to progress knowledge through successive steps, rather than focusing on the work of researchers and clinicians; such as basic scientists, applied researchers, marketers, designers, clinical practitioners, physicians, social workers, public health researchers, policymakers [
+     28
+     ,
+     69
+     ,
+     74
+     ].
+    </p>
+    <p>
+     There are drawbacks in using existing models to describe TS in HCI, although we can learn from them. The health model is field-specific, such as in how it deals with institutional constraints. The diffusion model focuses on disseminating information and does not address the importance of offering applicable resources to practitioners, or even learning what is useful for them. On the other hand, health shows many stakeholders working on a continuum of knowledge progressions, supporting Beck and Ekhbia's call [
+     7
+     ]. The diffusion of innovation shows pathways to disseminate information through translators, resonating with Gray et al.’s work [
+     32
+     ].
+    </p>
+    <p>
+     Therefore, how could we rethink the research-practice gap metaphor to represent HCI's unique process of knowledge progression, incorporating learnings from other fields and past work related to Translational Science?
+    </p>
+    <div class="table-responsive" id="tab2">
+     <div class="table-caption">
+      <span class="table-number">
+       Table 2:
+      </span>
+      <span class="table-title">
+       Description of the steps and gaps of the HCI Translational Science model. Definitions drawn from our data, Schneiderman [
+       65
+       ], and the NSF — National Science Foundation [
+       1
+       ]. Of note, similar to their academic counterparts, industry researchers can engage in both Basic and Applied research. The model does not designate where academic or industry researchers reside in the continuum.
+      </span>
+     </div>
+     <table class="table">
+      <tbody>
+       <tr>
+        <td style="text-align:center;">
+         Steps
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Description
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Basic Research
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Basic research is performed without thought of practical ends, resulting in general knowledge to answer a large number of problems, though it may not give a complete specific answer to any one of them. In HCI, basic research results in a foundational understanding of people, technology, and design. It is achieved by researchers posing formative questions and investigating a topic through the scientific process often in specific scenarios/contexts. Participants mentioned 3 main types of basic research relative to HCI: A) Research from other fields such as anthropology and psychology that is drawn upon to conduct Applied research; B) Ethnographies conducted within the context of how people use or are impacted by technologies, and C) HCI research probing the technological boundaries, demonstrating new potential interaction capabilities and new experiences made possible by technological advances.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Applied Research
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Applied research provides complete answers to practical problems. In HCI, applied research results in practical, goal/solution-oriented research. It is achieved by HCI researchers posing questions through the use of an embodiment of knowledge; study of interface efficacy and how people relate to it; observation of tensions between people and technologies, safety, and ethics in realistic scenarios.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Design Practice
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         HCI practitioners using HCI and design knowledge to create something new in the “made world.” Involves the deep consideration of specific users, related stakeholders, technical and market requirements. Integration of art, science, and engineering to make aesthetically functional interfaces.
+        </td>
+       </tr>
+      </tbody>
+      <tbody>
+       <tr>
+        <td style="text-align:center;">
+         Gaps
+        </td>
+        <td style="text-align:center;">
+         Barriers
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Main translations
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         TBA
+        </td>
+        <td style="text-align:center;">
+         Information overload, skillset
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Translation of basic science to designs and,interactions through an exchange between Applied and Basic research. Learning and iteration of theories through scientific research processes and communication. Translations of basic research findings into designs to be tested in Applied research often occurs through a collaboration between basic and applied researchers, as well as HCI practitioners.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         TBD
+        </td>
+        <td style="text-align:center;">
+         Understanding, access
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Translation of basic science into content that can be consumed more broadly. For example, pop psychology books, or events where researchers explain their findings to practitioners.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         TAD
+        </td>
+        <td style="text-align:center;">
+         Applicability
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Translation and synthesis of knowledge into usable resources, considering specific application domains. Development of resources that can lead to new knowledge being adopted in Design practice.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         Bubble-up
+        </td>
+        <td style="text-align:center;">
+         Personal interest, incentives
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Looking at practice to inform research; observation of designs and practice breakdowns as opportunities to inform further investigations. HCI practitioners broadcasting learnings from their day-to-day problem-solving work on social media/publishing platforms.
+        </td>
+       </tr>
+       <tr>
+        <td style="text-align:center;">
+         TAA
+        </td>
+        <td style="text-align:center;">
+         Information overload, traditions
+        </td>
+        <td style="text-align:center;border-right: 2pt solid #000000;">
+         Dissemination and reuse of HCI research from different traditions.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <figure id="fig1">
+     <img alt="" class="img-responsive" longdesc="The proposed HCI Translational Science Model. The model is visually represented by a diagram. The diagram displays three boxes horizontally. The three boxes are: First, Basic Research. Second, Applied Research. Third, Design practice. The arrows that connect these boxes represent multiple gaps and knowledge flow: TBD, TBA, TAD, and Bubble-up." src="https://dl.acm.org/cms/attachment/cda8b1a5-8b52-46e7-a73e-6e8ecb52761e/chi2019-1-fig1.jpg"/>
+     <div class="figure-caption">
+      <span class="figure-number">
+       Figure 1:
+      </span>
+      <span class="figure-title">
+       The HCI Translational Science Model consists of 3 main steps: Basic and Applied Research (described only as “research” in the gap metaphor) and Design Practice; and 3 main gaps: T
+       <sub>
+        BA
+       </sub>
+       , T
+       <sub>
+        AD
+       </sub>
+       , and T
+       <sub>
+        BD
+       </sub>
+       . The dotted line represents the Bubble-up from practice to research. T
+       <sub>
+        AA
+       </sub>
+       suggests a gap within Applied research. Steps and gaps are defined on Table
+       2
+       and detailed in the remainder of this paper.
+      </span>
+     </div>
+    </figure>
+   </section>
+   <section id="sec-5">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        4
+       </span>
+       MODEL OF TRANSLATIONAL SCIENCE IN HCI
+      </h2>
+     </div>
+    </header>
+    <p>
+     We propose a model for Translational Science in HCI (Figure
+     1
+     ). We ground the decisions that led to the design of the proposed model in our interview findings. First, we present how participants talked about the gap metaphor, translational science in the field, and the main actors in translational science. Second, we describe how participants view and enact relationships that point to a progression of knowledge between research and practice.
+    </p>
+    <p>
+     While most participants first described a single gap in Translational Science, upon further reflection, many noted issues with the dichotomy. Initially, participants defined TS in HCI as a “BIG gap” or a “barrier” between researchers and designers (P3, P11, P17, P22, P23, P26, P35, P39). Participants would often mention known research-practice barriers such as accessing and understanding scientific work, as well as how dissimilar incentive structures could be the biggest driver for the gap between HCI researchers and Design practitioners.
+    </p>
+    <p>
+     Most participants, regardless of their role, agreed that those in the HCI field share the goal of improving products and services for people, even if not directly. Therefore, we set the end-goal of our proposed model as Design practice (Figure
+     1
+     ).
+    </p>
+    <p>
+     As participants described their personal experiences related to translational science and “the gap”, the roles of additional parties in the progression of HCI knowledge surfaced naturally, such as industry researchers and science communicators, as well as a nuanced and fluid variety of academic researchers (e.g., P7 had worked in industry, launched a startup in the past, and now focuses on design research and teaching at her academic department).
+    </p>
+    <p>
+     At the end of the interview, after reflecting on their own initial interpretations of a single research-practice gap, it became clear to participants that the gap metaphor is insufficient to describe how multiple parties conduct a series of translations. Most participants, especially HCI researchers, noted their work falls in the Applied research step; they also noticed that the single gap narrative does not distinguish Basic research.
+    </p>
+    <p>
+     In the HCI TS model (Figure
+     1
+     ), we used the T-terminology to describe different gaps between steps with a goal of facilitating more precise discussion about specific gaps (following Drolet and Lorenzi's model [
+     28
+     ]). Drawing from our interviews, the most prominent gaps in the HCI Translational Science model seem to be between Basic and Applied research (T
+     <sub>
+      BA
+     </sub>
+     ), between Applied research and Design practice (T
+     <sub>
+      AD
+     </sub>
+     ), and between Basic research and Design practice (T
+     <sub>
+      BD
+     </sub>
+     ). We also heard about how Bubble-up happens (supporting  [
+     32
+     ]), and finally, about gaps within applied research in HCI. Table
+     2
+     shows descriptions of the abovementioned steps and gaps with their unique knowledge exchanges, translations, and barriers.
+    </p>
+    <p>
+     As can be seen on Figure
+     1
+     and Table
+     2
+     , the model does not designate where academic or industry researchers reside in the continuum. Basic and Applied research can occur both in academic or industry settings, and the same is true for the design of interactive systems (e.g., university startup incubators). Additionally, Applied research can be tightly linked to basic research if conducted in an academic setting, but in the industry, it gravitates towards design practice.
+    </p>
+    <section id="sec-6">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        T
+        <sub>
+         AD
+        </sub>
+        — Applied Research to Design Practice
+       </h3>
+      </div>
+     </header>
+     <p>
+      The gap between Applied research and Design practice is what people most often refer to as the research-practice gap. Participants said that basic research findings rarely influence the work of design practitioners, which is one of the reasons why translating basic research into applied research is important.
+     </p>
+     <p>
+      Participants described known barriers to the use of research findings by practitioners, such as understanding issues due to factors such as the terminology in research contributions and difficulty in accessing them. However, they highlighted that applicability might be the most significant barrier keeping applied research from influencing design practice.
+     </p>
+     <p>
+      P7 and P13, experienced in both academia and industry, said that expecting HCI practitioners to read papers is unrealistic. A practitioner noted designers will not — and cannot — spend the time to read papers:
+      <em>
+       “I don't have four hours to read one paper, I just don't, I could get a lot done in those four hours. Frankly, I do have 10 minutes to skim through a Medium article. I've never understood why in academia, they don't set up an incentivization structure for academics to almost like promote their research to industry”
+      </em>
+      (P35).
+     </p>
+     <p>
+      When researchers and designers meet and talk in person, the terminology issue is lessened as they can speak directly to each other and ask for clarification (P11, P13, P14, P30, P39, P40). However, even at these rare occasions, designers do not get actionable information from researchers (P7, P11, P29, P35).
+      <em>
+       “I have been to CHIplay, but there is a big barrier between industry and academia. Very little of what I saw there was applicable, and that event is the only direct contact I have with academia. During the year, everyone is locked up in their companies or universities and don't speak”
+      </em>
+      (P11, who runs a virtual reality gaming company).
+     </p>
+     <p>
+      HCI researchers translating between applied research and design practice described the
+      <em>
+       applicability
+      </em>
+      barrier as the most important to address to successfully influence the work of design practitioners. P14, P30, and P32, all HCI professors, said that designers do not care about using theories or detailed terminology, only wanting to know what can be applied for their particular case.
+     </p>
+     <p>
+      Many HCI researchers recognized that the long and difficult applied research process does not result in actionable resources that can be offered to design practice, which, in their view, is a big problem for HCI (P4, P7, P14, P19, P27, P34). An industry researcher, who worked in a translational medical science project after her doctorate, said that HCI
+      <em>
+       “does not have enough research study findings that have been shown to work in practice or practice-based research. Research findings are not real world enough to be meaningful and applicable”
+      </em>
+      (P16). This concern motivated P19, a long-time CHI contributor, to engage with industry partners, tapping into wider populations to generalize her study results, and to learn how to translate her research findings into something “useful” for practitioners.
+     </p>
+     <p>
+      We then asked participants what has worked in terms of translations from applied research to design practice. Researchers mentioned having success with a
+      <em>
+       “make it happen”
+      </em>
+      approach. They described embedding in organizations as consultants or doing design work along with practitioners, first learning what those practitioners care about before offering recommendations (P8, P19, P20, P21, P30, P32); and creating actionable resources for practitioners to use, such as easy to use research and design methods (P7, P14, P19, P32), or open-source projects. P8 used an open-source model:
+      <em>
+       “it was an open-source project, so they literally put the code up on the wall and like went through it and used that as the jumping off point to invent their startup”
+      </em>
+      and introduced the project to practitioners in a hackathon.
+     </p>
+     <p>
+      P19 told the story of how the idea to create a design method started:
+      <em>
+       “this industry guy asked for resources, and then I asked myself: what do I give to this guy? Papers... and academic research... are too hard for practitioners to get it.”
+      </em>
+      Her approach was to study how to transform empirical data from published studies into a design method.
+      <em>
+       “Connecting to practice was a study in itself, a long one”
+      </em>
+      (P19).
+     </p>
+     <p>
+      Compatibility with existing workflows and demonstrated utility affect adoption of assets and methods by practice, supporting [
+      58
+      ]. Scholars mentioned making assets compatible with current industry practices (P8, P19), and the need for these assets to prove their usefulness from the outset, such as by connecting with metrics that practitioners value.
+      <em>
+       “I have learned one lesson. Managers and bosses need to want it. They need to be convinced and make that a part of their process. They need to know what the practical outcome of the method for them is. One manager told me: ’I will fail if I don't use this method’ and that's when I knew I had succeeded”
+      </em>
+      (P19).
+     </p>
+    </section>
+    <section id="sec-7">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        T
+        <sub>
+         BA
+        </sub>
+        — Basic to Applied Research
+       </h3>
+      </div>
+     </header>
+     <p>
+      Participants, specifically researchers, made a point that apart from T
+      <sub>
+       AD
+      </sub>
+      , there is also an important gap in the knowledge progression from basic to applied research, with its unique barriers. First, translating basic knowledge into research products is a challenging process that happens through collaborations with parties who possess supportive skills. Second, there seems to be a disconnect between HCI and other disciplines.
+     </p>
+     <p>
+      Participants noted that translating theory from the social sciences, ethnography, or philosophy into tools for conducting applied research is complicated and often depends on partnerships as they lack the “
+      <em>
+       skillset
+      </em>
+      ” (P27, P28, P33, P43). P24, a psychology professor, said
+      <em>
+       “my main goal is finding reproducible regular patterns in people's behavior that both have real-life potential applicability or consequences, and at the same time can be studied in a fairly controlled way. But I want my studies to have an impact in real life.”
+      </em>
+     </p>
+     <p>
+      Regarding this challenge, participant P27 posed a question and a proposed path:
+      <em>
+       “How do we facilitate the interaction of basic and applied researcher in HCI, long term, sustainable? This is a big problem. We need to do more work on understanding how this happens naturally, which might help us foster how to facilitate this interaction.”
+      </em>
+      P28, also present in the group interview, agreed, saying that he worked in projects with collaborators from other fields in successful programs dedicated to foster basic and applied research exchange, funded by a Translational Medicine association.
+     </p>
+     <p>
+      A few participants described how basic and applied research interact through joint projects. Basic researchers may work with HCI researchers or practitioners to create designs that can be used in detailed investigations. However, finding these collaborations and establishing common-ground can be challenging and costly (P7, P19, P24, P27, P28).
+     </p>
+     <blockquote>
+      <p>
+       We hired a computer science Ph.D. student who was a really good programmer. We met with him and he prototyped a version that we had in mind. My colleague and I may say ’oh let's do this,’ not because we know that we have to do it, but because we happened to think of it, but learning from the programmer that would be difficult to implement, we would think of something else. (P27)
+      </p>
+     </blockquote>
+     <p>
+      However, P27 and P33 emphasized that collaborations with students or designers are often temporary and expensive, and that longer-term partnerships would be better. In P27’s case, the student soon graduated and left only the code. Changing and deploying the code required someone to have — or gain — familiarity with that particular technology stack. P27 and his colleague spent a year with the project on a hold because of this issue. P27 and P33, who are self-described basic researchers, even started learning design and engineering skills to do applied work on their own.
+     </p>
+     <p>
+      Second, as the first point already suggests, participants valued drawing on other domains of knowledge to create work that is “
+      <em>
+       new
+      </em>
+      ” and “
+      <em>
+       fresh
+      </em>
+      ” (P30, P26). Researchers think that engaging with diverse scholarship transforms them into better scholars (P5, P17, P26, P28). Understanding is not a barrier in T
+      <sub>
+       BA
+      </sub>
+      ; while it can be difficult to quickly grasp other research traditions, there is institutional support through citations and a common understanding of papers as an output to incentivize reading diverse work.
+     </p>
+     <p>
+      However, HCI scholars mentioned barriers to engaging with other scholarship. Scholars do not feel incentivized to participate in communities of interest that are peripheral to HCI; P28, P29, and P35 said this stifles research innovation. Most of the knowledge circulation in HCI happens within the confines of the CHI community and other ACM conferences.
+     </p>
+     <p>
+      HCI researchers also said their work rarely feeds back into the original bodies of theory from which they draw on. “
+      <em>
+       I draw on social psychology theories and behavior change and translate that into designs. So that's a translation. Usually, you're drawing on many different theories to help inform one coherent thing. Not the opposite. I don't feel like I contribute to basic science
+      </em>
+      ” (P7). Again, citation deficit was raised as evidence for a basic-applied research gap (P3, P14). Participants did not mention efforts to facilitate engagement with other disciplines, or to promote more —and more relevant— citation exchanges.
+     </p>
+    </section>
+    <section id="sec-8">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        T
+        <sub>
+         AA
+        </sub>
+        — Gap within Applied research
+       </h3>
+      </div>
+     </header>
+     <p>
+      Participants described another disconnect within HCI in academia, one specifically pertaining to how HCI research is disseminated and reused in the field. While some participants who frequently participate and publish at CHI boasted that it is common to cross-pollinate work with their colleagues’ diverse research (P1, P7, P19, P27, P32), others mentioned a critical barrier related to citations, perhaps the main currency in academia. Within sub-communities, research papers are often not cited:
+     </p>
+     <blockquote>
+      <p>
+       I speak directly to those issues. We use the same keywords, publish in the same venues. It becomes a personal grudge, which is a problem within HCI. You may not like my work, but it should be cited. If you disagree with my approach or findings, cite it and explain why. (P2)
+      </p>
+     </blockquote>
+     <p>
+      The reasons given by participants for the citation failure were information overload and academic traditions. First, participants mentioned that it is difficult to keep up with all publications within an area of studies or across them (P1, P9, P15, P17, P32, P43), which is curious as most of the knowledge circulation happens within a few, well-known venues. Regarding academic traditions, some researchers said that authors can devalue ethnographies or systems development if they do not engage with —or understand— it, which can cause those researchers to not learn from or cite that work (P4, P5, P19, P27). As in T
+      <sub>
+       BA
+      </sub>
+      , participants did not mention efforts to promote more and more relevant citation exchanges across HCI conferences tracks.
+     </p>
+    </section>
+    <section id="sec-9">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        T
+        <sub>
+         BD
+        </sub>
+        — Basic Research to Design Practice
+       </h3>
+      </div>
+     </header>
+     <p>
+      Our participants initially marked T
+      <sub>
+       BD
+      </sub>
+      as the rarest translational path. Basic researchers do not plan studies or write papers with the objective of influencing practice; and P19 mentioned that
+      <em>
+       “HCI is so important because it sits in between basic research and design practice to do the translation.”
+      </em>
+      For P6, P17, P24, and P33, T
+      <sub>
+       BD
+      </sub>
+      is where the understanding and access barriers are more salient. However, although rare, participants acknowledged that basic research can influence HCI practice, and provided a few examples.
+     </p>
+     <p>
+      One approach is to translate basic science into content to be consumed more broadly. For example, pop psychology books [
+      6
+      ,
+      29
+      ] are often written by practitioners with scientific training, sharing scientific findings blended with personal industry experience or partnering with scholars. None of our participants had written or helped to write such kind of books; instead they accomplished other types of outreach such as participating in radio talks and contributing to news articles about science (P6, P17, P24). Second, translating content and disseminating it for a targeted group of practitioners, in events (P24, P43), and in discussions with practitioners that are actively searching for new knowledge to inform product development (P4, P8, P17, P30, P33). Third, participants agreed that training in basic research affords the abilities to partner with practitioners through research method skills and deep scientific understanding (P6, P17, P24, P28, P33, P40, P43).
+     </p>
+    </section>
+    <section id="sec-10">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Bubble-up
+       </h3>
+      </div>
+     </header>
+     <p>
+      Bubble-up, an important aspect of our model (Figure 2), has been discussed in prior work [
+      32
+      ]. Our participants who engaged in Bubble-up work described mostly researcher-led strategies to help practice knowledge to influence research. They also voiced the impression that most of their colleagues do not do the same because they are either not personally interested in design, or for lack of incentive. For P15,
+      <em>
+       “It is crucial for researchers to really engage with practitioners and know how things are done in industry. This is, or should be, the minimum requirement to contribute to design.”
+      </em>
+     </p>
+     <p>
+      In our interviews, practitioners mentioned not engaging with bubble-up. UX researchers and designers are most often not incentivized to broadcast findings because of intellectual property restrictions (P12, P35). However, disseminating carefully vetted case studies in platforms such as Medium has been more common among practitioners. Although our participants did not have experience with such forms of communication, they mentioned an interest in doing so for personal branding (P29, P39, P41, P42). Interestingly, we heard from all HCI practitioners that instructors with professional experience as designers or engineers effectively made the
+      <em>
+       “academia-industry linkage”
+      </em>
+      (P35) in the classroom, bringing knowledge from practice into the education of a new generation of practitioners. This view was consistent among HCI professors who had industry experience (P10, P11, P13, P15, P34, P35, P38).
+     </p>
+     <p>
+      HCI researchers interested in learning insights from practice put effort into a few strategies that they deem successful, such as organizing and attending practitioner-oriented conferences (P9, P13, P15, P24); keeping track of students who go on to leading industry positions (P13, P29, P31); and using online design groups:
+      <em>
+       “I'm part of Facebook and Slack groups to talk to practitioners. Most of the times we talk about new tools or books, design trends, but sometimes deeper issues and methods. It's very varied but focused on practice only. It's almost like a crowdsourced design encyclopedia on current topics.”
+      </em>
+      (P15). The Bubble-up goals that our participants mentioned were: to learn what practitioners care about (P9, P13, P15, P24), to gain insights about design field trends (P13, P29, P31), to improve teaching (P15) and syllabi (P13).
+     </p>
+    </section>
+    <section id="sec-11">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Different Translators and Translational Work
+       </h3>
+      </div>
+     </header>
+     <p>
+      Through our interviews, we uncovered a number of different types of translations that address TS barriers: the design of example products, people transfer, education, use of research knowledge and products in industry research, and science communication.
+     </p>
+     <section id="sec-12">
+      <p>
+       <em>
+        Synthesizing Information into contextualized products.
+       </em>
+       This type of translation, achieved through the collaborative work of basic researchers, applied researchers, and designers, can entail both translating basic knowledge into research concepts for testing and applied research into prototypes and guidelines that can facilitate adoption in design practice.
+      </p>
+      <p>
+       In the interviews, we heard specific instances of translational work altering the original research insight to create a new product to address more contextualized problems. Both in T
+       <sub>
+        BA
+       </sub>
+       and in T
+       <sub>
+        AD
+       </sub>
+       , knowledge can get lost in translation because of the synthetic nature of design, which is reflected in the accounts of basic and applied researchers who have engaged in translations (P8, P19, P24). P24 mentioned that a foray into applied research required making many concessions and changing their initial ideas because of technical and design constraints. P19 in turn mentioned the need to make a design method compatible with industry practices, which required drastic adaptations.
+      </p>
+      <p>
+       The challenge in translating research into products or methods is described by Chilana et al. through the creation of a new venture born out of HCI research focusing on adoption [
+       17
+       ] and by the concept of appropriation used by Gray et al. [
+       32
+       ]. As seen in the previous paragraph, not only do design practitioners partially appropriate knowledge, so do researchers when attempting to bridge gaps.
+      </p>
+     </section>
+     <section id="sec-13">
+      <p>
+       <em>
+        People transfer as knowledge transfer.
+       </em>
+       Chilana et al.’s migration from academia to starting a venture [
+       17
+       ] represents a second path that drives translations: the movement of people. People ’move’ across gaps and steps, such as students or professors working in industry temporarily through sabbaticals, collaborative projects, or consulting, permanently after graduating or after a career change. People carry knowledge and skills with them. Most participants mentioned that industry researchers, for example, whether trained in applied or basic research, can help translate the terminology of academic contributions (both in T
+       <sub>
+        BD
+       </sub>
+       and T
+       <sub>
+        AD
+       </sub>
+       ). We interviewed industry researchers with academic training, who shared how they have used academic research to inform their work. First, most industry researchers said that, most commonly, their knowledge of research methods is employed on a day to day basis. Second, they use scientific findings to inform the creation of study protocols and initial product design directions. In these two latter cases, industry researchers benefit from their academic experience in reading and conducting scientific studies to quickly evaluate and identify takeaways in existing bodies of knowledge, contextualizing that knowledge to the problems that their companies face for the design of products or services (P12, P16, P17, P40, P42).
+      </p>
+      <p>
+       Connected to the points above, most participants called out one particular form of people transfer — education — as perhaps the most common path for HCI to influence design practice. Academia usually contributes to society with research findings, but HCI researchers in academia also participate in the training of practitioners. Multiple HCI professors mentioned that teaching HCI theory in classes is challenging and how to do so effectively is an open question.
+       <em>
+        “How do we effectively train people to be sensitive and make them think about these questions
+       </em>
+       [referring to information privacy and persuasive design]
+       <em>
+        when they go into the workforce?”
+       </em>
+       (P1).
+      </p>
+     </section>
+     <section id="sec-14">
+      <p>
+       <em>
+        Formal and informal science communication.
+       </em>
+       While papers are a primary communication artifact among researchers, time constraints hinder the use of academic research by industry researchers. To bridge T
+       <sub>
+        AD
+       </sub>
+       and T
+       <sub>
+        BD
+       </sub>
+       gaps, generating curated resources is particularly important (P6, P12, P16, P20, P34 P42).
+       <em>
+        “I have time to read the abstract basically. I'd love to read more academic papers, but everything is due yesterday in industry”
+       </em>
+       (P12). Participants valued Nielsen reports (P12, P20, P34) and meetings with scholars (P21, P40, P43) for helping them learn about the latest relevant readings in a particular area.
+      </p>
+      <p>
+       Writing books, blog posts, presenting research in events, talks, or informal conversations can also help bridge gaps. Science communication can be done by writers, researchers themselves, or collaboratively. Participants saw it as an important pathway to reach and influence scholars, practitioners, and public opinion (P1, P6, P7, P22, P23, P25), supporting Smith et al. [
+       66
+       ]. There is also a more informal approach to science communication, where industry researchers use academic research opportunistically in discussions with their product teams, or when academic researchers engage in casual conversations with design practitioners about how academic research can inform product development.
+      </p>
+      <p>
+       In translational science communication, a major barrier is balancing scientific precision with writing content that appeals to specific audiences. As in previous studies, HCI practitioners reported difficulty reading research papers (P12, P20, P21, P35, P37, P38). For the three science communicators we interviewed (P22, P23, P25) the most significant issue in working with scholars is their difficulty in explaining things simply. P25 said that academics dislike having their work translated
+       <em>
+        “because they want the original language in the final piece.”
+       </em>
+       HCI scholars acknowledged this barrier and mentioned a struggle in balancing simple communication and scientific precision. P1 has written blog posts and mentioned that it is hard to break away from the academic writing style:
+       <em>
+        “academics tend to be very fact-driven, and we have a certain style of writing, and we get this feedback - you have to be friendlier, you have to insert fun pieces, it's just a different style of writing to make it an engaging piece. So even if the desire is there, the ability sometimes can be difficult. We are more precise and nuanced in the way we describe things.”
+       </em>
+       P7 adds that she has hesitated to forego precision because study results are not entirely generalizable to all populations.
+      </p>
+     </section>
+    </section>
+   </section>
+   <section id="sec-15">
+    <header>
+     <div class="title-info">
+      <h2>
+       <span class="section-number">
+        5
+       </span>
+       DISCUSSION
+      </h2>
+     </div>
+    </header>
+    <p>
+     By triangulating information from multiple stakeholders involved in the TS process in HCI and models from other applied fields, we develop a model for TS in HCI that presents a more nuanced view, with multiple gaps, barriers within each, and corresponding translation efforts. While this model of multiple gaps has similarities to models developed in medicine, it also has attributes unique to HCI. For example, the HCI model is not linear. This is likely because HCI-proposed innovations typically do not face the regulatory constraints of medical research. There is much more flexibility for research insights to directly influence design practice, without rigorous testing and evaluation.
+    </p>
+    <p>
+     Below, we discuss the implications of using our proposed model of TS in HCI. We then consider how to coordinate translational efforts to move scientific HCI research into the hands and minds of practitioners, and the importance of engaging — and studying how to engage — with other translators in Translational Science.
+    </p>
+    <section id="sec-16">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        The Value of a Translational Science Model for HCI
+       </h3>
+      </div>
+     </header>
+     <p>
+      The Translational Science process in HCI can be described as a “continuum” because various resources and actions are involved in a progression of knowledge, advancing discoveries towards design practice. There are gaps in this progression and using models can make translational research more likely to be successful [
+      69
+      ]. Woolf describes several benefits of a Translational Science model that distinguishes different steps, translations, and disseminations [
+      74
+      ]. These include repositioning translational barriers into a more specific arrangement, helping to understand where translation occurs or has stalled. Second, models of TS can support discussions about allocation of resources that facilitate Translational Science.
+     </p>
+     <p>
+      First, our model can be used to reposition and study translational barriers more precisely. Previous work has generated a translational barriers taxonomy [
+      37
+      ], resulting from discussions between HCI practitioners and researchers [
+      11
+      ] that have been framed by a view of a single gap between research and practice. In our model, we specify nuanced barriers and offer additional insights into how to address them. For example, publishing academic papers to broadcast findings within the scientific community is still important; it is not, however — and should not be — a functional communication channel between research and practice [
+      27
+      ].
+     </p>
+     <p>
+      Also, HCI scholars doing research on Translational Science may describe the aim of their translational research more clearly with our terms, while helping to refine model constructs. For example, the TS HCI model may be used to describe where research has progressed or stalled (e.g., use of design applications found in HCI research is delayed in T
+      <sub>
+       AD
+      </sub>
+      ). The model highlights explicitly that applicability is the most significant barrier for HCI research to influence practice in T
+      <sub>
+       AD
+      </sub>
+      , so, to facilitate the translation of work stalled at this stage, the HCI community might focus on translations that make it easier for practitioners to apply theory-driven resources.
+     </p>
+     <p>
+      Second, our model can help understand areas where structural support is needed. Funding agencies and universities are essential pieces of Translational Science in HCI [
+      17
+      ,
+      39
+      ], as they help drive and support research with broad social and economic implications [
+      21
+      ]. Our model can help organizations more precisely target steps and barriers where vital advances are stalled, and catalyze work that can facilitate translation. For example, with a more specific Translational Science model, the health field devised initiatives such as dedicated budgets, research centers, scientific journals, and conferences for different T's [
+      18
+      ,
+      24
+      ,
+      74
+      ]. While we do not argue that all of the initiatives listed above are necessary for more robust TS in HCI, they should at least be considered. Foremost, investment in the translation of basic and applied research for use in design practice is vital for capitalizing on investments in producing new insights. An excellent example is a specific project that emerged in the health domain context: a plan to reduce cancer mortality by 2025 consisting of concentrating translational research in a few centers that can vet and test scientific findings clusters with the most potential [
+      16
+      ].
+     </p>
+    </section>
+    <section id="sec-17">
+     <header>
+      <div class="title-info">
+       <h3>
+        <span class="section-number">
+        </span>
+        Multiple Translations and Translators
+       </h3>
+      </div>
+     </header>
+     <p>
+      HCI is uniquely positioned and capable of addressing translational barriers, as it sits at the intersection between social sciences, computer science, and technology [
+      14
+      ]. Focusing HCI's attention on each gap will help increase both the impact of research and the pace of advancement in the field.
+     </p>
+     <p>
+      The constellation of parties involved in translating HCI knowledge is broader than just the sub-communities of HCI researchers and design practitioners. We found that these parties already cooperate and transition across steps and gaps. Based on our findings and results of previous SIGs [37], rather than creating a new profession [51], we believe there is a need to leverage and coordinate the incredibly diverse and capable parties already somehow involved in Translational Science efforts, especially those who can — and want to — do more translational work (while explaining the value of doing so to others who could become translators). Below, we address efforts that, in addition to the findings that we presented, hold promise as e
+     </p>
+    </section>
+   </section>
+  </section>
+ </body>
+</html>

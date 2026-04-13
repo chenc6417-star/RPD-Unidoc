@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+ <body>
+  <section>
+   <section>
+    <header>
+     <div>
+      <h1>
+       <span>
+        Implicit Communication of Actionable Information in Human-AI teams
+       </span>
+       <span>
+       </span>
+      </h1>
+     </div>
+    </header>
+    <div>
+     <div>
+      <span>
+       Claire
+      </span>
+      <span>
+       Liang
+      </span>
+      , Cornell University, USA,
+      cyl48@cornell.edu
+     </div>
+     <div>
+      <span>
+       Erik
+      </span>
+      <span>
+       Andersen
+      </span>
+      , Cornell University, USA,
+      eland@cs.cornell.edu
+     </div>
+     <div>
+      <span>
+       Ross
+      </span>
+      <span>
+       A. Knepper
+      </span>
+      , Cornell University, USA,
+      rak@cs.cornell.edu
+     </div>
+    </div>
+    <div>
+     <p>
+      DOI:
+      https://doi.org/10.1145/3290605.3300325
+      
+      CHI '19:
+      Proceedings of CHI Conference on Human Factors in Computing Systems
+      , Glasgow, Scotland UK, May 2019
+     </p>
+    </div>
+    <div>
+     <p>
+      <small>
+       Humans expect their collaborators to look beyond the explicit interpretation of their words.
+       <em>
+        Implicature
+       </em>
+       is a common form of implicit communication that arises in natural language discourse when an utterance leverages context to imply information beyond what the words literally convey. Whereas computational methods have been proposed for interpreting and using different forms of implicature, its role in human and artificial agent collaboration has not yet been explored in a concrete domain. The results of this paper provide insights to how artificial agents should be structured to facilitate natural and efficient communication of actionable information with humans. We investigated implicature by implementing two strategies for playing
+       <em>
+        Hanabi
+       </em>
+       , a cooperative card game that relies heavily on communication of actionable implicit information to achieve a shared goal. In a user study with 904 completed games and 246 completed surveys, human players randomly paired with an implicature AI are 71% more likely to think their partner is human than players paired with a non-implicature AI. These teams demonstrated game performance similar to other state of the art approaches.
+      </small>
+     </p>
+    </div>
+    <div>
+     <ccs2012>
+      <small>
+       <span>
+        CCS Concepts:
+       </span>
+       •
+       <strong>
+        Human-centered computing → User studies
+       </strong>
+       ; •
+       <strong>
+        Human-centered computing → Collaborative interaction
+       </strong>
+       ; •
+       <strong>
+        Human-centered computing → Empirical studies in HCI
+       </strong>
+       ;
+       <em>
+        Empirical studies in collaborative and social computing;
+       </em>
+       •
+       <strong>
+        Human-centered computing~Web-based interaction;
+       </strong>
+      </small>
+     </ccs2012>
+    </div>
+    <div>
+     <div>
+      <span>
+       <small>
+        Keywords:
+       </small>
+      </span>
+      <span>
+       <small>
+        Collaboration
+       </small>
+       ,
+      </span>
+      <span>
+       <small>
+        Games/Play
+       </small>
+       ,
+      </span>
+      <span>
+       <small>
+        Empirical study that tells us about people
+       </small>
+      </span>
+     </div>
+     <div>
+      <p>
+       <small>
+        <span>
+         ACM Reference Format:
+        </span>
+        Claire Liang, Erik Andersen, and Ross A. Knepper. 2019. Implicit Communication of Actionable Information in Human-AI teams. In
+        <em>
+         Proceedings of CHI Conference on Human Factors in Computing Systems (CHI '19), May 4-9, 2019, Glasgow, Scotland UK.
+        </em>
+        ACM, New York, NY, USA 13 Pages.
+        https://doi.org/10.1145/3290605.3300325
+       </small>
+      </p>
+     </div>
+    </div>
+   </section>
+  </section>
+  <section>
+   <section>
+    <header>
+     <div>
+      <h2>
+       <span>
+        1
+       </span>
+       INTRODUCTION
+      </h2>
+     </div>
+    </header>
+    <p>
+     An important area of human-computer interaction research involves enabling collaborative behavior for artificial agents working in close partnership with humans. Teamwork requires communication for planning and coordination, and the content communicated during this form of coordination is complex and multifaceted. In particular, a significant amount of communication in human groups goes through non-explicit channels [
+     73
+     ]. These channels can range from non-explicit verbal statements to other means as subtle as eye gaze or gesture [
+     71
+     ].
+    </p>
+    <p>
+     The impact of implicit communication is ubiquitous. It can be found in applications from robot motion [
+     25
+     ] to language input [
+     84
+     ]. In many domains involving teamwork, implicit communication is vital for good performance. In order to be effective partners and integrate well with human teams, robots and AIs need to understand and generate this kind of actionable implicit communication that results from actions being situated in context [
+     9
+     ,
+     18
+     ,
+     27
+     ].
+    </p>
+    <p>
+     One area in which implicit communication is particularly important is human-AI interaction in video games. While there has been significant progress in creating AIs that can play games such as chess [
+     16
+     ] and Go [
+     78
+     ], AIs are still incapable of playing many kinds of games because they cannot effectively deal with social elements [
+     64
+     ]. For example, consider the cooperative card game
+     <em>
+      Hanabi
+     </em>
+     . In this game, players must cooperate to play a set of cards in a certain order. Each player can see all of the other players' cards, but they cannot see their own. Although players need to inform other players about what cards they should play, they are prohibited from communicating anything other than direct facts such as “this card is red”. Therefore, in this highly restricted communication space, players routinely use direct facts to communicate actionable intent
+     <em>
+      implicitly
+     </em>
+     , such as saying “this card is red” to convey the action “play this card now” [
+     61
+     ]. Capturing implicit information of this form is crucial for designing AIs that can collaborate with humans in many HCI scenarios such as playing these kinds of games. However, implicit communication is rarely incorporated into AI design, effectively omitting a large component of team game experiences.
+    </p>
+    <p>
+     Previous work in building AIs that can collaborate with humans, both for
+     <em>
+      Hanabi
+     </em>
+     [
+     26
+     ,
+     60
+     ] and for other games [
+     77
+     ], has generally centered on modeling teammates' mental states and exhaustively searching all potential states. However, these approaches are inefficient. Furthermore, although the artificial agents resulting from these approaches perform well when playing against each other, they reason in a way that most human players do not, resulting in interactions that are insufficiently natural.
+    </p>
+    <p>
+     Modeling implicit communication is difficult because it is hard to generalize a set of principles that transcends domain and context. For our study, we draw inspiration from the field of pragmatics in linguistics in order to interpret and make use of implicit communication in human conversation. Specifically, this paper takes a step towards this goal by using a type of implicit communication called
+     <em>
+      conversational implicature
+     </em>
+     [
+     33
+     ]. Our key insight is that in a teamwork setting such as
+     <em>
+      Hanabi
+     </em>
+     , implicit communication typically focuses on conveying actionable information.
+    </p>
+    <p>
+     In this paper, we detail the landscape of communication for teamwork and subdivide the communicated content into different categories of implicit communication. We take a principled approach to studying effective modes of information transfer among teammates by investigating two methods of communicating information. We provide a computational approach to the theory of implicature by using Gricean maxims and describe an AI that we built that uses these strategies to play the cooperative card game
+     <em>
+      Hanabi
+     </em>
+     . We conducted a study in simulation comparing the AI that uses implicit communication strategies to a baseline AI that only uses explicit communication; the results of this study demonstrate that the former AI consistently outperforms the latter. Using an online interface of our design, we conducted a user study in which users completed 904 games and 246 follow-up surveys. From this study we found that the AI that used implicit communication performed comparably with other state of the art
+     <em>
+      Hanabi
+     </em>
+     AIs in terms of game score, but human teammates were 71% more likely to believe that their partner was human when playing with an AI that used implicit communication.
+    </p>
+   </section>
+   <section>
+    <header>
+     <div>
+      <h2>
+       <span>
+        2
+       </span>
+       RELATED WORK
+      </h2>
+     </div>
+    </header>
+    <p>
+     In our work, we employ actionable implicit communication as a hint-giving strategy in
+     <em>
+      Hanabi
+     </em>
+     . Aspects of implicit communication, though not always actionable, arise in research in many fields. We survey its forms and applications here.
+    </p>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Forms of Implicit Communication
+       </h3>
+      </div>
+     </header>
+     <p>
+      There exists a rich body of work that explores how communication can establish varying forms of shared context or common ground. Ways to reach consensus about context range broadly from demographic information about participating agents [
+      46
+      ] to converging on an understanding of game playing strategy for multiplayer online battle arena games [
+      47
+      ]. Many of these areas refer to a form of implicit communication, often verbally-restricted or entirely non-verbal, to reach these consensuses.
+     </p>
+     <p>
+      One form of implicit communication that has been explored in the realm of emotional understanding is
+      <em>
+       affective grounding
+      </em>
+      , which tends to focus on converging on a shared knowledge or understanding of mental state [
+      42
+      ] in regard to an agent's internal emotional state. Another area in which implicit communication is crucial is
+      <em>
+       tacit coordination
+      </em>
+      . Tacit coordination is focused on establishing consensus about expected behavior and responsibilities of others on a team when working to achieve a shared goal [
+      20
+      ]. It is cited as an important factor in scenarios from team dynamics for multiplayer game team coordination [
+      88
+      ] to effectiveness of crowdsourced teams in achieving tasks [
+      91
+      ]. Some means of communication for tacit coordination in these contexts are explicit, but there are others, such as use of an annotation system in distributed multiplayer games, that are highly context-dependent and implicitly communicated [
+      1
+      ].
+     </p>
+     <p>
+      Linguistics literature describing the phenomenon of conversational implicature [
+      11
+      ,
+      35
+      ,
+      37
+      ,
+      38
+      ,
+      51
+      ,
+      67
+      ] originated with Grice [
+      33
+      ]. Work in natural language processing has sought to build artificial agents able to generate and understand utterances containing implicature. Generalizable techniques are difficult to put into practice in a computational system due to dependency on context representation [
+      72
+      ]. More tractable techniques isolate specific and far more restricted types of implicature, such as the technique proposed for scalar implicature [
+      31
+      ]. The full complexity of the implicature understanding and generation problems has been explored as well [
+      84
+      ] but remains intractable.
+     </p>
+    </section>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Foundations of Implicit Communication
+       </h3>
+      </div>
+     </header>
+     <p>
+      The mechanism of implicit communication, including implicature, leverages context to allow messages to convey more information content than the raw message contains. This is possible because actions (the messages) are interpreted in context, from which added meaning can be derived. In social settings, this mechanism is mediated by an innate human mental capability, called teleological reasoning, which connects goals and actions. People perceive both humans [
+      24
+      ] and robots [
+      74
+      ] to be goal-oriented. If a person can correctly predict an action that somebody will take to achieve a known goal, we would say that the action is
+      <em>
+       predictable
+      </em>
+      ; if a person can infer the goal based on her observation of an action, then we say that the action is
+      <em>
+       legible
+      </em>
+      [
+      25
+      ]. The fact that humans perform teleological reasoning automatically explains how many
+      <em>
+       Hanabi
+      </em>
+      players are able to adopt an implicature-based hinting strategy without explicitly conferring with the other players about strategy.
+     </p>
+     <p>
+      At an even more basic level, teleological reasoning is a form of
+      <em>
+       abductive inference
+      </em>
+      [
+      62
+      ], sometimes called “inference to the best explanation”. Just as deduction leads from a general principle (
+      <em>
+       A
+      </em>
+      →
+      <em>
+       B
+      </em>
+      ) and an observation (
+      <em>
+       A
+      </em>
+      ) to a consequence (
+      <em>
+       B
+      </em>
+      ) and induction leads from a pair of specific observations (
+      <em>
+       A
+      </em>
+      and
+      <em>
+       B
+      </em>
+      ) to a prediction about a general principle (
+      <em>
+       A
+      </em>
+      →
+      <em>
+       B
+      </em>
+      ), abduction takes a general principle (
+      <em>
+       A
+      </em>
+      →
+      <em>
+       B
+      </em>
+      ) and an observation (
+      <em>
+       B
+      </em>
+      ) and returns an explanation (
+      <em>
+       A
+      </em>
+      ). It is an everyday human practice. For example, if Zach notices that his car key is in a different place than he left it, his mind will immediately compare possible explanations: his wife borrowed his car, the cat knocked the key on the floor, or there was an earthquake. Abduction has been studied in AI [
+      13
+      ,
+      15
+      ,
+      30
+      ,
+      36
+      ,
+      41
+      ,
+      50
+      ,
+      58
+      ,
+      63
+      ,
+      65
+      ] and employed to solve a variety of real-world problems [
+      36
+      ,
+      57
+      ,
+      66
+      ,
+      81
+      ,
+      82
+      ] and to perform plan recognition [
+      5
+      ,
+      21
+      ,
+      85
+      ]. Mirroring results in implicature however, it was found that abduction is generally intractable [
+      2
+      ,
+      14
+      ,
+      15
+      ,
+      28
+      ,
+      30
+      ] to exactly compute.
+     </p>
+    </section>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Partially Observable Games
+       </h3>
+      </div>
+     </header>
+     <p>
+      There are many strategies for partially observable games [
+      32
+      ,
+      43
+      ,
+      79
+      ], but the cooperative nature of
+      <em>
+       Hanabi
+      </em>
+      has inspired different kinds of playing strategies. We specifically consider the impact that Gricean conversational implicature can have on
+      <em>
+       Hanabi
+      </em>
+      -playing logic [
+      52
+      ,
+      86
+      ].
+     </p>
+     <p>
+      Osawa [
+      60
+      ] proposes a series of strategies that consider the state of a teammate's hand in a two-player game of
+      <em>
+       Hanabi
+      </em>
+      . The final strategy, titled the “self-recognition strategy”, outperforms the other strategies by modeling the other player's knowledge of their hand before providing each hint and considering the inverse when interpreting hints. Osawa implements the self-recognition strategy using an entropy-minimization approach and demonstrates the superior performance of this approach in computer simulations against less advanced models.
+     </p>
+     <p>
+      Eger et al. [
+      26
+      ] uses two of the Gricean maxims (Relation and Manner) in the context of
+      <em>
+       Hanabi
+      </em>
+      to construct an AI that employs “intentionality”, using implicature in addressing goal-directedness. Their “intentional” AI also employs an alternative discard policy and other resource management techniques as modifications over Osawa's prior work. Their AI is geared toward improving the
+      <em>
+       Hanabi
+      </em>
+      game experience as well as optimizing the AI for game score performance. Results indicate that for a limited score range, player engagement and enjoyment is correlated with the intentionality level of the AI. However, their AI does not exclusively or wholly investigate the impact of Grice's maxims, and their hypotheses are not focused on how conversational implicature affects the extent to which the gameplay of the AI reflects the gameplay of a human. We study the full score range from our user study participants and specifically investigate how the AI is perceived by human players.
+     </p>
+     <p>
+      We note that there are other rule-based techniques that can create AIs that can successfully demonstrate high scores in
+      <em>
+       Hanabi
+      </em>
+      . For example, Bouzy [
+      8
+      ] and Cox et al. [
+      23
+      ] use ideas from hat guessing games to get near-optimal scores. However, many rule-based approaches apply techniques that would be entirely opaque to human teammates [
+      12
+      ,
+      83
+      ].
+     </p>
+    </section>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Implicit Communication in Human-Robot Interaction
+       </h3>
+      </div>
+     </header>
+     <p>
+      Since robots can act physically in the world, they have a greater potential than software agents to perform acts of implicit communication and to best exploit actionable implicit communication from a human. An abstract, high-level framework for robots to automatically understand and generate implicit communicative messages was proposed [
+      48
+      ], although as presented it remains intractable to perform this inference for nontrivial problems.
+     </p>
+     <p>
+      There are many instances of robots performing domain-specific implicit communication. Robots have been demonstrated communicating the weight of objects during lifting [
+      75
+      ], the intended goal of a reaching motion [
+      25
+      ], how a person can most effectively help the robot [
+      49
+      ], intended avoidance maneuvers during socially-competent navigation [
+      56
+      ], symbol grounding for language understanding [
+      39
+      ], and communicating a self-driving car's goals to human observers [
+      40
+      ].
+     </p>
+     <p>
+      Researchers have also investigated implicit robot control by programming the robot's environment [
+      76
+      ,
+      90
+      ]. These interfaces qualify as implicit communication in the sense that they leverage context to interpret the meaning of symbols. In order to function as part of an effective team, robots need to infer human intentions and also express the internal state of the robot, for example via affective cues [
+      10
+      ,
+      29
+      ].
+     </p>
+    </section>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Conversational Implicature, Games, and HCI
+       </h3>
+      </div>
+     </header>
+     <p>
+      Researchers have examined the role of conversational implicature in human-computer interaction, such as in interpretation of multimodal interactions including eye gaze [
+      68
+      ], language [
+      19
+      ,
+      53
+      ], and gesture [
+      44
+      ]. Cordona-Rivera and Young studied how conversational implicature can provide a framework for game design and communication between the game and the player [
+      17
+      ]. We build on this work by applying conversational implicature specifically to human-AI teamwork and transmission of actionable information.
+     </p>
+     <p>
+      There is some work in HCI that examines board games, focusing on topics such as fostering sustainability [
+      6
+      ], collaboration [
+      89
+      ], and identification of user interface needs [
+      80
+      ]. Rogerson et al. studied
+      <em>
+       Hanabi
+      </em>
+      specifically, examining how players cooperate and distribute cognition [
+      71
+      ] and how eye tracking can reveal where players are looking and what they are paying attention to [
+      70
+      ]. We also study
+      <em>
+       Hanabi
+      </em>
+      but focus instead on how to model and improve team dynamics when an AI player is part of the team.
+     </p>
+     <p>
+      There is also work on using video games as a research platform for large-scale online experiments  [
+      3
+      ,
+      4
+      ,
+      54
+      ,
+      55
+      ]. We use this experimentation method to study the impact of our implicature AI on a large number of human players.
+     </p>
+    </section>
+   </section>
+   <section>
+    <header>
+     <div>
+      <h2>
+       <span>
+        3
+       </span>
+       <em>
+        Hanabi
+       </em>
+      </h2>
+     </div>
+    </header>
+    <p>
+     The game
+     <em>
+      Hanabi
+     </em>
+     is well-suited for our problem because of its collaborative nature and its players' natural tendency to adopt implicature into their playing strategies.
+    </p>
+    <ALT_TEXT>
+     A two-player game of Hanabi with one hand of cards concealed from the reader.
+    </ALT_TEXT>
+    <p>
+    </p>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Rules
+       </h3>
+      </div>
+     </header>
+     <p>
+      In
+      <em>
+       Hanabi
+      </em>
+      , players are a team working towards a shared goal. Although
+      <em>
+       Hanabi
+      </em>
+      supports more than two players, we only consider two-player games in this paper. The players alternate turns, creating a symmetric cooperative game. Players start with five cards each and are allowed to look at all players' hands except their own.
+     </p>
+     <p>
+      The
+      <em>
+       Hanabi
+      </em>
+      deck has five colors (suits) and five numbers (ranks). Players also start with three shared fuse tokens that function as lives and eight shared hint tokens (as depicted in Figure
+      3
+      ). For each color there are three cards of rank 1, one of rank 5, and two cards of each rank in between.
+     </p>
+     <p>
+      On each turn, a player must complete one of the following moves: give a hint, discard a card, or play a card. The goal of the game is to “complete fireworks” by playing cards of all five colors in increasing order from one to five. The game ends if all fireworks are complete, if all fuse tokens are lost, or one round after all cards are drawn from the deck.
+     </p>
+     <p>
+      Details about each of the three moves are given below.
+     </p>
+     <ol>
+      <li>
+       <em>
+        Give a hint:
+       </em>
+       Players can give only two kinds of hints:
+       <ul>
+        <li>
+         All cards of a color in the teammate's hand (e.g., in Figure
+         1
+         : “These three cards are blue”).
+        </li>
+        <li>
+         All cards of a number in the teammate's hand (e.g., in Figure
+         1
+         : “These two cards are 2s”).
+        </li>
+       </ul>
+       The player must point to all applicable cards in the teammate's hand while stating the hint. Giving a hint expends a hint token. Hints can only be given if there are available hint tokens.
+      </li>
+      <li>
+       <em>
+        Discard a card:
+       </em>
+       The player puts a card into the discard pile face-up, thereby learning the identity of the card. The player then draws a new card from the deck. If any hint tokens are currently spent, one is earned back.
+      </li>
+      <li>
+       <em>
+        Play a card:
+       </em>
+       The player picks a card from her hand to play and sets it on the table face-up. The card is either
+       <ul>
+        <li>
+         next in sequence (a legal play) and is added to its respective stack, or
+        </li>
+        <li>
+         not next in sequence and is added to the discard pile. One fuse token is lost.
+        </li>
+       </ul>
+       The player does not need to specify which sequence she thinks the card belongs to before playing the card. Regardless of whether the play was successful or not, the player draws a new card from the deck. Successfully playing a card of rank 5 also restores a hint token.
+      </li>
+     </ol>
+     <p>
+      At the end of the game, the score is the number of cards that were successfully played. It can range from 0 to 25.
+     </p>
+    </section>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Gameplay
+       </h3>
+      </div>
+     </header>
+     <p>
+      In
+      <em>
+       Hanabi
+      </em>
+      , the most significant contextual facts are the identities of currently-playable cards and the cards already played. In addition, it is common knowledge that the most direct way of sharing actionable information with another player (that is, telling him which card to play) is forbidden by the rules. By acknowledging these common-knowledge facts, the team is often able to implicitly communicate the same actionable information by a legal hint.
+     </p>
+     <p>
+      For example, in Figure
+      1
+      , suppose that Bernard is the one with the visible hand and that Annie is providing him a hint. Suppose Annie says “You have one red card” to Bernard and indicates a card in his hand about which he has received no previous hints. Even an intermediate
+      <em>
+       Hanabi
+      </em>
+      player immediately recognizes this hint as “play the red card”. Bernard quickly reasons about this hint. He realizes that providing this hint costs resources (a game turn and a hint token) and that Annie will want to pack immediately usable information into it. In addition, given the current game state, it is probabilistically unlikely for Annie to provide a hint about only one card unless she intends for it to be playable. This type of thought process is intuitive, and new players pick up on it as they play. However, in order to create an AI that is capable of this form of implicit communication, we need to formulate a methodology that is suited for a computational approach. We can use an established theory from the field of pragmatics, the linguistics subfield that studies language in context, and adapt it to develop a policy for this form of implicit communication.
+     </p>
+    </section>
+   </section>
+   <section>
+    <header>
+     <div>
+      <h2>
+       <span>
+        4
+       </span>
+       CONVERSATIONAL IMPLICATURE
+      </h2>
+     </div>
+    </header>
+    <p>
+     The term
+     <em>
+      implicature
+     </em>
+     , coined by Grice [
+     33
+     ], is used to describe information that is not explicitly stated but is intentionally conveyed. Grice focused primarily on implicature that occurs in conversation due to what he calls the
+     <em>
+      cooperative principle
+     </em>
+     , meaning that speakers are expected to contribute what is required by the accepted purpose of the conversation [
+     87
+     ]. He gives four maxims that constitute the cooperative principle and describe how to conduct cooperative speech [
+     34
+     ]:
+    </p>
+    <ul>
+     <li>
+      Quality: only contribute information that is true.
+     </li>
+     <li>
+      Quantity: provide all necessary information, but not more.
+     </li>
+     <li>
+      Relation: make your contribution relevant.
+     </li>
+     <li>
+      Manner: avoid ambiguity; be clear, orderly, and brief.
+     </li>
+    </ul>
+    <p>
+     Implicature arises when any of the maxims are violated. Consider the following example from Recanati [
+     69
+     ]:
+    </p>
+    <ul>
+     <li>
+      Annie: “Can you cook?”
+     </li>
+     <li>
+      Bernard: “I am French.”
+     </li>
+    </ul>
+    <p>
+     In order to make sense of Bernard's response, Annie must apply the following deductive inference steps:
+    </p>
+    <ol>
+     <li>
+      <em>
+       Contextual premise:
+      </em>
+      Bernard is able to answer the question of whether he can cook.
+     </li>
+     <li>
+      <em>
+       Contextual premise:
+      </em>
+      It is common knowledge that the French are known for their ability to cook.
+     </li>
+     <li>
+      Assume Bernard adheres to the cooperative principle and the four maxims.
+     </li>
+     <li>
+      By (
+      1
+      ), Bernard can completely resolve Annie's question, and by (
+      3
+      ), he will.
+     </li>
+     <li>
+      Only the propositions that Bernard can or cannot cook can fully resolve the question.
+     </li>
+     <li>
+      By stating a fact seemingly irrelevant to the propositions of (
+      5
+      ), Bernard flouts the maxim of Relation.
+     </li>
+     <li>
+      Thus Annie must search over a plausible set of facts in the relevant common ground to find fact (
+      2
+      ) and conclude that Bernard is implicating that he is able to cook.
+     </li>
+    </ol>
+    <p>
+     There is also a well-known cancellability test to gauge whether an instance of implicature is conversational implicature [
+     7
+     ]. The reasoning in Lines (
+     4
+     )-(
+     7
+     ) depends on the concepts of shared trust, consensus in a team, and receptivity of teammates. These dependencies are described in greater detail by Knepper et al. [
+     48
+     ].
+    </p>
+    <p>
+     We can then apply this set of rules to
+     <em>
+      Hanabi
+     </em>
+     .
+    </p>
+   </section>
+   <section>
+    <header>
+     <div>
+      <h2>
+       <span>
+        5
+       </span>
+       AI DESIGN
+      </h2>
+     </div>
+    </header>
+    <p>
+     The core strategy in
+     <em>
+      Hanabi
+     </em>
+     occurs during the giving and interpretation of hints. A key distinction in the strategic use of hints involves the issue of who decides what cards to play. If the team is viewed as a set of individual decision-makers, then each player is in charge of her own hand and actions. In this view, the best hinting strategy is to maximize information about the teammate's hand so that she can make the best decisions. We call the AI that uses this hint strategy the entropy AI, which serves as our baseline.
+    </p>
+    <p>
+     A contrasting hinting strategy stems from the perspective that good teamwork requires working together. Since each player has complete knowledge of her teammate's cards, it is logical that each player should decide what card her teammate should play next. In this case, the hints serve to direct the teammate's attention to which (singleton) card should be played next via implicature. We call the AI that uses this hint strategy the implicature AI.
+    </p>
+    <p>
+    </p>
+    <p>
+     The overall AI structure is shown in Figure
+     2
+     . The AIs share significant gameplay infrastructure, termed “resource management strategy” in the figure. The shared strategy is as follows. First, if the AI knows that it can play a card, it does so. Second, there is logic to special-case the hinting and playing of 1s, since it is desirable to give a maximal entropy-reduction hint about 1s even in the implicature condition. Third, the AI considers whether it should discard a card. If it knows for certain that one of its cards can be safely discarded (for example, if a blue 2 has already been played successfully, and it knows that it is holding the second blue 2), it will discard that card. Otherwise, if it is not certain whether any cards in its hand can be safely discarded but there is only one hint token left, it tries to discard a card that it suspects can be safely discarded. Lastly, if there are no hint tokens available, it will discard the card that it knows least about. From there, the AI takes a different course of action depending on which hint strategy the AI implements.
+    </p>
+    <section>
+     <header>
+      <div>
+       <h3>
+        <span>
+        </span>
+        Implicature AI
+       </h3>
+      </div>
+     </header>
+     <p>
+      Broadly, the logic of the implicature hint-giving strategy proceeds as described in Section 4. According to that section, the actor triggers an implicature interpretation by flouting one of the Gricean maxims. Since the observer assumes that the actor is being cooperative, she infers that there must exist some hypothetical actionable information that is unknown to her but would be known to the actor. She then searches
+     </p>
+    </section>
+   </section>
+  </section>
+ </body>
+</html>

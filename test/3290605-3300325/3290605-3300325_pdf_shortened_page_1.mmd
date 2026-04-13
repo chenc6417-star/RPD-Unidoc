@@ -1,0 +1,90 @@
+<think>
+</think>
+
+[[[42, 85, 57, 194], 'header', 'CHI 2019 Paper'], [[42, 581, 58, 913], 'header', 'CHI 2019, May 4-9, 2019, Glasgow, Scotland, UK'], [[118, 83, 178, 483], 'half_para', 'that can collaborate with humans in many HCI scenarios
+such as playing these kinds of games. However, implicit com-
+munication is rarely incorporated into AI design, effectively
+omitting a large component of team game experiences.'], [[179, 83, 329, 483], 'para', 'Previous work in building AIs that can collaborate with
+humans, both for Hanabi [26, 60] and for other games [77] ,
+has generally centered on modeling teammates\' mental states
+and exhaustively searching all potential states. However,
+these approaches are inefficient. Furthermore, although the
+artificial agents resulting from these approaches perform
+well when playing against each other, they reason in a way
+that most human players do not, resulting in interactions
+that are insufficiently natural.'], [[330, 83, 468, 483], 'para', 'Modeling implicit communication is difficult because it is
+hard to generalize a set of principles that transcends domain
+and context. For our study, we draw inspiration from the
+field of pragmatics in linguistics in order to interpret and
+make use of implicit communication in human conversation.
+Specifically, this paper takes a step towards this goal by
+using a type of implicit communication called conversational
+implicature [33] . Our key insight is that in a teamwork setting
+such as Hanabi , implicit communication typically focuses on
+conveying actionable information.'], [[469, 83, 750, 483], 'para', 'In this paper, we detail the landscape of communication for
+teamwork and subdivide the communicated content into dif-
+ferent categories of implicit communication. We take a prin-
+ciple approach to studying effective modes of information
+transfer among teammates by investigating two methods of
+communicating information. We provide a computational
+approach to the theory of implicature by using Gricean max-
+ims and describe an AI that we built that uses these strategies
+to play the cooperative card game Hanabi . We conducted a
+study in simulation comparing the AI that uses implicit com-
+munication strategies to a baseline AI that only uses explicit
+communication; the results of this study demonstrate that
+the former AI consistently outperforms the latter. Using an
+online interface of our design, we conducted a user study in
+which users completed 904 games and 246 follow-up surveys.
+From this study we found that the AI that used implicit com-
+munication performed comparably with other state of the
+art Hanabi AIs in terms of game score, but human teammates
+were 71 % more likely to believe that their partner was human
+when playing with an AI that used implicit communication.'], [[788, 83, 804, 240], 'sec_1', '2 RELATED WORK'], [[808, 83, 878, 483], 'para', 'In our work, we employ actionable implicit communication
+as a hint-giving strategy in Hanabi . Aspects of implicit com-
+munication, though not always actionable, arise in research
+in many fields. We survey its forms and applications here.'], [[118, 515, 134, 750], 'sec_2', 'Forms of Implicit Communication'], [[137, 515, 270, 914], 'para', 'There exists a rich body of work that explores how com-
+munication can establish varying forms of shared context or
+common ground. Ways to reach consensus about context
+range broadly from demographic information about partic-
+ipating agents [46] to converging on an understanding of
+game playing strategy for multiplayer online battle arena
+games [47] . Many of these areas refer to a form of implicit
+communication, often verbally-restricted or entirely non-
+verbal, to reach these consensuses.'], [[270, 515, 536, 915], 'para', 'One form of implicit communication that has been ex-
+plored in the realm of emotional understanding is affective
+grounding , which tends to focus on converging on a shared
+knowledge or understanding of mental state [42] in regard
+to an agent\'s internal emotional state. Another area in which
+implicit communication is crucial is tacit coordination . Tacit
+coordination is focused on establishing consensus about ex-
+pected behavior and responsibilities of others on a team
+when working to achieve a shared goal [20] . It is cited as
+an important factor in scenarios from team dynamics for
+multiplayer game team coordination [88] to effectiveness of
+crowdsourced teams in achieving tasks [91] . Some means
+of communication for tacit coordination in these contexts
+are explicit, but there are others, such as use of an annota-
+tion system in distributed multiplayer games, that are highly
+context-dependent and implicitly communicated [1] .'], [[536, 515, 720, 915], 'para', 'Linguistics literature describing the phenomenon of con-
+versational implicature [11, 35, 37, 38, 51, 67] originated with
+Grice [33] . Work in natural language processing has sought
+to build artificial agents able to generate and understand
+utterances containing implicature. Generalizable techniques
+are difficult to put into practice in a computational system
+due to dependency on context representation [72] . More
+tractable techniques isolate specific and far more restricted
+types of implicature, such as the technique proposed for
+scalar implicature [31] . The full complexity of the implicature
+understanding and generation problems has been explored
+as well [84] but remains intractable.'], [[738, 515, 753, 800], 'sec_2', 'Foundations of Implicit Communication'], [[757, 515, 903, 915], 'para', 'The mechanism of implicit communication, including implic-
+itance, leverages context to allow messages to convey more
+information content than the raw message contains. This is
+possible because actions (the messages) are interpreted in
+context, from which added meaning can be derived. In social
+settings, this mechanism is mediated by an innate human
+mental capability, called teleological reasoning, which con-
+nects goals and actions. People perceive both humans [24]
+and robots [74] to be goal-oriented. If a person can correctly
+predict an action that somebody will take to achieve a known
+goal, we would say that the action is predictable ; if a person'], [[942, 85, 958, 154], 'foot', 'Paper 95'], [[942, 865, 958, 913], 'foot', 'Page 2']]
