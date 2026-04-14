@@ -14,4 +14,5 @@ runs/
 venv/
 .venv/
 __pycache__/
-.DS_Store
+.DS_Storeqwen35_vqa_short_format.jsonl
+qwen35_unified_full_v2.jsonl
