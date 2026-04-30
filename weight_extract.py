@@ -2,7 +2,7 @@ import torch
 from safetensors.torch import load_file
 
 # 指向你训好的 safetensors 文件
-path = "/home/hk-project-pai00054/wm9835/qwen35/output_qwen35_expert/v10-20260410-184031/checkpoint-1600/model.safetensors"
+path = "/home/hk-project-pai00054/wm9835/qwen35/qwen_training/checkpoint-2000/model.safetensors"
 state_dict = load_file(path)
 
 # 提取我们自己的残差模块权重
