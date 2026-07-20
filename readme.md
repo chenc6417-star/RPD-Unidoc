@@ -1,6 +1,6 @@
 # Qwen Document Layout / OCR Fine-tuning Project
 
-This project is designed for document page understanding tasks. It uses a Qwen-based model to perform layout analysis, region localization, OCR extraction, and alt-text generation for figures and tables. A custom spatial enhancement module is also integrated to improve the model's ability to capture document structure and spatial relationships.
+This project is designed for document page understanding tasks. It uses a Qwen3.5-2B based model to perform layout analysis, region localization, OCR extraction, and alt-text generation for figures and tables. A custom spatial enhancement module is also integrated to improve the model's ability to capture document structure and spatial relationships.
 
 ## 1. Project Overview
 
@@ -14,7 +14,7 @@ The main objectives of this project are:
 
 ## 2. Key Features
 
-- Fine-tuning and inference based on Qwen models
+- Fine-tuning and inference based on Qwen3.5-2B model
 - Custom Spatial Enhancer module to strengthen spatial reasoning
 - Two-stage training pipeline:
   - Stage 1: full-parameter training to learn spatial enhancement capabilities
