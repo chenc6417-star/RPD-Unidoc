@@ -26,7 +26,7 @@ The main objectives of this project are:
 This README is tailored for the following environment:
 
 - Python: 3.12
-- Transformers: 4.5.2
+- Transformers: 5.2.0
 - Swift: 4.0.0
 - GPU: NVIDIA A100 40G
 - Recommended precision: bf16
