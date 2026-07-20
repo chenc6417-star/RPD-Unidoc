@@ -15,8 +15,8 @@ class VisualSpatialEnhancer(nn.Module):
         )
         
         # 🌟 核心修改 1：注释掉这两行！让 PyTorch 赋予它“救命的随机数”，打破梯度为 0 的死锁！
-        # nn.init.zeros_(self.spatial_projector[-1].weight)
-        # nn.init.zeros_(self.spatial_projector[-1].bias)
+        #nn.init.zeros_(self.spatial_projector[-1].weight)
+        #nn.init.zeros_(self.spatial_projector[-1].bias)
         
         # 🌟 核心修改 2：既然是白纸一张的冷启动，把水龙头彻底打开，让梯度大水漫灌！
         self.gate = nn.Parameter(torch.tensor([1.0]))
