@@ -4,10 +4,8 @@ import numpy as np
 import Levenshtein
 import re
 
-# ================= 配置区 =================
 PRED_DIR = "/home/hk-project-pai00054/wm9835/qwen35/test1"
 GT_DIR = "/home/hk-project-pai00054/wm9835/Dolphin/ground_truth"
-# =========================================
 
 def calculate_iou(box1, box2):
     xA, yA = max(box1[0], box2[0]), max(box1[1], box2[1])
@@ -43,10 +41,7 @@ def clean_text(text):
     return text.lower()
 
 def evaluate_json(predict_json, gt_json, iou_threshold=0.5):
-    """
-    TP 只有在框 IoU >= iou_threshold 且 label 完全匹配才算
-    OCR 分数单独计算 text
-    """
+
     preds_raw = predict_json.get("elements", []) if isinstance(predict_json, dict) else predict_json
     gts_raw = gt_json if isinstance(gt_json, list) else gt_json.get("elements", [])
 
@@ -84,7 +79,7 @@ def evaluate_json(predict_json, gt_json, iou_threshold=0.5):
     used_gts = set()
     matched_ious = []
 
-    # TP 匹配：框 + label
+    # TP matching based on IoU and label
     for p_idx, p in enumerate(preds):
         best_iou, best_gt_idx = 0, -1
         for g_idx, g in enumerate(gts):
@@ -105,7 +100,7 @@ def evaluate_json(predict_json, gt_json, iou_threshold=0.5):
     recall = tp / (tp + FN) if (tp + FN) > 0 else 0
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
 
-    # RO 惩罚 FP/FN
+    # RO penalty FP/FN
     max_char = 1114111
     dummy_char = 0
     p_seq = []
@@ -125,7 +120,6 @@ def evaluate_json(predict_json, gt_json, iou_threshold=0.5):
             g_seq.append(chr(min(dummy_char + 33, max_char)))
     ro_score = round(1 - (Levenshtein.distance("".join(p_seq), "".join(g_seq)) / max(len(p_seq), len(g_seq), 1)), 4)
 
-    # OCR 分数只针对 TP 框计算 text
     box_ocr_scores = []
     for p_idx, g_idx in matched_gt_indices.items():
         p_t, g_t = preds[p_idx]["text"], gts[g_idx]["text"]
@@ -141,9 +135,6 @@ def evaluate_json(predict_json, gt_json, iou_threshold=0.5):
 
     return {"f1":f1,"ro":ro_score,"ocr":avg_ocr_acc,"tp":tp,"bbox_mIoU":bbox_miou}
 
-
-
-# ===================== 批量评估 =====================
 def batch_evaluate(predict_root, gt_root):
     def scan(root_dir):
         m = {}
@@ -156,8 +147,8 @@ def batch_evaluate(predict_root, gt_root):
     pred_map = scan(predict_root)
     gt_map = scan(gt_root)
     
-    print(f"DEBUG: 扫描到 Predict 文件 {len(pred_map)} 个")
-    print(f"DEBUG: 扫描到 GT 文件 {len(gt_map)} 个")
+    print(f"DEBUG: Predict pages {len(pred_map)} 个")
+    print(f"DEBUG: ground_truth pages {len(gt_map)} 个")
 
     results = []
     for fname in pred_map:
@@ -168,7 +159,7 @@ def batch_evaluate(predict_root, gt_root):
                 res = evaluate_json(p_d, g_d)
                 results.append(res)
             except Exception as e:
-                print(f"WARNING: {fname} 解析失败: {e}")
+                print(f"WARNING: {fname} error: {e}")
                 continue
 
     if not results: return "No match found."
@@ -183,8 +174,6 @@ def batch_evaluate(predict_root, gt_root):
         },
         "Total_Correct_Boxes": sum([r["tp"] for r in results])
     }
-
-# ===================== 主函数 =====================
 if __name__ == "__main__":
     report = batch_evaluate(PRED_DIR, GT_DIR)
     print(json.dumps(report, indent=4))

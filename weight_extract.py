@@ -1,13 +1,9 @@
 import torch
 from safetensors.torch import load_file
 
-# 指向你训好的 safetensors 文件
-path = "/home/hk-project-pai00054/wm9835/qwen35/qwen_training/checkpoint-2000/model.safetensors"
+path = "Qwen3.5-with-Spatial-Enhancer-Adapter/spatial_enhancer_adapter.pth"
 state_dict = load_file(path)
-
-# 提取我们自己的残差模块权重
 enhancer_weights = {k: v for k, v in state_dict.items() if 'spatial_enhancer' in k}
-
-# 保存为最终的插件权重
+# Save the extracted weights to a new file
 torch.save(enhancer_weights, "spatial_enhancer_final.pth")
-print("✅ 空间增强插件提取完成！")
+print("spatial_enhancer_final.pth saved successfully.")

@@ -27,11 +27,11 @@ def extract_items_final(content):
         if len(raw_bbox) == 4:
             swapped_bbox = [raw_bbox[1], raw_bbox[0], raw_bbox[3], raw_bbox[2]]
         else:
-            swapped_bbox = raw_bbox # 防止意外情况
+            swapped_bbox = raw_bbox 
         
         entry = {
             "label": label,
-            "bbox": swapped_bbox, # 使用对调后的坐标
+            "bbox": swapped_bbox, 
             "text": text.replace('\\n', '\n'),
             "reading_order": i
         }
@@ -45,7 +45,7 @@ def extract_items_final(content):
 
 def main():
     if not os.path.exists(BASE_DIR):
-        print(f"路径不存在: {BASE_DIR}")
+        print(f"no path exist: {BASE_DIR}")
         return
 
     count = 0
@@ -64,15 +64,14 @@ def main():
                         json_data = extract_items_final(content)
                     
                     with open(output_file, 'w', encoding='utf-8') as f:
-                        # 使用 indent=4 使输出格式与你图片中的漂亮格式一致
                         json.dump(json_data, f, indent=4, ensure_ascii=False)
                     
-                    print(f"已处理 (坐标已对调): {output_file}")
+                    print(f"succesfully processed: {output_file}")
                     count += 1
                 except Exception as e:
-                    print(f"出错 {file_path}: {e}")
+                    print(f"error {file_path}: {e}")
 
-    print(f"\n全部完成，共处理 {count} 个文件。")
+    print(f"\nsuccessfully processed {count} documents in total.")
 
 if __name__ == "__main__":
     main()

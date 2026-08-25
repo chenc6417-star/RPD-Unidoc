@@ -1,46 +1,75 @@
-# Qwen Document Layout / OCR Fine-tuning Project
 
-This project is designed for document page understanding tasks. It uses a Qwen3.5-2B based model to perform layout analysis, region localization, OCR extraction, and alt-text generation for figures and tables. A custom spatial enhancement module is also integrated to improve the model's ability to capture document structure and spatial relationships.
+# 📄 Qwen Document Layout & OCR Fine-tuning
 
-## 1. Project Overview
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg?style=flat-square&logo=python)
+![Transformers](https://img.shields.io/badge/Transformers-4.5.2-orange.svg?style=flat-square&logo=huggingface)
+![Swift](https://img.shields.io/badge/Swift-4.0.0-red.svg?style=flat-square)
+![GPU](https://img.shields.io/badge/GPU-NVIDIA%20A100%2040G-green.svg?style=flat-square&logo=nvidia)
 
-The main objectives of this project are:
+> An end-to-end vision-language pipeline based on the **Qwen3.5-2B** model, designed for advanced document page understanding, layout analysis, region localization, and OCR extraction.
 
-- Recognize and classify document elements on each page
-- Generate bounding boxes for key regions
-- Extract OCR text from the document page
-- Produce concise descriptions for charts, tables, and figures
-- Improve performance through a two-stage fine-tuning pipeline
+---
 
-## 2. Key Features
+## 📑 Table of Contents
 
-- Fine-tuning and inference based on Qwen3.5-2B model
-- Custom Spatial Enhancer module to strengthen spatial reasoning
-- Two-stage training pipeline:
-  - Stage 1: full-parameter training to learn spatial enhancement capabilities
-  - Stage 2: LoRA-based training for efficient task adaptation
-- Complete workflow covering data construction, training, inference, and evaluation
+- [Project Overview](#-project-overview)
+- [Key Features](#-key-features)
+- [System Requirements](#-system-requirements)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Workflow & Usage](#-workflow--usage)
+- [Recommended Use Cases](#-recommended-use-cases)
+- [Roadmap & Future Improvements](#-roadmap--future-improvements)
 
-## 3. Environment
+---
 
-This README is tailored for the following environment:
+## 🎯 Project Overview
 
-- Python: 3.12
-- Transformers: 5.2.0
-- Swift: 4.0.0
-- GPU: NVIDIA A100 40G
-- Recommended precision: bf16
+This project tackles complex document understanding tasks by integrating a **custom Spatial Enhancement Module**. This module significantly improves the model's ability to capture document structures and spatial relationships.
 
-## 4. Installation
+**Main Objectives:**
 
-It is recommended to create a dedicated virtual environment first:
+- **Identify & Classify:** Recognize document elements across various page layouts.
+- **Localize:** Generate precise bounding boxes for key regions.
+- **Extract:** Perform highly accurate OCR text extraction.
+- **Describe:** Produce concise, contextual alt-text for charts, tables, and figures.
 
+---
+
+## ✨ Key Features
+
+- 🚀 **Powered by Qwen3.5-2B:** Robust baseline for vision-language tasks.
+- 🧩 **Custom Spatial Enhancer:** A specialized module injected to strengthen spatial reasoning capabilities.
+- 🔄 **Two-Stage Fine-Tuning Pipeline:**
+    - *Stage 1:* Full-parameter training focused on learning spatial enhancement.
+    - *Stage 2:* LoRA-based efficient training for specific task adaptation.
+- 🛠️ **End-to-End Workflow:** Covers everything from data construction to training, inference, and evaluation.
+
+---
+
+## 💻 System Requirements
+
+| Component | Specification |
+| :--- | :--- |
+| **Python** | `3.12` |
+| **Transformers** | `4.5.2` |
+| **Swift** | `4.0.0` |
+| **Hardware** | NVIDIA A100 40G (or equivalent) |
+| **Precision** | `bf16` (Highly Recommended) |
+
+---
+
+## 🛠️ Installation
+
+It is highly recommended to use an isolated virtual environment for this project.
+
+**1. Create and activate a virtual environment:**
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the required packages:
+**2. Install dependencies:**
 
 ```bash
 pip install --upgrade pip
@@ -50,110 +79,100 @@ pip install "swift==4.0.0"
 pip install pillow tqdm numpy python-Levenshtein
 ```
 
-If your environment requires a CUDA-compatible PyTorch build, please install the appropriate wheel for your system. On an A100 40G server, bf16 training is generally recommended.
+> **Note:** If your environment requires a specific CUDA-compatible PyTorch build, please install the appropriate wheel from the [official PyTorch website](https://pytorch.org/).
 
-## 5. Project Structure
+---
 
-- qwen_training.py: converts original annotation JSON files into a unified training dataset format
-- train_stage1.py: Stage 1 full-parameter training script
-- train_stage2.py: Stage 2 LoRA-based training script
-- model_patcher.py: injects the spatial enhancement module and adds forward hooks
-- stage1_dataset.py: builds VQA-style training samples
-- run_original_model.py: performs batch inference with the original model
-- run_with_adapter.py: performs inference using the base model + LoRA + spatial enhancer
-- json_transform.py: converts inference output from .mmd files into JSON files
-- DLA_OCR_RO_score.py: evaluates layout/OCR quality and reports F1, RO, OCR accuracy, and mIoU
+## 📂 Project Structure
 
-## 6. Data Preparation
+```text
+.
+├── qwen_training.py       # Converts raw JSON annotations to unified training format
+├── stage1_dataset.py      # Builds VQA-style training samples for Stage 1
+├── train_stage1.py        # Stage 1: Full-parameter training script
+├── train_stage2.py        # Stage 2: LoRA-based training script
+├── model_patcher.py       # Injects spatial enhancer and adds forward hooks
+├── run_original_model.py  # Batch inference using the vanilla model
+├── run_with_adapter.py    # Inference using Base Model + LoRA + Spatial Enhancer
+├── json_transform.py      # Converts .mmd output files to structured JSON
+└── DLA_OCR_RO_score.py    # Evaluation script (F1, RO, OCR accuracy, mIoU)
+```
 
-This project assumes that you already have document images and corresponding annotation files. The scripts currently use hard-coded local paths, so you should update them according to your own directory layout before running.
+---
 
-## 7. Training Workflow
+## 🚀 Workflow & Usage
 
-### 7.1 Generate the training data
+> **⚠️ Important:** The scripts currently use **hard-coded local paths**. Please ensure you update the directory paths in the scripts to match your local data layout before executing.
 
-Run:
+### 1️⃣ Data Preparation
+
+Generate the JSONL dataset suitable for downstream training from your raw annotations:
 
 ```bash
 python qwen_training.py
 ```
 
-This script scans the original annotation directory and builds a JSONL dataset suitable for downstream training.
-
-### 7.2 Build Stage 1 VQA-style data (optional)
-
-If you want to create additional VQA-style examples for Stage 1 training, run:
+*(Optional)* Build additional VQA-style examples for Stage 1:
 
 ```bash
 python stage1_dataset.py
 ```
 
-### 7.3 Stage 1 training
+### 2️⃣ Training Pipeline
 
-Run:
+**Stage 1: Spatial Enhancement Learning**
+
+Freezes most base parameters and uses full-parameter training for the spatial module.
 
 ```bash
 python train_stage1.py
 ```
 
-This stage uses full-parameter training and primarily focuses on learning the spatial enhancement capability while freezing most of the base model parameters.
+**Stage 2: Task Adaptation**
 
-### 7.4 Stage 2 training
-
-Run:
+LoRA-based fine-tuning optimized for OCR and layout-style tasks.
 
 ```bash
 python train_stage2.py
 ```
 
-This stage uses LoRA-based fine-tuning for better adaptation to OCR and layout-style tasks.
+### 3️⃣ Inference
 
-## 8. Inference
-
-### 8.1 Run inference with the original model
+You can run inference using either the vanilla model or the enhanced model:
 
 ```bash
+# Option A: Original Model
 python run_original_model.py
-```
 
-### 8.2 Run inference with the base model + LoRA + spatial enhancer
-
-```bash
+# Option B: Enhanced Model (Base + LoRA + Spatial Enhancer)
 python run_with_adapter.py
 ```
 
-## 9. Evaluation
+### 4️⃣ Evaluation
 
-Run:
+Compare your predictions against ground-truth annotations to get key metrics (F1, RO, mIoU):
 
 ```bash
 python DLA_OCR_RO_score.py
 ```
 
-This script compares prediction results with ground-truth annotations and reports the main evaluation metrics.
+---
 
-## 10. Notes
+## 💡 Recommended Use Cases
 
-- The current scripts use hard-coded absolute paths. Please update them when moving the project to another machine or environment.
-- Training hyperparameters such as batch size, learning rate, and maximum sequence length should be adjusted based on GPU memory and dataset size.
-- For A100 40G, bf16 is recommended for better throughput and memory efficiency.
-- The model output is typically stored as .mmd files, which can later be converted to JSON via json_transform.py for downstream analysis.
+This architecture excels in scenarios requiring deep structural understanding, including:
 
-## 11. Recommended Use Cases
+- 📑 Automated Document OCR & Digitization
+- 📐 Complex Page Layout Understanding
+- 🎯 Precise Document Element Localization
+- 📊 Table and Figure Contextualization
+- 🧠 Vision-Language Fine-Tuning Research
 
-This project is suitable for:
+---
 
-- Document OCR recognition
-- Page layout understanding
-- Document element localization
-- Table and figure understanding
-- Vision-language fine-tuning for document tasks
+## 🗺️ Roadmap & Future Improvements
 
-## 12. Future Improvements
-
-Possible improvements include:
-
-- Replacing hard-coded paths with configuration files
-- Supporting command-line arguments for training and inference
-- Adding logging and visualization for training results
-- Providing a more complete example workflow and dataset format guide
+- [ ] **Configuration Management:** Replace hard-coded paths with YAML/JSON config files.
+- [ ] **CLI Support:** Add `argparse` for flexible command-line execution (e.g., overriding batch size, LR).
+- [ ] **Experiment Tracking:** Integrate logging and visualization tools (e.g., Weights & Biases, TensorBoard).
+- [ ] **Documentation:** Provide a sample dataset format guide and a mini-tutorial.

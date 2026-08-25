@@ -117,7 +117,7 @@ def patch_qwen_spatial_residual(model, weight_path=None):
         clean_state_dict = {k.replace('spatial_enhancer.', ''): v for k, v in state_dict.items()}
         model.spatial_enhancer.load_state_dict(clean_state_dict, strict=False)
     else:
-    model.hooked_features = {} 
+        model.hooked_features = {} 
 
     original_visual_forward = visual_module.forward
     def new_visual_forward(*args, **kwargs):

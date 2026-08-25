@@ -28,6 +28,7 @@ def apply_monkey_patch():
             meta.thinking_prefix = ''
             meta.non_thinking_prefix = ''
         except AttributeError as e:
+            print(f"Unable to disable thinking mode: {e}")
     else:
         print("No TEMPLATE_MAPPING for qwen3_5")
 
