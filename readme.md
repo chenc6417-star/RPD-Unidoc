@@ -7,15 +7,15 @@ Yuheng Chen<sup>&ast;1</sup>, Yufan Chen<sup>&ast;†1</sup>, Zhuojun Cai<sup>1<
 <sup>1</sup>Karlsruhe Institute of Technology, <sup>2</sup>Hunan University, <sup>3</sup>University of Alberta  
 <sup>&ast;</sup>Equal contribution. <sup>†</sup>Corresponding author: Yufan Chen ([yufan.chen@kit.edu](mailto:yufan.chen@kit.edu)).
 
-[Paper](https://openreview.net/) · [Project Page](https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA) · [Dataset (Hugging Face)](https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset) 
+[Paper](https://openreview.net/) · [Project Page](https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA) · [Dataset (Hugging Face)](https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset)
 
 ---
 
 ## 📖 Abstract
 
-Document understanding systems are typically evaluated as separate components via layout analysis, optical text recognition, reading-order prediction, and image captioning. This separation leaves scientific figures, captions, and visual semantics weakly connected, and fails to measure whether a model can produce a single page-level parse that is both structurally faithful and semantically accessible. 
+Document understanding systems are typically evaluated as separate components via layout analysis, optical text recognition, reading-order prediction, and image captioning. This separation leaves scientific figures, captions, and visual semantics weakly connected, and fails to measure whether a model can produce a single page-level parse that is both structurally faithful and semantically accessible.
 
-We introduce **Read-Parse-Describe**, a unified dataset for document parsing with visual element description generation. Given a page image, models are required to output an ordered list of layout elements containing bounding boxes, semantic labels, reading-order indices, recognized textual content, explicit caption linkages, and alternative text descriptions for visual elements. The benchmark is built from 2,402 documents, comprising 18,164 continuous pages, 125,218 layout elements, and 11,338 visual instances. 
+We introduce **Read-Parse-Describe**, a unified dataset for document parsing with visual element description generation. Given a page image, models are required to output an ordered list of layout elements containing bounding boxes, semantic labels, reading-order indices, recognized textual content, explicit caption linkages, and alternative text descriptions for visual elements. The benchmark is built from 2,402 documents, comprising 18,164 continuous pages, 125,218 layout elements, and 11,338 visual instances.
 
 Furthermore, we propose **SARA** (*Spatial Alignment Residual Adapter*), a lightweight plug-and-play space-awareness enhancer that reuses multi-layer visual features and injects grid-aware spatial guidance into vision-language tokens for layout-aware generation. Experiments across end-to-end VLMs and pipeline parsers show that existing systems struggle to jointly recover reading order and visual semantics, while our adapter-enhanced model achieves strong joint performance.
 
@@ -32,7 +32,7 @@ $$Y = [e_1, e_2, \dots, e_n]$$
 
 Each element $e_i$ is structured under a unified schema:
 
-$$e_i = \{\text{id}, \text{bbox}, \text{category}, \text{order}, \text{text}, \text{html}, \text{caption\_id}, \text{alt\_text}\}$$
+$$e_i = \{\text{id}, \text{bbox}, \text{category}, \text{order}, \text{text}, \text{html}, \text{caption\\_id}, \text{alt\\_text}\}$$
 
 | Field | Type | Description |
 |---|---|---|
@@ -152,8 +152,10 @@ Read-Parse-Describe/
 │   └── test.jsonl           # 5% test split
 └── metadata/
     └── documents.jsonl      # Source paper metadata (DOI, title, ACM URL, license)
+```
 
 ---
+
 ## 📝 Citation
 
 ```bibtex
