@@ -141,19 +141,6 @@ All models are evaluated on the held-out test split under the unified schema. Pr
 
 The dataset will be available on Hugging Face.
 
-### Loading the Data
-
-```python
-from datasets import load_dataset
-
-# Load dataset split
-dataset = load_dataset("<YOUR-HF-REPO-ID>/Read-Parse-Describe", split="test")
-
-# Element record structure example
-sample_page = dataset[0]
-print(sample_page["elements"])
-```
-
 ### File Hierarchy
 
 ```text
@@ -165,32 +152,7 @@ Read-Parse-Describe/
 │   └── test.jsonl           # 5% test split
 └── metadata/
     └── documents.jsonl      # Source paper metadata (DOI, title, ACM URL, license)
-```
 
----
-
-## 🚀 Quickstart
-
-### Installation
-
-```bash
-git clone [https://github.com/](https://github.com/)<YOUR-REPO>/Read-Parse-Describe.git
-cd Read-Parse-Describe
-pip install -r requirements.txt
-```
-
-### Evaluation
-
-Run evaluation on parsed JSONL outputs:
-
-```bash
-python evaluate.py \
-    --prediction_file predictions/qwen3.5_sara_test.jsonl \
-    --ground_truth_file data/annotations/test.jsonl \
-    --metrics dla_f1 miou ro_score ocr meteor bertscore
-```
-
----
 
 ## 📝 Citation
 
