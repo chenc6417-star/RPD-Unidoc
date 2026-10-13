@@ -153,7 +153,7 @@ Read-Parse-Describe/
 └── metadata/
     └── documents.jsonl      # Source paper metadata (DOI, title, ACM URL, license)
 
-
+---
 ## 📝 Citation
 
 ```bibtex
