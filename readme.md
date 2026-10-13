@@ -86,7 +86,7 @@ Visual instances were annotated through an automated generation, scoring, and hu
 
 ## 🧩 SARA: Spatial Alignment Residual Adapter
 
-![SARA Architecture](docs/assets/sara.pdf)
+![SARA Architecture](docs/assets/sara.png)
 
 Modern VLMs often compress and merge visual tokens, degrading the spatial resolution required for fine-grained bounding-box regression and two-column reading flow. **SARA** restores spatial fidelity without updating the backbone:
 
