@@ -143,16 +143,22 @@ The dataset will be available on Hugging Face.
 
 ### File Hierarchy
 
+
 ```text
-Read-Parse-Describe/
-├── images/                  # Rendered high-resolution page images (PNG)
-├── annotations/
-│   ├── train.jsonl          # 90% training split (ordered element lists)
-│   ├── val.jsonl            # 5% validation split
-│   └── test.jsonl           # 5% test split
-└── metadata/
-    └── documents.jsonl      # Source paper metadata (DOI, title, ACM URL, license)
+Unified_Document_Understanding_Dataset/
+├── train/
+│   ├── images/                  # Rendered page images for training split (90%)
+│   └── metadata.jsonl           # Structured annotations (bboxes, labels, reading order, OCR, alt-text)
+├── validation/
+│   ├── images/                  # Rendered page images for validation split (5%)
+│   └── metadata.jsonl           # Annotations for validation split
+├── test/
+│   ├── images/                  # Rendered page images for test split (5%)
+│   └── metadata.jsonl           # Annotations for test split
+├── .gitattributes
+└── README.md
 ```
+
 
 ---
 
