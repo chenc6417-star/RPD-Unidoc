@@ -177,5 +177,5 @@ Unified_Document_Understanding_Dataset/
 
 ## 📬 Contact
 
-- **Yuheng Chen**: [yuheng.chen@student.kit.edu](mailto:yuheng.chen@student.kit.edu)
+- **Yuheng Chen**: [chenc6417@gmail.com](mailto:chenc6417@gmail.com)
 - **Yufan Chen** (Corresponding Author): [yufan.chen@kit.edu](mailto:yufan.chen@kit.edu)
