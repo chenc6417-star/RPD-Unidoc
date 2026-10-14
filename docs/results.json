@@ -1,0 +1,21 @@
+[
+  {"setting": "Zero-shot", "model": "GOT-OCR 2.0", "trainable_params": null, "dla_f1": null, "dla_miou": null, "ocr_acc": 0.8652, "ro_score": 0.5330, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "Nougat", "trainable_params": null, "dla_f1": null, "dla_miou": null, "ocr_acc": 0.7327, "ro_score": 0.4640, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "Dolphin-v2", "trainable_params": null, "dla_f1": 0.9124, "dla_miou": 0.9265, "ocr_acc": 0.9307, "ro_score": 0.8221, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "MonkeyOCR", "trainable_params": null, "dla_f1": 0.6030, "dla_miou": 0.8949, "ocr_acc": 0.9684, "ro_score": 0.6254, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "VGT", "trainable_params": null, "dla_f1": 0.6795, "dla_miou": 0.8540, "ocr_acc": 0.6304, "ro_score": 0.3833, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "PaddleOCR-VL", "trainable_params": null, "dla_f1": 0.7564, "dla_miou": 0.9458, "ocr_acc": 0.9043, "ro_score": 0.6619, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "PP-Structure V3", "trainable_params": null, "dla_f1": 0.6375, "dla_miou": 0.8870, "ocr_acc": 0.9558, "ro_score": 0.5054, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "MinerU", "trainable_params": null, "dla_f1": 0.7171, "dla_miou": 0.9151, "ocr_acc": 0.9671, "ro_score": 0.6757, "meteor": null, "bert_score": null},
+  {"setting": "Zero-shot", "model": "ChatGPT-5.4", "trainable_params": null, "dla_f1": 0.6978, "dla_miou": 0.6454, "ocr_acc": 0.9796, "ro_score": 0.7253, "meteor": 0.3506, "bert_score": 0.8751},
+  {"setting": "Zero-shot", "model": "GPT-5.6", "trainable_params": null, "dla_f1": 0.7489, "dla_miou": 0.7781, "ocr_acc": 0.9448, "ro_score": 0.8967, "meteor": 0.3793, "bert_score": 0.9004},
+  {"setting": "Zero-shot", "model": "Gemini 3.6 Flash", "trainable_params": null, "dla_f1": 0.6909, "dla_miou": 0.8658, "ocr_acc": 0.9544, "ro_score": 0.8183, "meteor": 0.3744, "bert_score": 0.8841},
+  {"setting": "Zero-shot", "model": "Gemini 3.1 Pro", "trainable_params": null, "dla_f1": 0.7421, "dla_miou": 0.8551, "ocr_acc": 0.9633, "ro_score": 0.8337, "meteor": 0.3785, "bert_score": 0.8961},
+  {"setting": "Zero-shot", "model": "DeepSeek-OCR", "trainable_params": null, "dla_f1": 0.5987, "dla_miou": 0.6074, "ocr_acc": 0.9064, "ro_score": 0.5003, "meteor": 0.2562, "bert_score": 0.8280},
+  {"setting": "Full FT", "model": "Qwen3.5-2B", "trainable_params": "1881.83M", "dla_f1": 0.7336, "dla_miou": 0.8350, "ocr_acc": 0.9408, "ro_score": 0.9628, "meteor": 0.3741, "bert_score": 0.8928},
+  {"setting": "Full FT", "model": "DeepSeek-OCR", "trainable_params": "2937.36M", "dla_f1": 0.9644, "dla_miou": 0.9492, "ocr_acc": 0.9679, "ro_score": 0.9825, "meteor": 0.3998, "bert_score": 0.8968},
+  {"setting": "Full FT", "model": "Dolphin-v2", "trainable_params": "3085.93M", "dla_f1": 0.9826, "dla_miou": 0.9588, "ocr_acc": 0.9751, "ro_score": 0.9857, "meteor": 0.3396, "bert_score": 0.8838},
+  {"setting": "Adapter", "model": "Gemma4-E4B + SARA", "trainable_params": "158.82M", "dla_f1": 0.9437, "dla_miou": 0.9136, "ocr_acc": 0.9474, "ro_score": 0.9288, "meteor": 0.3009, "bert_score": 0.8746},
+  {"setting": "Adapter", "model": "Qwen3.5-2B + LoRA", "trainable_params": "48.37M", "dla_f1": 0.7004, "dla_miou": 0.6845, "ocr_acc": 0.9673, "ro_score": 0.9304, "meteor": 0.3586, "bert_score": 0.8652},
+  {"setting": "Adapter", "model": "Qwen3.5-2B + SARA", "trainable_params": "83.99M", "dla_f1": 0.9189, "dla_miou": 0.8919, "ocr_acc": 0.9636, "ro_score": 0.9774, "meteor": 0.3834, "bert_score": 0.8946}
+]
