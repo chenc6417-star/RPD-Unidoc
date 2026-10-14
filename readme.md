@@ -2,7 +2,7 @@
 
 **NeurIPS 2026**
 
-Yuheng Chen<sup>&ast;1</sup>, Yufan Chen<sup>&ast;†1</sup>, Zhuojun Cai<sup>1</sup>, Ruiping Liu<sup>1</sup>, Junwei Zheng<sup>1</sup>, Jiale Wei<sup>1</sup>, Di Wen<sup>1</sup>, Weijia Fan<sup>1,3</sup>, Kunyu Peng<sup>1</sup>, Jiaming Zhang<sup>2</sup>, Rainer Stiefelhagen<sup>1</sup>
+Yuheng Chen<sup>1</sup>, Yufan Chen<sup>†1</sup>, Zhuojun Cai<sup>1</sup>, Ruiping Liu<sup>1</sup>, Junwei Zheng<sup>1</sup>, Jiale Wei<sup>1</sup>, Di Wen<sup>1</sup>, Weijia Fan<sup>1,3</sup>, Kunyu Peng<sup>1</sup>, Jiaming Zhang<sup>2</sup>, Rainer Stiefelhagen<sup>1</sup>
 
 <sup>1</sup>Karlsruhe Institute of Technology, <sup>2</sup>Hunan University, <sup>3</sup>University of Alberta  
 <sup>&ast;</sup>Equal contribution. <sup>†</sup>Corresponding author: Yufan Chen ([yufan.chen@kit.edu](mailto:yufan.chen@kit.edu)).
