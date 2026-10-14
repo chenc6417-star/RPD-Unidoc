@@ -7,7 +7,7 @@ Yuheng Chen<sup>1</sup>, Yufan Chen<sup>†1</sup>, Zhuojun Cai<sup>1</sup>, Rui
 <sup>1</sup>Karlsruhe Institute of Technology, <sup>2</sup>Hunan University, <sup>3</sup>University of Alberta  
 <sup>†</sup>Corresponding author: Yufan Chen ([yufan.chen@kit.edu](mailto:yufan.chen@kit.edu)).
 
-[Paper](https://openreview.net/) · [Qwen3.5-2B with SARA](https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA) · [Dataset (Hugging Face)](https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset) · [Project Page](https://openreview.net/)
+[Paper](https://openreview.net/) · [Qwen3.5-2B with SARA](https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA) · [Dataset (Hugging Face)](https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset) · [Project Page](https://yuheng98chen.github.io/RPD-Unidoc/)
 
 ---
 
