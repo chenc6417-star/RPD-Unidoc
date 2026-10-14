@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read, Parse, Describe: Unified Document Parsing</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="title">Read, Parse, Describe: Unified Document Parsing with Visual Element Description Generation</h1>
+      <h3 class="conference">NeurIPS 2026</h3>
+
+      <div class="authors">
+        <span class="author">Yuheng Chen<sup>1,*</sup></span>,
+        <span class="author">Yufan Chen<sup>1,*,†</sup></span>,
+        <span class="author">Zhuojun Cai<sup>1</sup></span>,
+        <span class="author">Ruiping Liu<sup>1</sup></span>,
+        <span class="author">Junwei Zheng<sup>1</sup></span>,
+        <span class="author">Jiale Wei<sup>1</sup></span>,
+        <span class="author">Di Wen<sup>1</sup></span>,
+        <span class="author">Weijia Fan<sup>1,3</sup></span>,
+        <span class="author">Kunyu Peng<sup>1</sup></span>,
+        <span class="author">Jiaming Zhang<sup>2</sup></span>,
+        <span class="author">Rainer Stiefelhagen<sup>1</sup></span>
+      </div>
+
+      <div class="affiliations">
+        <span><sup>1</sup>Karlsruhe Institute of Technology</span> &nbsp;|&nbsp;
+        <span><sup>2</sup>Hunan University</span> &nbsp;|&nbsp;
+        <span><sup>3</sup>University of Alberta</span>
+      </div>
+
+      <div class="notes">
+        <span>* Equal contribution. &nbsp; † Corresponding author.</span><br>
+        <a href="mailto:yuheng.chen@student.kit.edu">yuheng.chen@student.kit.edu</a> &nbsp;|&nbsp;
+        <a href="mailto:yufan.chen@kit.edu">yufan.chen@kit.edu</a>
+      </div>
+
+      <!-- Links & Badges -->
+      <div class="links">
+        <a href="https://openreview.net/" class="btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+        <a href="https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset" class="btn" target="_blank"><i class="fa-solid fa-database"></i> Dataset</a>
+        <a href="https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA" class="btn" target="_blank"><i class="fa-solid fa-cube"></i> Model</a>
+        <a href="https://github.com/" class="btn" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+        <a href="#bibtex" class="btn"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Abstract -->
+    <section class="section" id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Document understanding systems are typically evaluated as separate components via layout analysis, optical text recognition, reading-order prediction, and image captioning. This separation leaves scientific figures, captions, and visual semantics weakly connected, and fails to measure whether a model can produce a single page-level parse that is both structurally faithful and semantically accessible. 
+      </p>
+      <p>
+        We introduce <strong>Read-Parse-Describe</strong>, a unified dataset for document parsing with visual element description generation. Given a page image, models are required to output an ordered list of layout elements containing bounding boxes, semantic labels, reading-order indices, recognized textual content, explicit caption linkages, and alternative text descriptions for visual elements. The benchmark is built from 2,402 documents, comprising 18,164 continuous pages, 125,218 layout elements, and 11,338 visual instances. 
+      </p>
+      <div class="image-box">
+        <img src="assets/overview.png" alt="Read-Parse-Describe Overview">
+        <p class="caption">Figure 1: (a) Unified document parsing contract with localized elements, reading order, text/HTML content, caption links, and visual descriptions. (b) Domain distribution across 2,402 source documents.</p>
+      </div>
+    </section>
+
+    <!-- SARA Architecture -->
+    <section class="section" id="method">
+      <h2>SARA: Spatial Alignment Residual Adapter</h2>
+      <p>
+        Modern VLMs often compress and merge visual tokens, degrading the spatial resolution required for fine-grained bounding-box regression and two-column reading flow. <strong>SARA</strong> restores spatial fidelity without updating the backbone:
+      </p>
+      <ul>
+        <li><strong>Multi-Layer Feature Reuse:</strong> Reuses intermediate encoder layers \(\mathcal{S} = \{2, 5, 8, 11\}\) and projects channel-concatenated features into guidance representation \(G\).</li>
+        <li><strong>Crop-Aware Grid Alignment:</strong> Slices guidance segments corresponding to each crop grid and average-pools them to match the native merged token grid resolution \(G'\).</li>
+        <li><strong>Residual Gated Injection:</strong> Injects guidance directly into the native tokens \(T\) via a learnable scalar gate \(\lambda\): \(\hat{T} = T + \lambda G'\).</li>
+      </ul>
+      <div class="image-box">
+        <img src="assets/sara.png" alt="SARA Architecture">
+        <p class="caption">Figure 2: Architecture of SARA. Features from intermediate encoder layers are aligned via crop-aware pooling and injected through a gated residual connection.</p>
+      </div>
+    </section>
+
+    <!-- Benchmark Results -->
+    <section class="section" id="results">
+      <h2>Benchmark Evaluation</h2>
+      <p>Test set performance across zero-shot models, full fine-tuning, and adapter tuning. The results can be filtered and sorted dynamically.</p>
+      
+      <div class="table-container">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Model</th>
+              <th>Trainable Params</th>
+              <th>DLA F1 ↑</th>
+              <th>DLA mIoU ↑</th>
+              <th>OCR Acc. ↑</th>
+              <th>RO Score ↑</th>
+              <th>METEOR ↑</th>
+              <th>Alt. Text BERT ↑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamically populated via script.js -->
+          </tbody>
+        </table>
+      </div>
+      <div class="download-links">
+        <a href="results.csv" download class="btn-small"><i class="fa-solid fa-file-csv"></i> Download CSV</a>
+        <a href="results.json" download class="btn-small"><i class="fa-solid fa-file-code"></i> Download JSON</a>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section" id="bibtex">
+      <h2>Citation</h2>
+      <div class="bibtex-wrapper">
+        <button id="copy-btn" class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        <pre><code id="bibtex-code">@inproceedings{chen2026readparsedescribe,
+  title     = {Read, Parse, Describe: Unified Document Parsing with Visual Element Description Generation},
+  author    = {Chen, Yuheng and Chen, Yufan and Cai, Zhuojun and Liu, Ruiping and Zheng, Junwei and Wei, Jiale and Wen, Di and Fan, Weijia and Peng, Kunyu and Zhang, Jiaming and Stiefelhagen, Rainer},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Read, Parse, Describe Project &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
