@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Read, Parse, Describe: Unified Document Parsing</title>
+  <title>Read, Parse, Describe: Unified Document Parsing with Visual Element Description Generation</title>
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts & FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -41,17 +41,17 @@
       </div>
 
       <div class="notes">
-        <span>* Equal contribution. &nbsp; † Corresponding author.</span><br>
+        <span>* Equal contribution. &nbsp; † Corresponding author: Yufan Chen.</span><br>
         <a href="mailto:yuheng.chen@student.kit.edu">yuheng.chen@student.kit.edu</a> &nbsp;|&nbsp;
         <a href="mailto:yufan.chen@kit.edu">yufan.chen@kit.edu</a>
       </div>
 
-      <!-- Links & Badges -->
+      <!-- Quick Nav Buttons -->
       <div class="links">
-        <a href="https://openreview.net/" class="btn" target="_blank"><i class="fa-solid fa-file-pdf"></i> Paper</a>
-        <a href="https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset" class="btn" target="_blank"><i class="fa-solid fa-database"></i> Dataset</a>
-        <a href="https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA" class="btn" target="_blank"><i class="fa-solid fa-cube"></i> Model</a>
-        <a href="https://github.com/" class="btn" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+        <a href="#abstract" class="btn"><i class="fa-solid fa-align-left"></i> Abstract</a>
+        <a href="#dataset-model" class="btn"><i class="fa-solid fa-database"></i> Dataset</a>
+        <a href="#dataset-model" class="btn"><i class="fa-solid fa-cube"></i> Model</a>
+        <a href="https://github.com/yuheng98chen/RPD-Unidoc" class="btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="#bibtex" class="btn"><i class="fa-solid fa-quote-right"></i> BibTeX</a>
       </div>
     </div>
@@ -59,88 +59,197 @@
 
   <!-- Main Content -->
   <main class="container">
+
+    <!-- Teaser / Hero Banner -->
+    <section class="section-teaser">
+      <div class="image-box">
+        <img src="assets/teaser.png" alt="RPD Teaser Overview" onerror="this.src='assets/overview.png'">
+        <p class="caption">A shared page representation associates document structure with textual content and visual descriptions.</p>
+      </div>
+    </section>
     
     <!-- Abstract -->
     <section class="section" id="abstract">
       <h2>Abstract</h2>
-      <p>
-        Document understanding systems are typically evaluated as separate components via layout analysis, optical text recognition, reading-order prediction, and image captioning. This separation leaves scientific figures, captions, and visual semantics weakly connected, and fails to measure whether a model can produce a single page-level parse that is both structurally faithful and semantically accessible. 
+      <p class="text-content">
+        Document understanding systems are typically evaluated as separate components via layout analysis, optical text recognition, reading-order prediction, and image captioning. This separation leaves scientific figures, captions, and visual semantics weakly connected, and fails to measure whether a model can produce a single page-level parse that is both structurally faithful and semantically accessible. We introduce <strong>Read-Parse-Describe</strong>, a unified dataset for document parsing with visual element description generation. Given a page image, models are required to output an ordered list of layout elements containing bounding boxes, semantic labels, reading-order indices, recognized textual content, and alternative text descriptions for visual elements. The benchmark is built from 2,402 documents, comprising 18,164 continuous pages, 125,218 layout elements, and 11,338 visual instances. Besides, we further propose a plug-and-play space-awareness enhancer that reuses multi-layer visual features and injects grid-aware spatial guidance into vision-language tokens for layout-aware generation. Experiments across end-to-end VLMs and pipeline parsers show that existing systems still struggle to jointly recover reading order and visual semantics, while our enhanced model achieves strong joint performance. These results highlight the need to move beyond isolated document parsing modules toward unified models that jointly read, parse, and describe complex documents.
       </p>
-      <p>
-        We introduce <strong>Read-Parse-Describe</strong>, a unified dataset for document parsing with visual element description generation. Given a page image, models are required to output an ordered list of layout elements containing bounding boxes, semantic labels, reading-order indices, recognized textual content, explicit caption linkages, and alternative text descriptions for visual elements. The benchmark is built from 2,402 documents, comprising 18,164 continuous pages, 125,218 layout elements, and 11,338 visual instances. 
-      </p>
-      <div class="image-box">
-        <img src="assets/overview.png" alt="Read-Parse-Describe Overview">
-        <p class="caption">Figure 1: (a) Unified document parsing contract with localized elements, reading order, text/HTML content, caption links, and visual descriptions. (b) Domain distribution across 2,402 source documents.</p>
-      </div>
     </section>
 
-    <!-- SARA Architecture -->
-    <section class="section" id="method">
-      <h2>SARA: Spatial Alignment Residual Adapter</h2>
-      <p>
-        Modern VLMs often compress and merge visual tokens, degrading the spatial resolution required for fine-grained bounding-box regression and two-column reading flow. <strong>SARA</strong> restores spatial fidelity without updating the backbone:
+    <!-- Read-Parse-Describe (Dataset Stats) -->
+    <section class="section" id="rpd-dataset">
+      <h2>Read-Parse-Describe</h2>
+      <p class="text-content">
+        RPD contains open-access ACM scientific papers with interleaved text, equations, tables, figures, and captions. Given a page image, a parser predicts an ordered list of localized elements with recognized content and descriptions for applicable visual objects.
       </p>
-      <ul>
-        <li><strong>Multi-Layer Feature Reuse:</strong> Reuses intermediate encoder layers \(\mathcal{S} = \{2, 5, 8, 11\}\) and projects channel-concatenated features into guidance representation \(G\).</li>
-        <li><strong>Crop-Aware Grid Alignment:</strong> Slices guidance segments corresponding to each crop grid and average-pools them to match the native merged token grid resolution \(G'\).</li>
-        <li><strong>Residual Gated Injection:</strong> Injects guidance directly into the native tokens \(T\) via a learnable scalar gate \(\lambda\): \(\hat{T} = T + \lambda G'\).</li>
-      </ul>
+
+      <!-- Stat Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num">2,402</div>
+          <div class="stat-label">Scientific papers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">18,164</div>
+          <div class="stat-label">Document pages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">125,218</div>
+          <div class="stat-label">Layout elements</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">11,338</div>
+          <div class="stat-label">Visual instances</div>
+        </div>
+      </div>
+
+      <p class="text-content mt-3">
+        The corpus retains the first eight pages of each paper, or all pages of shorter papers, and uses 23 semantic layout labels. Each element record connects geometry, category, reading position, and applicable text, table, caption, and visual-description fields. The same output contract supports end-to-end models and modular parsers.
+      </p>
+    </section>
+
+    <!-- SARA -->
+    <section class="section" id="sara">
+      <h2>SARA</h2>
+      <p class="text-content">
+        The Spatial Alignment Residual Adapter reuses intermediate visual encoder features and aligns them with the native merged tokens for each crop. A learned projection and crop-aware pooling produce spatial guidance that is injected through a gated residual connection.
+      </p>
       <div class="image-box">
         <img src="assets/sara.png" alt="SARA Architecture">
-        <p class="caption">Figure 2: Architecture of SARA. Features from intermediate encoder layers are aligned via crop-aware pooling and injected through a gated residual connection.</p>
+        <p class="caption">Multi-layer visual features are aligned to crop grids and added to the merged visual tokens.</p>
       </div>
     </section>
 
-    <!-- Benchmark Results -->
+    <!-- Parsing Examples (Interactive Tabs) -->
+    <section class="section" id="examples">
+      <h2>Parsing Examples</h2>
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="switchExample('gt')">Ground truth</button>
+          <button class="tab-btn" onclick="switchExample('qwen-base')">Qwen3.5-2B</button>
+          <button class="tab-btn" onclick="switchExample('full-ft')">Full fine-tuning</button>
+          <button class="tab-btn" onclick="switchExample('sara')">Qwen3.5-2B + SARA</button>
+        </div>
+        <div class="tab-content">
+          <img id="example-img" src="assets/example_gt.png" alt="Parsing Example" onerror="this.src='assets/overview.png'">
+          <p class="caption">Comparison of element mappings for the same scientific-document page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parsing Results -->
     <section class="section" id="results">
-      <h2>Benchmark Evaluation</h2>
-      <p>Test set performance across zero-shot models, full fine-tuning, and adapter tuning. The results can be filtered and sorted dynamically.</p>
-      
+      <h2>Parsing Results</h2>
+      <p class="text-content">
+        The comparison reports localization F1 and mIoU, OCR and reading-order similarity, and METEOR and BERTScore for visual descriptions. Zero-shot, full fine-tuning, LoRA, and SARA are shown as separate evaluation settings.
+      </p>
+
       <div class="table-container">
-        <table id="results-table">
+        <table>
           <thead>
             <tr>
-              <th>Setting</th>
               <th>Model</th>
-              <th>Trainable Params</th>
-              <th>DLA F1 ↑</th>
-              <th>DLA mIoU ↑</th>
-              <th>OCR Acc. ↑</th>
-              <th>RO Score ↑</th>
-              <th>METEOR ↑</th>
-              <th>Alt. Text BERT ↑</th>
+              <th>Setting</th>
+              <th>Trainable</th>
+              <th>F1</th>
+              <th>mIoU</th>
+              <th>OCR</th>
+              <th>RO</th>
+              <th>METEOR</th>
+              <th>BERTScore</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Dynamically populated via script.js -->
+            <tr><td>ChatGPT-5.6</td><td>Zero-shot</td><td>—</td><td>0.7489</td><td>0.7781</td><td>0.9448</td><td>0.8967</td><td>0.3793</td><td>0.9004</td></tr>
+            <tr><td>Gemini 3.1 Pro</td><td>Zero-shot</td><td>—</td><td>0.7421</td><td>0.8551</td><td>0.9633</td><td>0.8337</td><td>0.3785</td><td>0.8961</td></tr>
+            <tr><td>Qwen3.5-2B</td><td>Full FT</td><td>1881.83M</td><td>0.7336</td><td>0.8350</td><td>0.9408</td><td>0.9628</td><td>0.3741</td><td>0.8928</td></tr>
+            <tr><td>Gemma4-E4B</td><td>Full FT</td><td>7463.01M</td><td>0.9358</td><td>0.8836</td><td>0.9452</td><td>0.9628</td><td>0.3047</td><td>0.8821</td></tr>
+            <tr><td>DeepSeek-OCR</td><td>Full FT</td><td>2937.36M</td><td>0.9644</td><td>0.9492</td><td>0.9679</td><td>0.9825</td><td>0.3998</td><td>0.8968</td></tr>
+            <tr><td>Dolphin-v2</td><td>Full FT</td><td>3085.93M</td><td>0.9826</td><td>0.9588</td><td>0.9751</td><td>0.9857</td><td>0.3396</td><td>0.8838</td></tr>
+            <tr><td>Gemma4-E4B + LoRA</td><td>LoRA</td><td>103.82M</td><td>0.7687</td><td>0.7238</td><td>0.9164</td><td>0.9451</td><td>0.2871</td><td>0.8753</td></tr>
+            <tr><td>Qwen3.5-2B + LoRA</td><td>LoRA</td><td>48.37M</td><td>0.7004</td><td>0.6845</td><td>0.9673</td><td>0.9304</td><td>0.3586</td><td>0.8652</td></tr>
+            <tr><td>Gemma4-E4B + SARA</td><td>SARA</td><td>158.82M</td><td>0.9437</td><td>0.9136</td><td>0.9474</td><td>0.9288</td><td>0.3009</td><td>0.8746</td></tr>
+            <tr class="highlight-row"><td><strong>Qwen3.5-2B + SARA</strong></td><td><strong>SARA</strong></td><td><strong>83.99M</strong></td><td><strong>0.9189</strong></td><td><strong>0.8919</strong></td><td><strong>0.9636</strong></td><td><strong>0.9774</strong></td><td><strong>0.3834</strong></td><td><strong>0.8946</strong></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="download-links">
-        <a href="results.csv" download class="btn-small"><i class="fa-solid fa-file-csv"></i> Download CSV</a>
-        <a href="results.json" download class="btn-small"><i class="fa-solid fa-file-code"></i> Download JSON</a>
+
+      <p class="table-note">
+        Scores use the reported 0–1 scale. Trainable counts refer to the listed configuration. Dashes indicate unavailable fields or non-applicable training entries.
+      </p>
+      <p class="table-note">
+        On Qwen3.5-2B, SARA raises F1 from 0.7336 to 0.9189 and mIoU from 0.8350 to 0.8919 relative to full fine-tuning. Localization also improves on Gemma4-E4B, while its reading-order and description scores decrease. Comparisons with LoRA use different trainable-parameter budgets.
+      </p>
+
+      <div class="result-actions">
+        <a href="results.csv" download class="btn-sub"><i class="fa-solid fa-file-csv"></i> Results (CSV)</a>
+        <span>·</span>
+        <a href="results.json" download class="btn-sub"><i class="fa-solid fa-file-code"></i> Results (JSON)</a>
+      </div>
+    </section>
+
+    <!-- Annotation -->
+    <section class="section" id="annotation">
+      <h2>Annotation</h2>
+      <p class="text-content">
+        Structural fields are manually inspected and corrected after parser initialization. Gemini 3 Pro generates initial visual descriptions, and Gemini 3 Flash scores them using a factuality, completeness, and instruction-adherence rubric. Descriptions scoring below 4 are routed to human refinement.
+      </p>
+      <p class="text-content">
+        A 200-sample audit yields 194 exact agreements between human and LLM rubric scores. The audit covers revised descriptions and does not estimate the quality of all retained seeds. Reference-based description scores do not directly establish factual completeness or accessibility utility.
+      </p>
+    </section>
+
+    <!-- Dataset and Model -->
+    <section class="section" id="dataset-model">
+      <h2>Dataset and Model</h2>
+      <div class="resource-block">
+        <p class="text-content">
+          The dataset is released on Hugging Face as page images and ImageFolder-style metadata, with train, validation, and test partitions. Serialized annotations associate each page with its layout and content records.
+        </p>
+        <p class="resource-links">
+          <a href="https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset" target="_blank"><i class="fa-solid fa-database"></i> Dataset</a> ·
+          <a href="https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset/tree/main" target="_blank">Data files</a> ·
+          <a href="https://huggingface.co/datasets/chen-doc-ai/Unified_Document_Understanding_Dataset" target="_blank">Loading instructions</a>
+        </p>
+      </div>
+
+      <div class="resource-block mt-3">
+        <p class="text-content">
+          The Qwen3.5-2B release includes a first-stage checkpoint, second-stage LoRA weights, the spatial enhancer, and training, inference, and evaluation scripts.
+        </p>
+        <p class="resource-links">
+          <a href="https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA" target="_blank"><i class="fa-solid fa-cube"></i> Qwen3.5-2B with SARA</a> ·
+          <a href="https://huggingface.co/chen-doc-ai/Qwen3.5-2B_with_SARA/tree/main" target="_blank">Model files</a> ·
+          <a href="https://github.com/yuheng98chen/RPD-Unidoc" target="_blank">Inference script</a>
+        </p>
       </div>
     </section>
 
     <!-- BibTeX -->
     <section class="section" id="bibtex">
-      <h2>Citation</h2>
+      <h2>BibTeX</h2>
       <div class="bibtex-wrapper">
-        <button id="copy-btn" class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
-        <pre><code id="bibtex-code">@inproceedings{chen2026readparsedescribe,
+        <div class="bibtex-header">
+          <button id="copy-btn" class="btn-sub-small"><i class="fa-regular fa-copy"></i> Copy BibTeX</button>
+          <a href="citation.bib" download class="btn-sub-small"><i class="fa-solid fa-download"></i> Download citation</a>
+        </div>
+        <pre><code id="bibtex-code">@inproceedings{chen2026rpd,
   title     = {Read, Parse, Describe: Unified Document Parsing with Visual Element Description Generation},
-  author    = {Chen, Yuheng and Chen, Yufan and Cai, Zhuojun and Liu, Ruiping and Zheng, Junwei and Wei, Jiale and Wen, Di and Fan, Weijia and Peng, Kunyu and Zhang, Jiaming and Stiefelhagen, Rainer},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026}
+  author    = {Chen, Yuheng and Chen, Yufan and Cai, Zhuojun and Liu, Ruiping and
+               Zheng, Junwei and Wei, Jiale and Wen, Di and Fan, Weijia and
+               Peng, Kunyu and Zhang, Jiaming and Stiefelhagen, Rainer},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://yufanchen96.github.io/RPD/}
 }</code></pre>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>Read, Parse, Describe Project &copy; 2026</p>
+    <p>Contact: <a href="mailto:yuheng.chen@student.kit.edu">Yuheng Chen</a> and <a href="mailto:yufan.chen@kit.edu">Yufan Chen</a>.</p>
   </footer>
 
   <script src="script.js"></script>
